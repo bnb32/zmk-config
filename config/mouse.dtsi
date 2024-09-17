@@ -1,7 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
+
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
-
-#include <dt-bindings/zmk/mouse.h>
 
 // Config from @caksoylar, defaults in comments
 &mmv {
