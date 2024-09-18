@@ -23,18 +23,18 @@
           ╰────────────────────┴────────────────────╯
 */
 
-
 // dt-formatter: indent = "  "
 // dt-formatter: multilineIntegerCellsIndent = "reindent"
 // dt-formatter: multilineListCommaStyle = "leading"
 
-#define BASE 0
+#define DEF 0
 #define NAV 1
-#define SYM 2
-#define MOUSE 3
-#define SET 4
-#define FN 5
+#define FN 2
+#define NUM 3
+#define SYS 4
+#define MOUSE 5
 
+#include <behaviors/num_word.dtsi> // requires auto-layer module
 #include "mouse.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -43,20 +43,27 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "zmk-helpers/helper.h"
 #include "custom.dtsi"
+#include "combos.dtsi"
 
+// smart-mouse, requires PR #1366
+ZMK_TRI_STATE(smart_mouse,
+    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+    ignored-key-positions = <MOUSE_KEYS>;
+    ignored-layers = <MOUSE>;
+)
 
 /* Keymap ----------------------------------------------------------------------------------------------------------- */
 
 #define KNOBS &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN
 
-ZMK_CONDITIONAL_LAYER(settings, SYM NAV, SET)
+ZMK_CONDITIONAL_LAYER(settings, NUM NAV, SYS)
 
-ZMK_LAYER(base,
-  &kp GRAVE     &kp N1     &kp N2     &kp N3      &kp N4          &kp N5                                       &kp N6         &kp N7            &kp N8        &kp N9          &kp N0          &kp EQUAL
-  &kp ESC       &kp Q      &kp W      &kp E       &kp R           &kp T                                        &kp Y          &kp U             &kp I         &kp O           &kp P           &kp MINUS
-  &kp TAB       &kp A      HRML(S,    D,          F)              &kp G                                        &kp H          HRMR(J,           K,            L,              SEMI)           &kp APOS
-  &kp LSHFT     &kp Z      &cut       &copy       &paste          &kp B          &trans         &trans         &kp N          &kp M             &kp COMMA     &kp DOT         &kp FSLH        &mt RSHFT BSLH
-                           &kp LGUI   &kp LCTRL   &kp LALT        &mt LSHFT TAB  &lt SYM RET    &lt NAV SPACE  &lt MOUSE RET  &mo FN            &kp LBKT      &kp RBKT,
+ZMK_LAYER(default,
+  &kp GRAVE     &kp N1     &kp N2     &kp N3      &kp N4          &kp N5                                       &kp N6         &kp N7            &kp N8          &kp N9          &kp N0          &kp EQUAL
+  &kp ESC       &kp Q      &kp W      &kp E       &kp R           &kp T                                        &kp Y          &kp U             &kp I           &kp O           &kp P           &kp MINUS
+  &kp TAB       HRML(A,    S,         D,          F)              &kp G                                        &kp H          HRMR(J,           K,              L,              SEMI)           &kp APOS
+  &kp LSHFT     &kp Z      &kp X      &kp C       &kp V           &kp B          &trans         &trans         &kp N          &kp M             &kp COMMA       &kp DOT         &kp FSLH        &mt RSHFT BSLH
+                           &kp LGUI   &kp LCTRL   &kp LALT        &mt LSHFT TAB  &lt NUM RET    &lt NAV SPACE  &lt MOUSE RET  &mo FN            &kp LBKT        &kp RBKT,
   KNOBS
 )
 
@@ -65,42 +72,37 @@ ZMK_LAYER(nav,
   &trans  &trans  &trans  &trans  &trans  &trans                    &kp PG_UP   &kp BSPC   &up         &kp DEL      &trans   HOME_MT
   &trans  &trans  &trans  &trans  &trans  &trans                    &kp PG_DN   &left      &down       &right       &trans   END_MT
   &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  NEXT_APP    PREV_WIN   &win_up     NEXT_WIN     &trans   &trans
-                  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &win_left  &win_down   &win_right,
-  KNOBS
+                  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &win_left  &win_down   &win_right
 )
 
-ZMK_LAYER(symbol,
-  &none  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                     &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-  &none  &none     &none   &none     &none     &none                      &none      &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT  &kp F12
+ZMK_LAYER(function,
+  &none  &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
+  &none  &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
+  &none  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                   &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
+  &none  &none     CUT     COPY      PASTE     &none    &none    &none  &none      &none     &none      &none     &none     &kp F12
+                   &none   &none     &none     &none    &none    &none  &none      &none     &none      &none
+)
+
+ZMK_LAYER(number,
+  &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &none
+  &none  &none     &none   &none     &none     &none                      &none      &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT  &none
   &none  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                     &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &none
-  &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &none    &none  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &none
-                   &none   &none     &none     &none      &none    &none  &none      &none     &none      &none,
-  KNOBS
+  &none  &none     CUT     COPY      PASTE     &none      &none    &none  &none      &none     &none      &none     &none     &none
+                   &none   &none     &none     &none      &none    &none  &none      &none     &none      &none
 )
 
-ZMK_LAYER(mouse,
-  &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans          &trans           &trans   &bspc
-  &trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans   &del
-  &trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &mkp MB4        &trans          &mkp MB5         &trans   &trans
-                  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT,
-  KNOBS
-)
-
-ZMK_LAYER(settings,
+ZMK_LAYER(system,
   &bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                &trans    &trans      &trans        &trans      &trans  &trans
   &out OUT_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                             &trans    &kp C_MUTE  &kp C_VOL_UP  &kp C_PP    &trans  &trans
   &out OUT_BLE  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp PSCRN        &kp K_CMENU      &trans                                      &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &trans  &trans
   &trans        &trans           &trans           &trans           &trans           &trans           &rgb_ug RGB_TOG    &trans  &trans    &trans      &trans        &trans      &trans  &trans
-                                 &trans           &trans           &trans           &trans           &trans             &trans  &trans    &trans      &trans        &trans,
-  KNOBS
+                                 &trans           &trans           &trans           &trans           &trans             &trans  &trans    &trans      &trans        &trans
 )
 
-ZMK_LAYER(function,
-  &none  &none     &none   &none     &none     &none                      &none      &none     &none      &none     &none     &none
-  &none  &none     &none   &none     &none     &none                      &none      &none     &none      &none     &none     &none
-  &none  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                     &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-  &none  &none     &none   &none     &none     &none      &none    &none  &none      &none     &none      &none     &none     &kp F12
-                   &none   &none     &none     &none      &none    &none  &none      &none     &none      &none,
-  KNOBS
+ZMK_LAYER(mouse,
+  &trans  &trans  &trans  &trans  &trans  &trans                    &trans   &trans   &trans   &trans   &trans   &bspc
+  &trans  &trans  &trans  &trans  &trans  &trans                    U_WH_U   U_CL_L   U_MS_U   U_CL_R   &trans   &del
+  &trans  &trans  &trans  &trans  &trans  &trans                    U_WH_D   U_MS_L   U_MS_D   U_MS_R   &trans   &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   U_CL_B   &trans   U_CL_F   &trans   &trans
+                  &trans  &trans  &trans  &trans  &trans    &trans  &trans   U_WH_L   &trans   U_WH_R
 )
