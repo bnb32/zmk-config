@@ -131,7 +131,7 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 #define HRMR(k0,k1,k2,k3) &hmr RALT k0 &hmr RCTRL k1 &hmr RSHFT k2 &hmr RGUI k3
-#define HRML(k0,k1,k2,k3) &hml RGUI k0 &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
+#define HRML(k1,k2,k3) &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // MACROS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
