@@ -26,7 +26,7 @@ layers:
   - P
   - '-'
   - TAB
-  - A
+  - {t: A, h: RGUI}
   - {t: S, h: LSHFT}
   - {t: D, h: LCTRL}
   - {t: F, h: LALT}
