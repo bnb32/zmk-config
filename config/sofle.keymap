@@ -34,7 +34,6 @@
 #define SYS 4
 #define MOUSE 5
 
-#include <behaviors/num_word.dtsi> // requires auto-layer module
 #include "mouse.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -45,12 +44,14 @@
 #include "custom.dtsi"
 #include "combos.dtsi"
 
+/*
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
     ignored-key-positions = <MOUSE_KEYS>;
     ignored-layers = <MOUSE>;
 )
+*/
 
 /* Keymap ----------------------------------------------------------------------------------------------------------- */
 
