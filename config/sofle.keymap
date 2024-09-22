@@ -24,5 +24,11 @@
 */
 
 #define X_TOP &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+#define X_RT1 &none
+#define X_RT2 &none
+#define X_LT1 &none
+#define X_LT2 &none
+#define X_LE &none
+#define X_RE &none
 
 #include "base.keymap"
