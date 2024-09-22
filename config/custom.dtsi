@@ -50,7 +50,7 @@
 
 / {
     behaviors {
-        ht {
+        ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -60,7 +60,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        mouse_tog {
+        mouse_tog: mouse_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "tap-preferred";
@@ -70,7 +70,7 @@
             bindings = <&mo MOUSE>, <&tog MOUSE>;
         };
 
-        nav_tog {
+        nav_tog: nav_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "tap-preferred";
@@ -168,6 +168,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 #define COPY &kp LC(INS)
 #define PASTE &kp LS(INS)
 #define SAVE &kp LC(S)
+
+#define MOUSE_TOG &ht
 
 / {
 
