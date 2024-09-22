@@ -29,11 +29,10 @@
 
 #define DEF 0
 #define NAV 1
-#define NUM 2
+#define FN 2
 #define SYM 3
-#define FN 4
-#define SYS 5
-#define MOUSE 6
+#define SYS 4
+#define MOUSE 5
 
 #include "mouse.dtsi"
 #include <behaviors.dtsi>
@@ -65,7 +64,7 @@ ZMK_LAYER(default,
   &kp ESC       &kp Q      &kp W      &kp E       &kp R           &kp T                                        &kp Y          &kp U             &kp I           &kp O           &kp P           &kp MINUS
   &kp TAB       HRML(A,    S,         D,          F)              &kp G                                        &kp H          HRMR(J,           K,              L,              SEMI)           &kp APOS
   &kp LSHFT     &kp Z      &kp X      &kp C       &kp V           &kp B          &kp C_MUTE     &trans         &kp N          &kp M             &kp COMMA       &kp DOT         &kp FSLH        &mt RSHFT BSLH
-                           &kp LGUI   &kp LCTRL   &mo NUM         &mt LSHFT TAB  &lt SYM RET    &lt NAV SPACE  &mo MOUSE      &mo FN            &kp LBKT        &kp RBKT,
+                           &kp LGUI   &kp LCTRL   &kp LALT        &mt LSHFT TAB  &lt SYM RET    &lt NAV SPACE  &mo MOUSE      &mo FN            &kp LBKT        &kp RBKT,
   KNOBS
 )
 
@@ -77,28 +76,20 @@ ZMK_LAYER(nav,
                   &trans     &trans     &trans      &trans  &trans    &trans  &trans      &trans     &trans      &trans
 )
 
-ZMK_LAYER(number,
-  &none       &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
-  &kp TILDE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
-  &kp GRAVE   &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                   &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
-  &none       &none     &none   &none     &none     &none    &none    &none  &none      &none     &none      &none     &none     &kp none
-                        &none   &none     &none     &none    &none    &none  &none      &none     &none      &none
-)
-
-ZMK_LAYER(symbol,
-  &none  &none     &none   &none     &none     &none                      &none      &none     &none      &none     &none       &none
-  &none  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                     &none      &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT    &kp UNDER
-  &none  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0                     &none      &none     &none      &none     &kp COLON   &kp DQT
-  &none  &none     CUT     COPY      PASTE     &none      &none    &none  &none      &none     &kp LT     &kp GT    &kp QMARK   &kp PIPE
-                   &none   &none     &none     &none      &none    &none  &none      &none     &none      &none
-)
-
 ZMK_LAYER(function,
   &none  &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
   &none  &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
   &none  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                   &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
   &none  &none     CUT     COPY      PASTE     &none    &none    &none  &none      &none     &none      &none     &none     &kp F12
                    &none   &none     &none     &none    &none    &none  &none      &none     &none      &none
+)
+
+ZMK_LAYER(symbol,
+  &none       &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
+  &kp TILDE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
+  &kp GRAVE   &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                   &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
+  &none       &none     CUT     COPY      PASTE     &none    &none    &none  &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &none     &none
+                        &none   &none     &none     &none    &none    &none  &none      &none     &none      &none
 )
 
 ZMK_LAYER(system,
