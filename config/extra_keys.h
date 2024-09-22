@@ -1,45 +1,30 @@
-// The default layout has 34 keys. Additional keys can be added by pre-setting any of
+// The default layout has 42 keys. Additional keys can be added by pre-setting any of
 // the macros defined in this file to one or more keys before sourcing this file.
 
-/* left of left half */
-#if !defined X_LT  // top row, left
-    #define X_LT
-#endif
-#if !defined X_LM  // middle row, left
-    #define X_LM
-#endif
-#if !defined X_LB  // bottom row, left
-    #define X_LB
-#endif
-#if !defined X_LH  // thumb row, left
-    #define X_LH
+#if !defined X_TOP // top row for solfe
+    #define X_TOP
 #endif
 
-/* between left and right half */
-#if !defined X_MT  // top row, middle
-    #define X_MT
-#endif
-#if !defined X_MM  // middle row, middle
-    #define X_MM
-#endif
-#if !defined X_MB  // bottom row, middle
-    #define X_MB
-#endif
-#if !defined X_MH  // thumb row, middle
-    #define X_MH
+#if !defined X_RT1 // extra furthest right thumb for solfe
+    #define X_RT1
 #endif
 
-/* right of right half */
-#if !defined X_RT  // top row, right
-    #define X_RT
-#endif
-#if !defined X_RM  // middle row, right
-    #define X_RM
-#endif
-#if !defined X_RB  // bottom row, right
-    #define X_RB
-#endif
-#if !defined X_RH  // thumb row, right
-    #define X_RH
+#if !defined X_RT1 // extra second furthest right thumb for solfe
+    #define X_RT2
 #endif
 
+#if !defined X_LT1 // extra furthest left thumb for solfe
+    #define X_LT1
+#endif
+
+#if !defined X_LT2 // extra second furthest left thumb for solfe
+    #define X_LT2
+#endif
+
+#if !defined X_LE // extra left encoder knob
+    #define X_LE
+#endif
+
+#if !defined X_RE // extra right encoder knob
+    #define X_RE
+#endif

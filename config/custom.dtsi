@@ -25,24 +25,27 @@
 
 #include "zmk-helpers/key-labels/sofle.h"
 
-#define KEYS_L LN0 LN1 LN2 LN3 LN4 LN5 \
-               LT0 LT1 LT2 LT3 LT4 LT5 \
-               LM0 LM1 LM2 LM3 LM4 LM5 \
-               LB0 LB1 LB2 LB3 LB4 LB5 // left hand
-#define KEYS_R RN0 RN1 RN2 RN3 RN4 RN5 \
-               RT0 RT1 RT2 RT3 RT4 RT5 \
-               RM0 RM1 RM2 RM3 RM4 RM5 \
-               RB0 RB1 RB2 RB3 RB4 RB5 // right hand
-#define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4 // thumbs
+
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 \
+               LM0 LM1 LM2 LM3 LM4 \
+               LB0 LB1 LB2 LB3 LB4 // left hand
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 \
+               RM0 RM1 RM2 RM3 RM4 \
+               RB0 RB1 RB2 RB3 RB4 // right hand
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // thumbs
 
 #define MOUSE_KEYS = RT0 RT1 RT2 RT3 \
                      RM0 RM1 RM2 RM3 \
-                     RB1 RB2 RB3 RB4 \
-                     RH2 RH3 RH4
+                     RB1 RB2 RB3 RB4
 
 // Shorten default mod tap tapping term
 &mt {
   tapping-term-ms = <200>;
+};
+
+// Increase default layer tap tapping term
+&lt {
+  tapping-term-ms = <220>;
 };
 
 / {
@@ -119,7 +122,7 @@ MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
   ZMK_HOLD_TAP(NAME, \
     flavor = "balanced"; \
-    tapping-term-ms = <200>; \
+    tapping-term-ms = <220>; \
     quick-tap-ms = <QUICK_TAP_MS>; \
     require-prior-idle-ms = <200>; \
     bindings = <HOLD>, <TAP>; \
