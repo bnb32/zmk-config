@@ -48,9 +48,6 @@
   tapping-term-ms = <220>;
 };
 
-#define MOUSE_TOG &tog MOUSE
-#define NAV_TOG &tog NAV
-
 / {
     behaviors {
         ht: hold_tap {
@@ -63,29 +60,20 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /*
-        mouse_tog: mouse_tog {
+        lht: layer_ht {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
-            bindings = <&mo MOUSE>, <&tog MOUSE>;
+            bindings = <&mo>, <&tog>;
         };
-
-        nav_tog: nav_tog {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&mo NAV>, <&tog NAV>;
-        };
-        */
     };
 };
+
+#define MOUSE_TOG &lht MOUSE MOUSE
+#define NAV_TOG &lht NAV NAV
 
 
 // TAP DANCE --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
