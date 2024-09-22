@@ -162,8 +162,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 #define PASTE &kp LS(INS)
 #define SAVE &kp LC(S)
 
-#define MOUSE_TOG &ht
-
 / {
 
   macros {
