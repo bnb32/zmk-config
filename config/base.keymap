@@ -97,8 +97,8 @@ ZMK_LAYER(system,
 
 ZMK_LAYER(mouse,
   X_TOP
-  &trans  &trans  &trans  &trans  &trans  &trans                  U_WH_U   U_CL_L   U_MS_U   U_CL_R   U_CL_F  &bspc
-  &trans  &trans  &trans  &trans  &trans  &trans                  U_WH_D   U_MS_L   U_MS_D   U_MS_R   U_CL_B  &del
-  &trans  &trans  &trans  &trans  &trans  &trans  X_LE    X_RE    &trans   U_WH_L   &trans   U_WH_R   &trans  &trans
-                  X_LT1   X_LT2  &none    &none   &none   &none   &none    &none    X_RT2    X_RT1
+  &trans  &trans  &trans  &trans  &trans      &trans                  U_WH_U   U_CL_L   U_MS_U   U_CL_R   U_CL_F  &bspc
+  &trans  &trans  &trans  &trans  &trans      &trans                  U_WH_D   U_MS_L   U_MS_D   U_MS_R   U_CL_B  &del
+  &trans  &trans  &trans  &trans  &trans      &trans  X_LE    X_RE    &trans   U_WH_L   &trans   U_WH_R   &trans  &trans
+                  X_LT1   X_LT2   &tog MOUSE  &none   &none   &none   &none    &none    X_RT2    X_RT1
 )
