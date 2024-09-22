@@ -23,7 +23,7 @@
           ╰────────────────────┴────────────────────╯
 */
 
-#include "zmk-helpers/key-labels/sofle.h"
+#include "zmk-helpers/key-labels/42.h"
 
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 \
