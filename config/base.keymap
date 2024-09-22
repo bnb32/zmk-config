@@ -60,7 +60,7 @@ ZMK_LAYER(default,
   &kp ESC    &kp Q    &kp W  &kp E  &kp R       &kp T                                      &kp Y       &kp U    &kp I      &kp O    &kp P     &kp MINUS
   &kp TAB    HRML(A,  S,     D,     F)          &kp G                                      &kp H       HRMR(J,  K,         L,       SEMI)     &kp APOS
   &kp LSHFT  &kp Z    &kp X  &kp C  &kp V       &kp B          X_LE         X_RE           &kp N       &kp M    &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT BSLH
-                      X_LT1  X_LT2  &nav_tog    &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  &mouse_tog  &mo FN   X_RT2      X_RT1
+                      X_LT1  X_LT2  NAV_TOG     &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  MOUSE_TOG   &mo FN   X_RT2      X_RT1
 )
 
 ZMK_LAYER(nav,
@@ -68,7 +68,7 @@ ZMK_LAYER(nav,
   &trans  &trans  &trans     &win_up    &trans      &trans                    &kp PG_UP   &kp BSPC   &up         &kp DEL      FORMAT   &kp INS
   &trans  &trans  &win_left  &win_down  &win_right  &trans                    &kp PG_DN   &left      &down       &right       CLOSE    &kp HOME
   &trans  &trans  &trans     &trans     &trans      &trans  X_LE      X_RE    NEXT_APP    PREV_WIN   &trans      NEXT_WIN     &trans   &kp END
-                  X_LT1      X_LT2      &nav_tog    &trans  &trans    &trans  &trans      &trans     X_RT2       X_RT1
+                  X_LT1      X_LT2      NAV_TOG     &trans  &trans    &trans  &trans      &trans     X_RT2       X_RT1
 )
 
 ZMK_LAYER(function,
@@ -100,5 +100,5 @@ ZMK_LAYER(mouse,
   &trans  &trans  &trans  &trans  &trans      &trans                  U_WH_U      U_CL_L   U_MS_U   U_CL_R   U_CL_F  &bspc
   &trans  &trans  &trans  &trans  &trans      &trans                  U_WH_D      U_MS_L   U_MS_D   U_MS_R   U_CL_B  &del
   &trans  &trans  &trans  &trans  &trans      &trans  X_LE    X_RE    &trans      U_WH_L   &trans   U_WH_R   &trans  &trans
-                  X_LT1   X_LT2   &none       &none   &none   &none   &mouse_tog  &none    X_RT2    X_RT1
+                  X_LT1   X_LT2   &none       &none   &none   &none   MOUSE_TOG   &none    X_RT2    X_RT1
 )

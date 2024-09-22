@@ -48,6 +48,9 @@
   tapping-term-ms = <220>;
 };
 
+#define MOUSE_TOG &tog MOUSE
+#define NAV_TOG &tog NAV
+
 / {
     behaviors {
         ht: hold_tap {
@@ -60,6 +63,7 @@
             bindings = <&kp>, <&kp>;
         };
 
+        /*
         mouse_tog: mouse_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
@@ -79,6 +83,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&mo NAV>, <&tog NAV>;
         };
+        */
     };
 };
 
