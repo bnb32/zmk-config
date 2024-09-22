@@ -40,7 +40,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "zmk-helpers/helper.h"
 #include "custom.dtsi"
-#include "combos.dtsi"
 
 /*
 // smart-mouse, requires PR #1366
