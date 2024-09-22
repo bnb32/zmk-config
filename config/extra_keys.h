@@ -9,7 +9,7 @@
     #define X_RT1
 #endif
 
-#if !defined X_RT1 // extra second furthest right thumb for solfe
+#if !defined X_RT2 // extra second furthest right thumb for solfe
     #define X_RT2
 #endif
 
