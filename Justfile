@@ -84,8 +84,8 @@ clean-nix:
 draw:
     #!/usr/bin/env bash
     set -euo pipefail
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/sofle.keymap" >"{{ draw }}/base.yaml"
-    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "sofle/rev1" >"{{ draw }}/base.svg"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/corne.keymap" >"{{ draw }}/base.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "splitkb/aurora/corne/rev1" >"{{ draw }}/base.svg"
 
 # initialize west
 init:

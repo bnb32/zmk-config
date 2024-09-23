@@ -26,10 +26,9 @@
 
 #define DEF 0
 #define NAV 1
-#define FN 2
-#define SYM 3
-#define SYS 4
-#define MOUSE 5
+#define SYM 2
+#define SYS 3
+#define MOUSE 4
 
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -56,34 +55,26 @@ ZMK_CONDITIONAL_LAYER(settings, SYM NAV, SYS)
 
 ZMK_LAYER(default,
   X_TOP
-  &kp ESC    &kp Q    &kp W  &kp E  &kp R       &kp T                                      &kp Y       &kp U    &kp I      &kp O    &kp P     &kp MINUS
-  &kp TAB    HRML(A,  S,     D,     F)          &kp G                                      &kp H       HRMR(J,  K,         L,       SEMI)     &kp APOS
-  &kp LSHFT  &kp Z    &kp X  &kp C  &kp V       &kp B          X_LE         X_RE           &kp N       &kp M    &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT BSLH
-                      X_LT1  X_LT2  NAV_TOG     &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  MOUSE_TOG   &mo FN   X_RT2      X_RT1
+  &kp ESC    &kp Q    &kp W  &kp E  &kp R       &kp T                                      &kp Y       &kp U       &kp I      &kp O    &kp P     &kp MINUS
+  &kp TAB    HRML(A,  S,     D,     F)          &kp G                                      &kp H       HRMR(J,     K,         L,       SEMI)     &kp APOS
+  &kp LSHFT  &kp Z    &kp X  &kp C  &kp V       &kp B          X_LE         X_RE           &kp N       &kp M       &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT BSLH
+                      X_LT1  X_LT2  SYM_TOG     &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  MOUSE_TOG   NAV_TOG     X_RT2      X_RT1
 )
 
-ZMK_LAYER(nav,
+ZMK_LAYER(fn_nav,
   X_TOP
-  &trans  &trans  &trans    &win_up    &trans      &trans                    &kp PG_UP   &kp BSPC   &up         &kp DEL      FORMAT   &kp INS
-  &trans  &trans  &trans    &trans     &trans      &trans                    &kp PG_DN   &left      &down       &right       CLOSE    &kp HOME
+  &kp F1  &kp F2  &kp F3    &kp F4     &kp F5      &kp F6                    &kp PG_UP   &kp BSPC   &up         &kp DEL      FORMAT   &kp INS
+  &kp F7  &kp F8  &kp F9    &kp F10    &kp F11     &kp F12                   &kp PG_DN   &left      &down       &right       CLOSE    &kp HOME
   &trans  &trans  &trans    &trans     &trans      &trans  X_LE      X_RE    NEXT_APP    PREV_WIN   &trans      NEXT_WIN     &trans   &kp END
-                  X_LT1     X_LT2      NAV_TOG     &trans  &trans    &trans  &trans      &trans     X_RT2       X_RT1
+                  X_LT1     X_LT2      &trans      &trans  &trans    &trans  &trans      NAV_TOG    X_RT2       X_RT1
 )
 
-ZMK_LAYER(function,
-  X_TOP
-  &none  &none     &none   &none     &none     &none                    &none      &none     &none      &none     &none     &none
-  &none  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                   &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-  &none  &none     CUT     COPY      PASTE     &none    X_LE     X_RE   &none      &none     &none      &none     &none     &kp F12
-                   X_LT1   X_LT2     &none     &none    &none    &none  &none      &none     X_RT2      X_RT1
-)
-
-ZMK_LAYER(symbol,
+ZMK_LAYER(num_sym,
   X_TOP
   &kp TILDE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                 &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
   &kp GRAVE   &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                    &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
   &none       &none     CUT     COPY      PASTE     &none      X_LE    X_RE   &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &none     &none
-                        X_LT1   X_LT2     &none     &none      &none   &none  &none      &none     X_RT2      X_RT1
+                        X_LT1   X_LT2     SYM_TOG   &none      &none   &none  &none      &none     X_RT2      X_RT1
 )
 
 ZMK_LAYER(system,
@@ -98,6 +89,6 @@ ZMK_LAYER(mouse,
   X_TOP
   &trans  &trans  &trans     &win_up    &trans      &trans                  U_WH_U      U_CL_L   U_MS_U   U_CL_R   U_CL_F  &bspc
   &trans  &trans  &win_left  &win_down  &win_right  &trans                  U_WH_D      U_MS_L   U_MS_D   U_MS_R   U_CL_B  &del
-  &trans  &trans  &trans     &trans     &trans      &trans  X_LE    X_RE    &trans      U_WH_L   &trans   U_WH_R   &trans  &trans
+  &trans  &trans  &trans     &trans     &trans      &trans  X_LE    X_RE    U_CL_L      U_WH_L   &trans   U_WH_R   &trans  &trans
                   X_LT1      X_LT2      &none       &none   &none   &none   MOUSE_TOG   &none    X_RT2    X_RT1
 )

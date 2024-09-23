@@ -48,35 +48,8 @@
   tapping-term-ms = <220>;
 };
 
-/ {
-    behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
 
-        lht: layer_ht {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&mo>, <&tog>;
-        };
-    };
-};
-
-#define NAV_TOG &lht NAV NAV
-#define MOUSE_TOG &lht MOUSE MOUSE
-
-
-// TAP DANCE --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Tap and tap dance combos -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #define MAKE_TAP_DANCE(NAME, TAP, DANCE) \
   ZMK_TAP_DANCE(NAME, \
@@ -89,15 +62,12 @@
     bindings = <TAP>, <DANCE>; \
   )
 
-// action which performs first arg on tap, second on double tap, and third on one tap and then hold
 #define MAKE_TAP_DANCE_HOLD(NAME, TAP, DANCE, HOLD) \
   MAKE_TAP_DANCE(NAME, &kp TAP, &ht HOLD DANCE)
 
-// action which performs first arg on hold, second on tap, and third on double tap
 #define MAKE_HOLD_TAP_DANCE(NAME, HOLD, TAP, DANCE) \
   MAKE_TAP_DANCE(NAME, &ht HOLD TAP, &kp DANCE)
 
-// action which performs first arg on hold, second on tap, and third on double tap, and fourth on one tap plus hold
 #define MAKE_HOLD_TAP_DANCE_HOLD(NAME, HOLD1, TAP, DANCE, HOLD2) \
   MAKE_TAP_DANCE(NAME, &ht HOLD1 TAP, &ht HOLD2 DANCE)
 
@@ -110,11 +80,31 @@
     bindings = <HOLD>, <TAP>; \
   )
 
-MAKE_NAV_HOLD_TAP(nht, &kp, &kp)
+#define MAKE_HOLD_TAP(NAME, HOLD, TAP) \
+  ZMK_HOLD_TAP(NAME, \
+    flavor = "balanced"; \
+    tapping-term-ms = <220>; \
+    quick-tap-ms = <150>; \
+    require-prior-idle-ms = <100>; \
+    bindings = <HOLD>, <TAP>; \
+  )
 
-// navigation action which performs first arg on hold, second on tap, and third on double tap, and fourth on one tap plus hold
+#define MAKE_LAYER_HOLD_TAP(NAME, HOLD, TAP) \
+  ZMK_HOLD_TAP(NAME, \
+    flavor = "balanced"; \
+    tapping-term-ms = <220>; \
+    quick-tap-ms = <150>; \
+    require-prior-idle-ms = <100>; \
+    bindings = <HOLD>, <TAP>; \
+  )
+
 #define MAKE_NAV_HOLD_TAP_DANCE_HOLD(NAME, HOLD1, TAP, DANCE, HOLD2) \
   MAKE_NAV_TAP_DANCE(NAME, &nht HOLD1 TAP, &nht HOLD2 DANCE)
+
+
+MAKE_NAV_HOLD_TAP(nht, &kp, &kp)
+MAKE_HOLD_TAP(ht, &kp, &kp)
+MAKE_LAYER_HOLD_TAP(lht, &mo, &tog)
 
 MAKE_TAP_DANCE_HOLD(bspc, BSPC, BSPC, LC(BSPC))
 MAKE_TAP_DANCE_HOLD(del, DEL, DEL, LC(DEL))
@@ -126,6 +116,9 @@ MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
 
 #define HOME_MT &mt LC(HOME) HOME
 #define END_MT &mt LC(END) END
+#define NAV_TOG &lht NAV NAV
+#define MOUSE_TOG &lht MOUSE MOUSE
+#define SYM_TOG &lht SYM SYM
 
 
 // HOMEROW MODS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
