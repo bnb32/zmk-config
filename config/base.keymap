@@ -38,10 +38,11 @@
 
 #define DEF 0
 #define NAV 1
-#define SYM 2
-#define FN 3
-#define SYS 4
-#define MOUSE 5
+#define NUM 2
+#define SYM 3
+#define FN 4
+#define SYS 5
+#define MOUSE 6
 
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -58,10 +59,10 @@ ZMK_LAYER(default,
   &kp ESC    &kp Q    &kp W  &kp E  &kp R       &kp T                                      &kp Y         &kp U       &kp I      &kp O    &kp P     &kp MINUS
   &kp TAB    HRML(A,  S,     D,     F)          &kp G                                      &kp H         HRMR(J,     K,         L,       SEMI)     &kp APOS
   &kp LSHFT  &kp Z    &kp X  &kp C  &kp V       &kp B                   X_ENC              &kp N         &kp M       &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT BSLH
-                             X_LT   SYM_TOG     &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  &smart_mouse  FN_TOG      X_RT
+                             X_LT   SMART_NUM   &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  &smart_mouse  FN_TOG      X_RT
 )
 
-ZMK_LAYER(nav,
+ZMK_LAYER(navigation,
   X_TOP
   &trans  &trans  &trans    &trans    &trans      &trans                    &kp PG_UP   &kp BSPC   &up      &kp DEL     FORMAT   &kp INS
   &trans  &trans  &trans    &trans    &trans      &trans                    &kp PG_DN   &left      &down    &right      CLOSE    &kp HOME
@@ -69,12 +70,20 @@ ZMK_LAYER(nav,
                             X_LT      &trans      &trans  &trans    &trans  &trans      NAV_TOG    X_RT
 )
 
-ZMK_LAYER(num_sym,
+ZMK_LAYER(number,
   X_TOP
-  &kp TILDE   &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                 &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
-  &kp GRAVE   &kp N1       &kp N2  &kp N3    &kp N4    &kp N5                    &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
-  &kp PSCRN   &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK       X_ENC      &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &none     &none
-                                   X_LT      SYM_TOG   &none      &none   &none  &none      &none     X_RT
+  &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
+  &trans     &trans    &trans    &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &trans
+  &trans     &trans    &trans    &trans    &trans    &trans        X_ENC       &trans     &trans    &trans     &trans    &trans    &trans
+                                 X_LT      NUM_TOG   &none     &none   &none   &none      &none     X_RT
+)
+
+ZMK_LAYER(symbol,
+  X_TOP
+  &kp TILDE  &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                 &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
+  &trans     &trans       &trans  &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &trans
+  &kp PSCRN  &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK       X_ENC      &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &none     &none
+                                  X_LT      &none     &none      &none   &none  &none      &none     X_RT
 )
 
 ZMK_LAYER(function,
@@ -82,9 +91,8 @@ ZMK_LAYER(function,
   &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                    &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
   &trans    &trans    &trans    &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &kp F12
   &trans    &trans    &trans    &trans    &trans    &trans       X_ENC        &trans     &trans    &trans     &trans    &trans    &trans
-                                X_LT      SYM_TOG   &none    &none   &none    &none      FN_TOG    X_RT
+                                X_LT      &none     &none    &none   &none    &none      FN_TOG    X_RT
 )
-
 
 ZMK_LAYER(system,
   X_TOP
@@ -99,5 +107,5 @@ ZMK_LAYER(mouse,
   &kp K_CANCEL  &trans  &trans     &win_up    &trans      &trans                  U_WH_U      U_CL_L   U_MS_U   U_CL_R   U_CL_F  &bspc
   &trans        &trans  &win_left  &win_down  &win_right  &trans                  U_WH_D      U_MS_L   U_MS_D   U_MS_R   U_CL_B  &del
   &trans        &trans  &trans     &trans     &trans      &trans      X_ENC       U_CL_L      U_WH_L   &trans   U_WH_R   &trans  &trans
-                                   X_LT       &none       &none   &none   &none   &none       &none    X_RT
+                                   X_LT       &none       &none   &none   &none   MOUSE_TOG   &none    X_RT
 )

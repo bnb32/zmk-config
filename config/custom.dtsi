@@ -59,7 +59,7 @@ ZMK_TRI_STATE(smart_mouse,
 // Tap and tap dance combos -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num SYM 0
+#define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -68,7 +68,7 @@ ZMK_HOLD_TAP(smart_num,
 )
 ZMK_TAP_DANCE(num_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word SYM>, <&sl SYM>;  // reverse this for sticky-num on single tap
+    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
 
 #define MAKE_TAP_DANCE(NAME, TAP, DANCE) \
@@ -139,6 +139,7 @@ MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
 #define NAV_TOG &lht NAV NAV
 #define MOUSE_TOG &lht MOUSE MOUSE
 #define SYM_TOG &lht SYM SYM
+#define NUM_TOG &lht NUM NUM
 #define FN_TOG &lht FN FN
 
 
