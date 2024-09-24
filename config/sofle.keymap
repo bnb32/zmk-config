@@ -28,4 +28,5 @@
 #define X_LT &none &none
 #define X_ENC &none &none
 
+#include "zmk-helpers/key-labels/sofle.h"
 #include "base.keymap"
