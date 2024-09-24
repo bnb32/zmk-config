@@ -40,28 +40,28 @@ layers:
   - {t: num_sym, h: num_sym}
   - {t: TAB, h: LSHFT}
   - {t: RET, h: num_sym}
-  - {t: SPACE, h: fn_nav}
-  - {t: mouse, h: mouse}
-  - {t: fn_nav, h: fn_nav}
-  fn_nav:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
+  - {t: SPACE, h: nav}
+  - '&smart_mouse'
+  - {t: function, h: function}
+  nav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PG UP
   - BSPC
   - '&up'
   - DEL
   - Sft+AGr+ F
   - INS
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PG DN
   - '&left'
   - '&down'
@@ -85,7 +85,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: fn_nav, h: fn_nav}
+  - {t: nav, h: nav}
   num_sym:
   - '~'
   - '!'
@@ -111,12 +111,12 @@ layers:
   - '9'
   - '0'
   - '='
-  - ''
-  - ''
+  - PSCRN
+  - CMENU
   - Ctl+ X
   - Ctl+ INS
   - Sft+ INS
-  - ''
+  - CLCK
   - '{'
   - '}'
   - '['
@@ -129,6 +129,49 @@ layers:
   - ''
   - ''
   - ''
+  function:
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: num_sym, h: num_sym}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: function, h: function, type: held}
   system:
   - BT CLR
   - {t: BT, h: '0'}
@@ -157,9 +200,9 @@ layers:
   - OUT BLE
   - RGB BRD
   - RGB BRI
-  - PSCRN
-  - CMENU
   - RGB TOG
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -173,7 +216,7 @@ layers:
   - ''
   - ''
   mouse:
-  - {t: ▽, type: trans}
+  - CANCEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&win_up'
@@ -213,5 +256,5 @@ layers:
   - ''
   - ''
   - ''
-  - {t: mouse, h: mouse, type: held}
+  - {t: mouse, h: mouse}
   - ''
