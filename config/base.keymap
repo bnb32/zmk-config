@@ -27,10 +27,16 @@
 #include <behaviors/num_word.dtsi> // requires auto-layer module
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 #define _BT_SEL_KEYS_ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-#define _RGB_HOME_ &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF
-#define _RGB_BOTTOM_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG &none &none
+
+#ifdef CONFIG_RGB
+    #include <dt-bindings/zmk/rgb.h>
+    #define _RGB_HOME_ &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF
+    #define _RGB_BOTTOM_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG &none &none
+#else
+    #define _RGB_HOME_ &none &none &none &none &none
+    #define _RGB_BOTTOM_ &none &none &none &none &none
+#endif
 
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/greek.dtsi"
@@ -56,13 +62,13 @@ ZMK_CONDITIONAL_LAYER(settings, SYM NAV, SYS)
 
 ZMK_LAYER(default,
   X_TOP
-  &kp ESC    &kp Q    &kp W  &kp E  &kp R       &kp T                                      &kp Y         &kp U       &kp I      &kp O    &kp P     &kp MINUS
-  &kp TAB    HRML(A,  S,     D,     F)          &kp G                                      &kp H         HRMR(J,     K,         L,       SEMI)     &kp APOS
-  &kp LSHFT  &kp Z    &kp X  &kp C  &kp V       &kp B                   X_ENC              &kp N         &kp M       &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT BSLH
-                             X_LT   SMART_NUM   &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  &smart_mouse  FN_TOG      X_RT
+  &kp ESC    &kp Q    &kp W  &kp E  &kp R   &kp T                                      &kp Y         &kp U       &kp I      &kp O    &kp P     &kp MINUS
+  &kp TAB    HRML(A,  S,     D,     F)      &kp G                                      &kp H         HRMR(J,     K,         L,       SEMI)     &kp APOS
+  &kp LSHFT  &kp Z    &kp X  &kp C  &kp V   &kp B                   X_ENC              &kp N         &kp M       &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT BSLH
+                             X_LT   FN_TOG  &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  &smart_mouse  SMART_NUM   X_RT
 )
 
-ZMK_LAYER(navigation,
+ZMK_LAYER(nav,
   X_TOP
   &trans  &trans  &trans    &trans    &trans      &trans                    &kp PG_UP   &kp BSPC   &up      &kp DEL     FORMAT   &kp INS
   &trans  &trans  &trans    &trans    &trans      &trans                    &kp PG_DN   &left      &down    &right      CLOSE    &kp HOME
@@ -75,7 +81,7 @@ ZMK_LAYER(number,
   &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
   &trans     &trans    &trans    &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &trans
   &trans     &trans    &trans    &trans    &trans    &trans        X_ENC       &trans     &trans    &trans     &trans    &trans    &trans
-                                 X_LT      NUM_TOG   &none     &none   &none   &none      &none     X_RT
+                                 X_LT      &none     &none     &none   &none   &none      NUM_TOG   X_RT
 )
 
 ZMK_LAYER(symbol,
@@ -91,7 +97,7 @@ ZMK_LAYER(function,
   &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                    &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
   &trans    &trans    &trans    &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &kp F12
   &trans    &trans    &trans    &trans    &trans    &trans       X_ENC        &trans     &trans    &trans     &trans    &trans    &trans
-                                X_LT      &none     &none    &none   &none    &none      FN_TOG    X_RT
+                                X_LT      FN_TOG    &none    &none   &none    &none      &none     X_RT
 )
 
 ZMK_LAYER(system,
@@ -107,5 +113,5 @@ ZMK_LAYER(mouse,
   &kp K_CANCEL  &trans  &trans     &win_up    &trans      &trans                  U_WH_U      U_CL_L   U_MS_U   U_CL_R   U_CL_F  &bspc
   &trans        &trans  &win_left  &win_down  &win_right  &trans                  U_WH_D      U_MS_L   U_MS_D   U_MS_R   U_CL_B  &del
   &trans        &trans  &trans     &trans     &trans      &trans      X_ENC       U_CL_L      U_WH_L   &trans   U_WH_R   &trans  &trans
-                                   X_LT       &none       &none   &none   &none   MOUSE_TOG   &none    X_RT
+                                   X_LT       &none       &none   &none   &none   &none       &none    X_RT
 )

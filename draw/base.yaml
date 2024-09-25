@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - {t: \, h: RSHFT}
-  - {t: num_sym, h: num_sym}
+  - {t: function, h: function}
   - {t: TAB, h: LSHFT}
-  - {t: RET, h: num_sym}
+  - {t: RET, h: symbol}
   - {t: SPACE, h: nav}
   - '&smart_mouse'
-  - {t: function, h: function}
+  - {t: '&num_dance', h: number}
   nav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -86,19 +86,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: nav, h: nav}
-  num_sym:
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - +
+  number:
   - '`'
   - '1'
   - '2'
@@ -111,6 +99,61 @@ layers:
   - '9'
   - '0'
   - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: number, h: number, type: held}
+  symbol:
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - +
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PSCRN
   - CMENU
   - Ctl+ X
@@ -123,9 +166,9 @@ layers:
   - ']'
   - ''
   - ''
-  - {t: num_sym, h: num_sym, type: held}
   - ''
   - ''
+  - {type: held}
   - ''
   - ''
   - ''
@@ -166,12 +209,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: num_sym, h: num_sym}
-  - ''
-  - ''
-  - ''
-  - ''
   - {t: function, h: function, type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   system:
   - BT CLR
   - {t: BT, h: '0'}
@@ -186,11 +229,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT TOG
-  - RGB HUD
-  - RGB HUI
-  - RGB SAD
-  - RGB SAI
-  - RGB EFF
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - PREV
   - VOL DN
@@ -198,20 +241,20 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT BLE
-  - RGB BRD
-  - RGB BRI
-  - RGB TOG
   - ''
   - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - ''
+  - ''
   - {type: held}
-  - ''
-  - ''
   - {type: held}
   - ''
   - ''
@@ -256,5 +299,5 @@ layers:
   - ''
   - ''
   - ''
-  - {t: mouse, h: mouse}
+  - ''
   - ''
