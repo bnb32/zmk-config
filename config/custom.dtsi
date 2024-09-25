@@ -129,7 +129,7 @@ MAKE_LAYER_HOLD_TAP(lht, &mo, &tog)
 
 #define MAKE_NAV_TAP_DANCE(NAME, TAP, DANCE) \
   ZMK_TAP_DANCE(NAME, \
-    tapping-term-ms = <100>; \
+    tapping-term-ms = <150>; \
     bindings = <TAP>, <DANCE>; \
   )
 
