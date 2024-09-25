@@ -92,8 +92,8 @@ ZMK_LAYER(number,
 ZMK_LAYER(symbol,
   X_TOP
   &kp TILDE  &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                 &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
-  &trans     &trans       &trans  &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &trans
-  &kp PSCRN  &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK       X_ENC      &kp LBRC   &kp RBRC  &kp LBKT   &kp RBKT  &none     &none
+  &trans     &trans       &trans  &trans    &trans    &trans                    &trans     &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT  &trans
+  &kp PSCRN  &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK       X_ENC      &none      &none     &none      &none     &none     &none
                                   X_LT      &none     &none      &none   &none  &none      &none     X_RT
 )
 
