@@ -23,5 +23,7 @@
 
 */
 
+#define CONFIG_RGB
+#define CONFIG_WIRELESS
 #include "zmk-helpers/key-labels/42.h"
 #include "base.keymap"

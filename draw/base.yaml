@@ -41,8 +41,8 @@ layers:
   - {t: TAB, h: LSHFT}
   - {t: RET, h: symbol}
   - {t: SPACE, h: nav}
-  - '&smart_mouse'
   - {t: '&num_dance', h: number}
+  - '&smart_mouse'
   nav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -127,8 +127,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - {t: number, h: number, type: held}
+  - ''
   symbol:
   - '~'
   - '!'
@@ -229,11 +229,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT TOG
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - RGB HUD
+  - RGB HUI
+  - RGB SAD
+  - RGB SAI
+  - RGB EFF
   - {t: ▽, type: trans}
   - PREV
   - VOL DN
@@ -241,9 +241,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT BLE
-  - ''
-  - ''
-  - ''
+  - RGB BRD
+  - RGB BRI
+  - RGB TOG
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -261,9 +261,9 @@ layers:
   mouse:
   - CANCEL
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp LCLK'
   - '&win_up'
-  - {t: ▽, type: trans}
+  - '&mkp RCLK'
   - {t: ▽, type: trans}
   - '&msc SCRL_UP'
   - '&mkp LCLK'
@@ -289,7 +289,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
+  - {t: ▽, type: trans}
   - '&msc SCRL_LEFT'
   - {t: ▽, type: trans}
   - '&msc SCRL_RIGHT'

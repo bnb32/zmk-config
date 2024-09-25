@@ -28,7 +28,7 @@
 #define X_LT &none &none
 #define X_ENC &none &none
 
-#define RGB_CONFIG
-
+#define CONFIG_RGB
+#define CONFIG_WIRELESS
 #include "zmk-helpers/key-labels/sofle.h"
 #include "base.keymap"
