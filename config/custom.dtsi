@@ -129,14 +129,14 @@ MAKE_LAYER_HOLD_TAP(lht, &mo, &tog)
 
 #define MAKE_NAV_TAP_DANCE(NAME, TAP, DANCE) \
   ZMK_TAP_DANCE(NAME, \
-    tapping-term-ms = <150>; \
+    tapping-term-ms = <100>; \
     bindings = <TAP>, <DANCE>; \
   )
 
 #define MAKE_NAV_HOLD_TAP(NAME, HOLD, TAP) \
   ZMK_HOLD_TAP(NAME, \
     flavor = "balanced"; \
-    tapping-term-ms = <150>; \
+    tapping-term-ms = <100>; \
     quick-tap-ms = <QUICK_TAP_MS>; \
     require-prior-idle-ms = <0>; \
     bindings = <HOLD>, <TAP>; \
