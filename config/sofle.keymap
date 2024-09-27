@@ -23,7 +23,8 @@
           ╰────────────────────┴────────────────────╯
 */
 
-#define X_TOP &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+//#define X_TOP &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+#define X_TOP &none &none &none &none &none &none &none &none &none &none &none &none
 #define X_RT &none &none
 #define X_LT &none &none
 #define X_ENC &none &none
