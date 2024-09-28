@@ -55,12 +55,12 @@ layers:
   - '&up'
   - DEL
   - Sft+AGr+ F
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LGUI
+  - LSHFT
+  - LCTRL
+  - LALT
   - {t: ▽, type: trans}
   - PG DN
   - '&left'
@@ -82,7 +82,7 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
   - {type: held}
   - {t: ▽, type: trans}
   - {t: nav, h: nav}
@@ -100,10 +100,10 @@ layers:
   - '0'
   - '='
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LGUI
+  - LSHFT
+  - LCTRL
+  - LALT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -125,7 +125,7 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
   - ''
   - {t: number, h: number, type: held}
   - {t: ▽, type: trans}
@@ -143,10 +143,10 @@ layers:
   - )
   - +
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LGUI
+  - LSHFT
+  - LCTRL
+  - LALT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '{'
@@ -168,7 +168,7 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: RET, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
