@@ -123,12 +123,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DEL
-  - ''
-  - {t: TAB, h: LSHFT}
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - {t: number, h: number, type: held}
-  - ''
+  - {t: ▽, type: trans}
   symbol:
   - '~'
   - '!'
@@ -166,12 +166,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DEL
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   function:
   - {t: ▽, type: trans}
   - F1
@@ -210,11 +210,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   system:
   - BT CLR
   - {t: BT, h: '0'}
@@ -252,12 +252,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {type: held}
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   mouse:
   - CANCEL
   - {t: ▽, type: trans}
@@ -295,9 +295,9 @@ layers:
   - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
   - DEL
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
