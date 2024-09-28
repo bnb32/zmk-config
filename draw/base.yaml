@@ -51,9 +51,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG UP
-  - '&bspc'
+  - BSPC
   - '&up'
-  - '&del'
+  - DEL
   - Sft+AGr+ F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,7 +67,7 @@ layers:
   - '&down'
   - '&right'
   - Ctl+ F4
-  - '&bspc'
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+ TAB
   - {t: ▽, type: trans}
-  - '&del'
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -110,7 +110,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&bspc'
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -122,7 +122,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&del'
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET
@@ -153,7 +153,7 @@ layers:
   - '}'
   - '['
   - ']'
-  - '&bspc'
+  - BSPC
   - PSCRN
   - CMENU
   - Ctl+ X
@@ -165,7 +165,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&del'
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: RET, type: held}
@@ -282,7 +282,7 @@ layers:
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
   - '&mkp MB4'
-  - '&bspc'
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -294,7 +294,7 @@ layers:
   - {t: ▽, type: trans}
   - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
-  - '&del'
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET

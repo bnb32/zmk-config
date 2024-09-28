@@ -219,8 +219,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 #define COPY &kp LC(INS)
 #define PASTE &kp LS(INS)
 #define SAVE &kp LC(S)
-#define C_BSPC &bspc // &kp BSPC
-#define C_DEL &del // &kp DEL
+#define C_BSPC &kp BSPC
+#define C_DEL &kp DEL
 
 #define NAV_U &up
 #define NAV_D &down
