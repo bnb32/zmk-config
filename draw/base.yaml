@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - {t: \, h: RSHFT}
-  - {t: function, h: function}
+  - function
   - {t: TAB, h: LSHFT}
   - {t: RET, h: symbol}
   - {t: SPACE, h: nav}
@@ -55,7 +55,7 @@ layers:
   - '&up'
   - DEL
   - Sft+AGr+ F
-  - INS
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,7 +67,7 @@ layers:
   - '&down'
   - '&right'
   - Ctl+ F4
-  - HOME
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+ TAB
   - {t: ▽, type: trans}
-  - END
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -110,6 +110,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -121,10 +122,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
   - ''
-  - ''
+  - {t: TAB, h: LSHFT}
   - ''
   - ''
   - {t: number, h: number, type: held}
@@ -149,23 +149,23 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '{'
+  - '}'
+  - '['
+  - ']'
+  - BSPC
   - PSCRN
   - CMENU
   - Ctl+ X
   - Ctl+ INS
   - Sft+ INS
   - CLCK
-  - '{'
-  - '}'
-  - '['
-  - ']'
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DEL
   - ''
   - ''
   - {type: held}
@@ -209,7 +209,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: function, h: function, type: held}
+  - {type: held}
   - ''
   - ''
   - ''
@@ -270,7 +270,7 @@ layers:
   - '&mmv MOVE_UP'
   - '&mkp RCLK'
   - '&mkp MB5'
-  - '&bspc'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&win_left'
@@ -282,7 +282,7 @@ layers:
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
   - '&mkp MB4'
-  - '&del'
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -294,7 +294,7 @@ layers:
   - {t: ▽, type: trans}
   - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
   - ''
   - ''
   - ''

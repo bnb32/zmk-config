@@ -38,7 +38,7 @@
                    LT3 LT2 LT1 \
                    LM3 LM2 LM1
 
-#define QUICK_TAP_MS 100
+#define QUICK_TAP_MS 175
 
 // Shorten default mod tap tapping term
 &mt {
@@ -78,11 +78,15 @@
 
 MAKE_HOLD_TAP(ht, &kp, &kp)
 
+#define HOME_MT &mt LC(HOME) HOME
+#define END_MT &mt LC(END) END
+
+// custom backspace and delete macros
 MAKE_TAP_DANCE_HOLD(bspc, BSPC, BSPC, LC(BSPC))
 MAKE_TAP_DANCE_HOLD(del, DEL, DEL, LC(DEL))
 
-#define HOME_MT &mt LC(HOME) HOME
-#define END_MT &mt LC(END) END
+#define C_BSPC &kp BSPC
+#define C_DEL &kp DEL
 
 
 // Layer bindings ----------------------------------------------------------------------------------------------------------------------
@@ -136,23 +140,29 @@ MAKE_LAYER_HOLD_TAP(lht, &mo, &tog)
 #define MAKE_NAV_HOLD_TAP(NAME, HOLD, TAP) \
   ZMK_HOLD_TAP(NAME, \
     flavor = "balanced"; \
-    tapping-term-ms = <100>; \
+    tapping-term-ms = <150>; \
     quick-tap-ms = <QUICK_TAP_MS>; \
     require-prior-idle-ms = <0>; \
     bindings = <HOLD>, <TAP>; \
   )
 
-
 #define MAKE_NAV_HOLD_TAP_DANCE_HOLD(NAME, HOLD1, TAP, DANCE, HOLD2) \
   MAKE_NAV_TAP_DANCE(NAME, &nht HOLD1 TAP, &nht HOLD2 DANCE)
 
+#define MAKE_NAV_TAP_DANCE_HOLD(NAME, TAP, DANCE, HOLD) \
+  MAKE_NAV_TAP_DANCE(NAME, &kp TAP, &nht HOLD DANCE)
 
 MAKE_NAV_HOLD_TAP(nht, &kp, &kp)
 
-MAKE_NAV_HOLD_TAP_DANCE_HOLD(down, DOWN, DOWN, DOWN, LC(END))
-MAKE_NAV_HOLD_TAP_DANCE_HOLD(up, UP, UP, UP, LC(HOME))
+MAKE_NAV_TAP_DANCE_HOLD(down, DOWN, DOWN, LC(END))
+MAKE_NAV_TAP_DANCE_HOLD(up, UP, UP, LC(HOME))
 MAKE_NAV_HOLD_TAP_DANCE_HOLD(left, LEFT, LEFT, LC(LEFT), HOME)
 MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
+
+#define NAV_U &up
+#define NAV_D &down
+#define NAV_R &right
+#define NAV_L &left
 
 
 // HOMEROW MODS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -171,12 +181,15 @@ MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS, 150)
 
 // left-hand gui - tend to hold this longer during normal typing
-MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 220)
+MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 300)
+
+// left-hand shift - tend to hold this longer during normal typing
+MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 300)
 
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 
 #define HRMR(k0,k1,k2,k3) &hmr RALT k0 &hmr RCTRL k1 &hmr RSHFT k2 &hmr RGUI k3
-#define HRML(k0,k1,k2,k3) &hmlg LGUI k0 &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
+#define HRML(k0,k1,k2,k3) &hmlg LGUI k0 &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // MACROS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

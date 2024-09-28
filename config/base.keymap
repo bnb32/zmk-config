@@ -75,48 +75,48 @@ ZMK_LAYER(default,
 
 ZMK_LAYER(nav,
   X_TOP
-  &trans  &trans  &trans    &trans    &trans      &kp INS                   &kp PG_UP   &bspc      &up      &del       FORMAT  &none
-  &trans  &trans  &trans    &trans    &trans      &kp HOME                  &kp PG_DN   &left      &down    &right     CLOSE   &bspc
-  &trans  &trans  &trans    &trans    &trans      &kp END       X_ENC       NEXT_APP    PREV_WIN   &trans   NEXT_WIN   &trans  &del
-                            X_LT      &trans      &trans  &trans    &trans  &trans      NAV_TOG    X_RT
+  &trans  &trans  &trans   &trans   &trans   &trans                    &kp PG_UP   C_BSPC     NAV_U   C_DEL     FORMAT  &none
+  &trans  &trans  &trans   &trans   &trans   &trans                    &kp PG_DN   NAV_L      NAV_D   NAV_R     CLOSE   C_BSPC
+  &trans  &trans  &trans   &trans   &trans   &trans       X_ENC        NEXT_APP    PREV_WIN   &trans  NEXT_WIN  &trans  C_DEL
+                           X_LT     &trans   &trans  &trans    &trans  &trans      NAV_TOG    X_RT
 )
 
 ZMK_LAYER(number,
   X_TOP
-  &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                            &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
-  &trans     &trans    &trans    &trans    &trans    &trans                            &trans     &trans    &trans     &trans    &trans    &bspc
-  &trans     &trans    &trans    &trans    &trans    &trans                X_ENC       &trans     &trans    &trans     &trans    &trans    &del
-                                 X_LT      &none     &mt LSHFT TAB     &none   &none   NUM_TOG    &none     X_RT
+  &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                   &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp EQUAL
+  &trans     &trans    &trans    &trans    &trans    &trans                   &trans     &trans    &trans     &trans    &trans    C_BSPC
+  &trans     &trans    &trans    &trans    &trans    &trans        X_ENC      &trans     &trans    &trans     &trans    &trans    C_DEL
+                                 X_LT      &trans    &trans   &trans  &none   NUM_TOG    &trans    X_RT
 )
 
 ZMK_LAYER(symbol,
   X_TOP
-  &kp TILDE  &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                 &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
-  &trans     &trans       &trans  &trans    &trans    &trans                    &trans     &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT  &bspc
-  &kp PSCRN  &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK       X_ENC      &none      &none     &none      &none     &none     &del
-                                  X_LT      &none     &none      &none   &none  &none      &none     X_RT
+  &kp TILDE  &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                   &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
+  &trans     &trans       &trans  &trans    &trans    &trans                      &trans     &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT  C_BSPC
+  &kp PSCRN  &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK        X_ENC       &trans     &trans    &trans     &trans    &trans    C_DEL
+                                  X_LT      &trans    &trans     &trans   &trans  &trans     &trans    X_RT
 )
 
 ZMK_LAYER(function,
   X_TOP
-  &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                    &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-  &trans    &trans    &trans    &trans    &trans    &trans                    &trans     &trans    &trans     &trans    &trans    &kp F12
-  &trans    &trans    &trans    &trans    &trans    &trans       X_ENC        &trans     &trans    &trans     &trans    &trans    &trans
-                                X_LT      &none     &none    &none   &none    &none      &none     X_RT
+  &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                    &kp F6   &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
+  &trans    &trans    &trans    &trans    &trans    &trans                    &trans   &trans    &trans     &trans    &trans    &kp F12
+  &trans    &trans    &trans    &trans    &trans    &trans       X_ENC        &trans   &trans    &trans     &trans    &trans    &trans
+                                X_LT      &trans    &trans   &trans  &trans   &trans   &trans    X_RT
 )
 
 ZMK_LAYER(system,
   X_TOP
-  _BT_SEL_KEYS_                                                               &trans    &kp C_MUTE  &kp C_VOL_UP  &kp C_PP    &trans  &trans
-  &out OUT_TOG  _RGB_HOME_                                                    &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &trans  &trans
-  &out OUT_BLE  _RGB_BOTTOM_                                    X_ENC         &trans    &trans      &trans        &trans      &trans  &trans
-                                X_LT  &none  &none  &none   &none   &none     &none       X_RT
+  _BT_SEL_KEYS_                                                        &trans    &kp C_MUTE  &kp C_VOL_UP  &kp C_PP    &trans  &trans
+  &out OUT_TOG  _RGB_HOME_                                             &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &trans  &trans
+  &out OUT_BLE  _RGB_BOTTOM_                              X_ENC        &trans    &trans      &trans        &trans      &trans  &trans
+                               X_LT  &trans  &trans  &trans   &trans   &trans    &trans      X_RT
 )
 
 ZMK_LAYER(mouse,
   X_TOP
-  &kp K_CANCEL  &trans  U_CL_L     &win_up    U_CL_R      &trans                  U_WH_U      U_CL_L   U_MS_U   U_CL_R   U_CL_F  &none
-  &trans        &trans  &win_left  &win_down  &win_right  &trans                  U_WH_D      U_MS_L   U_MS_D   U_MS_R   U_CL_B  &bspc
-  &trans        &trans  &trans     &trans     &trans      &trans      X_ENC       &trans      U_WH_L   &trans   U_WH_R   &trans  &del
-                                   X_LT       &none       &none   &none   &none   &none       &none    X_RT
+  &kp K_CANCEL  &trans  U_CL_L     &win_up    U_CL_R      &trans                    U_WH_U   U_CL_L   U_MS_U   U_CL_R   U_CL_F  &trans
+  &trans        &trans  &win_left  &win_down  &win_right  &trans                    U_WH_D   U_MS_L   U_MS_D   U_MS_R   U_CL_B  C_BSPC
+  &trans        &trans  &trans     &trans     &trans      &trans       X_ENC        &trans   U_WH_L   &trans   U_WH_R   &trans  C_DEL
+                                   X_LT       &trans      &trans   &trans  &trans   &trans   &trans   X_RT
 )
