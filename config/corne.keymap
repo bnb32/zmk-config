@@ -23,6 +23,11 @@
 
 */
 
+// number of keys per side, plus six?
+&led_strip {
+    chain-length = <27>;
+};
+
 #define CONFIG_RGB
 #define CONFIG_WIRELESS
 #include "zmk-helpers/key-labels/42.h"
