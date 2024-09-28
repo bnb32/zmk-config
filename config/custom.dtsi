@@ -159,11 +159,6 @@ MAKE_NAV_TAP_DANCE_HOLD(up, UP, UP, LC(HOME))
 MAKE_NAV_HOLD_TAP_DANCE_HOLD(left, LEFT, LEFT, LC(LEFT), HOME)
 MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
 
-#define NAV_U &up
-#define NAV_D &down
-#define NAV_R &right
-#define NAV_L &left
-
 
 // HOMEROW MODS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -192,17 +187,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 #define HRML(k0,k1,k2,k3) &hmlg LGUI k0 &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // MACROS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#define FORMAT &kp RS(RA(F))
-#define CLOSE &kp RC(F4)
-#define NEXT_WIN &kp RC(TAB)
-#define PREV_WIN &kp LS(RC(TAB))
-#define NEXT_APP &kp LG(TAB)
-
-#define CUT &kp LC(X)
-#define COPY &kp LC(INS)
-#define PASTE &kp LS(INS)
-#define SAVE &kp LC(S)
 
 / {
 
@@ -233,3 +217,35 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
     };
   };
 };
+
+// Aliases -----------------------------------------------------------------------------------
+
+
+#define FORMAT &kp RS(RA(F))
+#define CLOSE &kp RC(F4)
+#define NEXT_WIN &kp RC(TAB)
+#define PREV_WIN &kp LS(RC(TAB))
+#define NEXT_APP &kp LG(TAB)
+
+#define CUT &kp LC(X)
+#define COPY &kp LC(INS)
+#define PASTE &kp LS(INS)
+#define SAVE &kp LC(S)
+
+#define NAV_U &up
+#define NAV_D &down
+#define NAV_R &right
+#define NAV_L &left
+
+#define CANCEL &kp K_CANCEL
+#define MUTE &kp C_MUTE
+#define VOL_U &kp C_VOL_UP
+#define VOL_D &kp C_VOL_DN
+#define PAUSE &kp C_PP
+#define NEXT &kp C_NEXT
+#define PREV &kp C_PREV
+
+#define WIN_U &win_up
+#define WIN_D &win_down
+#define WIN_R &win_right
+#define WIN_L &win_left

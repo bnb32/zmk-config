@@ -36,10 +36,10 @@
 
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
-    #define _RGB_HOME_ &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF
-    #define _RGB_BOTTOM_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG &none &none
+    #define _RGB_HOME_ &none &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF
+    #define _RGB_BOTTOM_ &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG &none
 #else
-    #define _RGB_HOME_ &none &none &none &none &none
+    #define _RGB_HOME_ &none &none &none &none &none &none
     #define _RGB_BOTTOM_ &none &none &none &none &none
 #endif
 
@@ -77,10 +77,10 @@ ZMK_LAYER(default,
 
 ZMK_LAYER(nav,
   X_TOP
-  &trans  &trans  &trans  &trans  &trans  &trans                      &kp PG_UP  C_BSPC    NAV_U   C_DEL     FORMAT  &trans
-  &trans            LMOD_ROW              &trans                      &kp PG_DN  NAV_L     NAV_D   NAV_R     CLOSE   C_BSPC
-  &trans  &trans  &trans  &trans  &trans  &trans        X_ENC         NEXT_APP   PREV_WIN  &trans  NEXT_WIN  &trans  C_DEL
-                          X_LT    &trans  &trans  &kp RET  &kp SPACE  &trans     NAV_TOG   X_RT
+  &trans  &trans  &trans  &trans  &trans  &trans                  &kp PG_UP  C_BSPC    NAV_U   C_DEL     FORMAT  &trans
+  &trans            LMOD_ROW              &trans                  &kp PG_DN  NAV_L     NAV_D   NAV_R     CLOSE   C_BSPC
+  &trans  &trans  &trans  &trans  &trans  &trans        X_ENC     NEXT_APP   PREV_WIN  &trans  NEXT_WIN  &trans  C_DEL
+                          X_LT    &trans  &trans  &trans  &trans  &trans     NAV_TOG   X_RT
 )
 
 ZMK_LAYER(number,
@@ -101,7 +101,7 @@ ZMK_LAYER(symbol,
 
 ZMK_LAYER(function,
   X_TOP
-  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                 &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+  CANCEL  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                 &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
   &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans   &kp F12
   &trans  &trans  &trans  &trans  &trans  &trans      X_ENC      &trans  &trans  &trans  &trans  &trans   &trans
                           X_LT    &trans  &trans  &trans &trans  &trans  &trans  X_RT
@@ -109,16 +109,16 @@ ZMK_LAYER(function,
 
 ZMK_LAYER(system,
   X_TOP
-  _BT_SEL_KEYS_                                                     &trans  &kp C_MUTE  &kp C_VOL_UP  &kp C_PP    &trans  &trans
-  &out OUT_TOG  _RGB_HOME_                                          &trans  &kp C_PREV  &kp C_VOL_DN  &kp C_NEXT  &trans  &trans
-  &out OUT_BLE  _RGB_BOTTOM_                              X_ENC     &trans  &trans      &trans        &trans      &trans  &trans
-                              X_LT  &trans  &trans  &trans  &trans  &trans  &trans      X_RT
+  _BT_SEL_KEYS_                                                      &trans       MUTE    VOL_U   PAUSE   &trans  &trans
+  _RGB_HOME_                                                         &trans       PREV    VOL_D   NEXT    &trans  &trans
+  _RGB_BOTTOM_                          &bootloader      X_ENC       &bootloader  &trans  &trans  &trans  &trans  &trans
+                          X_LT  &trans  &trans       &trans  &trans  &trans       &trans  X_RT
 )
 
 ZMK_LAYER(mouse,
   X_TOP
-  &kp K_CANCEL  &trans  U_CL_L     &win_up    U_CL_R      &trans                     U_WH_U  U_CL_L  U_MS_U  U_CL_R  U_CL_F  &trans
-  &trans        &trans  &win_left  &win_down  &win_right  &trans                     U_WH_D  U_MS_L  U_MS_D  U_MS_R  U_CL_B  C_BSPC
-  &trans        &trans  &trans     &trans     &trans      &trans       X_ENC         &trans  U_WH_L  &trans  U_WH_R  &trans  C_DEL
-                                   X_LT       &trans      &trans  &kp RET &kp SPACE  &trans  &trans  X_RT
+  CANCEL  &trans  U_CL_L  WIN_U   U_CL_R  &trans                     U_WH_U  U_CL_L  U_MS_U  U_CL_R  U_CL_F  &trans
+  &trans  &trans  WIN_L   WIN_D   WIN_R   &trans                     U_WH_D  U_MS_L  U_MS_D  U_MS_R  U_CL_B  C_BSPC
+  &trans  &trans  &trans  &trans  &trans  &trans       X_ENC         &trans  U_WH_L  &trans  U_WH_R  &trans  C_DEL
+                          X_LT    &trans  &trans  &kp RET &kp SPACE  &trans  &trans  X_RT
 )

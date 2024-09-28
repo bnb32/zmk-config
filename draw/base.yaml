@@ -82,8 +82,8 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RET
-  - {t: SPACE, type: held}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: nav, h: nav}
   number:
@@ -173,7 +173,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   function:
-  - {t: ▽, type: trans}
+  - CANCEL
   - F1
   - F2
   - F3
@@ -228,7 +228,7 @@ layers:
   - PP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - OUT TOG
+  - ''
   - RGB HUD
   - RGB HUI
   - RGB SAD
@@ -240,13 +240,13 @@ layers:
   - NEXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - OUT BLE
+  - ''
   - RGB BRD
   - RGB BRI
   - RGB TOG
   - ''
-  - ''
-  - {t: ▽, type: trans}
+  - '&bootloader'
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

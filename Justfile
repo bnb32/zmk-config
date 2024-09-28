@@ -104,3 +104,7 @@ update:
 # upgrade zephyr-sdk and python dependencies
 upgrade-sdk:
     nix flake update --flake .
+
+run:
+    @just build all
+    @just draw
