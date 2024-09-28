@@ -26,6 +26,7 @@
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi> // requires auto-layer module
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #ifdef CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
@@ -37,7 +38,7 @@
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
     #define _RGB_HOME_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
-    #define _RGB_BOTTOM_ &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none &none
+    #define _RGB_BOTTOM_ &rgb_ug RGB_TOG &rgb_ug RGB_EFF &out OUT_TOG &out OUT_BLE &none
 #else
     #define _RGB_HOME_ &none &none &none &none &none &none
     #define _RGB_BOTTOM_ &none &none &none &none &none

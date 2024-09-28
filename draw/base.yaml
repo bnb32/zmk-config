@@ -242,8 +242,8 @@ layers:
   - {t: ▽, type: trans}
   - RGB TOG
   - RGB EFF
-  - ''
-  - ''
+  - OUT TOG
+  - OUT BLE
   - ''
   - '&bootloader'
   - '&bootloader'
