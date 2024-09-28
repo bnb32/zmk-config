@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RSHFT}
   - {t: ;, h: RGUI}
   - ''''
-  - LSHFT
+  - {t: LSHFT, h: sticky}
   - Z
   - X
   - C
@@ -36,7 +36,7 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: RSHFT}
+  - \
   - function
   - {t: TAB, h: LSHFT}
   - {t: RET, h: symbol}
