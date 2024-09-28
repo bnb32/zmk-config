@@ -51,9 +51,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG UP
-  - BSPC
+  - '&bspc'
   - '&up'
-  - DEL
+  - '&del'
   - Sft+AGr+ F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,7 +67,7 @@ layers:
   - '&down'
   - '&right'
   - Ctl+ F4
-  - BSPC
+  - '&bspc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+ TAB
   - {t: ▽, type: trans}
-  - DEL
+  - '&del'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -110,7 +110,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BSPC
+  - '&bspc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -122,7 +122,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DEL
+  - '&del'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET
@@ -153,7 +153,7 @@ layers:
   - '}'
   - '['
   - ']'
-  - BSPC
+  - '&bspc'
   - PSCRN
   - CMENU
   - Ctl+ X
@@ -165,7 +165,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DEL
+  - '&del'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: RET, type: held}
@@ -228,22 +228,22 @@ layers:
   - PP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - RGB BRD
+  - RGB BRI
   - RGB HUD
   - RGB HUI
   - RGB SAD
   - RGB SAI
-  - RGB EFF
   - {t: ▽, type: trans}
   - PREV
   - VOL DN
   - NEXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - RGB BRD
-  - RGB BRI
   - RGB TOG
+  - RGB EFF
+  - ''
+  - ''
   - ''
   - '&bootloader'
   - '&bootloader'
@@ -282,7 +282,7 @@ layers:
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
   - '&mkp MB4'
-  - BSPC
+  - '&bspc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -294,7 +294,7 @@ layers:
   - {t: ▽, type: trans}
   - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
-  - DEL
+  - '&del'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET

@@ -36,16 +36,14 @@
 
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
-    #define _RGB_HOME_ &none &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF
-    #define _RGB_BOTTOM_ &none &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG &none
+    #define _RGB_HOME_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
+    #define _RGB_BOTTOM_ &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none &none
 #else
     #define _RGB_HOME_ &none &none &none &none &none &none
     #define _RGB_BOTTOM_ &none &none &none &none &none
 #endif
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define DEF 0
 #define NAV 1

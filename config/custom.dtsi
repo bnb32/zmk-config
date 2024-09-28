@@ -40,12 +40,12 @@
 
 #define QUICK_TAP_MS 175
 
-// Shorten default mod tap tapping term
+// Set default mod tap tapping term
 &mt {
   tapping-term-ms = <200>;
 };
 
-// Increase default layer tap tapping term
+// Set default layer tap tapping term
 &lt {
   tapping-term-ms = <200>; \
 };
@@ -85,10 +85,6 @@ MAKE_HOLD_TAP(ht, &kp, &kp)
 MAKE_TAP_DANCE_HOLD(bspc, BSPC, BSPC, LC(BSPC))
 MAKE_TAP_DANCE_HOLD(del, DEL, DEL, LC(DEL))
 
-#define C_BSPC &kp BSPC
-#define C_DEL &kp DEL
-
-
 // Layer bindings ----------------------------------------------------------------------------------------------------------------------
 
 // smart mouse keeps mouse layer activated unless non mouse button is pressed
@@ -122,13 +118,6 @@ ZMK_TAP_DANCE(num_dance,
 
 MAKE_LAYER_HOLD_TAP(lht, &mo, &tog)
 
-#define NAV_TOG &lht NAV NAV
-#define MOUSE_TOG &lht MOUSE MOUSE
-#define SYM_TOG &lht SYM SYM
-#define NUM_TOG &lht NUM NUM
-#define FN_TOG &lht FN FN
-
-
 // Navigation bindings -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #define MAKE_NAV_TAP_DANCE(NAME, TAP, DANCE) \
@@ -156,8 +145,8 @@ MAKE_NAV_HOLD_TAP(nht, &kp, &kp)
 
 MAKE_NAV_TAP_DANCE_HOLD(down, DOWN, DOWN, LC(END))
 MAKE_NAV_TAP_DANCE_HOLD(up, UP, UP, LC(HOME))
-MAKE_NAV_HOLD_TAP_DANCE_HOLD(left, LEFT, LEFT, LC(LEFT), HOME)
-MAKE_NAV_HOLD_TAP_DANCE_HOLD(right, RIGHT, RIGHT, LC(RIGHT), END)
+MAKE_NAV_TAP_DANCE_HOLD(left, LEFT, LEFT, HOME)
+MAKE_NAV_TAP_DANCE_HOLD(right, RIGHT, RIGHT, END)
 
 
 // HOMEROW MODS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -220,7 +209,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 
 // Aliases -----------------------------------------------------------------------------------
 
-
 #define FORMAT &kp RS(RA(F))
 #define CLOSE &kp RC(F4)
 #define NEXT_WIN &kp RC(TAB)
@@ -231,6 +219,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 #define COPY &kp LC(INS)
 #define PASTE &kp LS(INS)
 #define SAVE &kp LC(S)
+#define C_BSPC &bspc // &kp BSPC
+#define C_DEL &del // &kp DEL
 
 #define NAV_U &up
 #define NAV_D &down
@@ -249,3 +239,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 #define WIN_D &win_down
 #define WIN_R &win_right
 #define WIN_L &win_left
+
+#define NAV_TOG &lht NAV NAV
+#define MOUSE_TOG &lht MOUSE MOUSE
+#define SYM_TOG &lht SYM SYM
+#define NUM_TOG &lht NUM NUM
+#define FN_TOG &lht FN FN
+
