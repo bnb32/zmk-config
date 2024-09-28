@@ -83,7 +83,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET
-  - {type: held}
+  - {t: SPACE, type: held}
   - {t: ▽, type: trans}
   - {t: nav, h: nav}
   number:
@@ -126,7 +126,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET
-  - ''
+  - SPACE
   - {t: number, h: number, type: held}
   - {t: ▽, type: trans}
   symbol:
@@ -169,7 +169,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: RET, type: held}
-  - {t: ▽, type: trans}
+  - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   function:
@@ -297,7 +297,7 @@ layers:
   - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
+  - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
