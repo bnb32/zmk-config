@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RSHFT}
   - {t: ;, h: RGUI}
   - '&apos_ret'
-  - {t: LSHFT, h: sticky}
+  - {t: LSHFT, h: sticky, s: '&caps_word'}
   - Z
   - X
   - C
@@ -37,10 +37,10 @@ layers:
   - .
   - /
   - \
-  - ''
+  - LGUI
   - {t: TAB, h: LSHFT}
   - {t: RET, h: symbol}
-  - {t: SPACE, h: nav_fn}
+  - {t: SPACE, h: nav_fn, s: '&dot_spc'}
   - {t: '&num_dance', h: number}
   - '&smart_mouse'
   nav_fn:
@@ -85,7 +85,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: nav_fn, h: nav_fn}
+  - {t: ▽, type: trans}
   number:
   - '`'
   - '1'
@@ -98,7 +98,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '='
+  - '&equal_bspc'
   - {t: ▽, type: trans}
   - LGUI
   - LSHFT
@@ -127,7 +127,7 @@ layers:
   - {t: ▽, type: trans}
   - RET
   - SPACE
-  - {t: number, h: number, type: held}
+  - {t: number, h: toggle, type: held}
   - {t: ▽, type: trans}
   symbol:
   - '~'
@@ -139,9 +139,9 @@ layers:
   - ^
   - '&'
   - '*'
-  - (
-  - )
-  - +
+  - {t: (, s: '['}
+  - {t: ), s: ']'}
+  - '&plus_bspc'
   - {t: ▽, type: trans}
   - LGUI
   - LSHFT
@@ -149,11 +149,11 @@ layers:
   - LALT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '{'
-  - '}'
-  - '['
-  - ']'
-  - BSPC
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: ▽, type: trans}
+  - ':'
+  - '"'
   - PSCRN
   - CMENU
   - Ctl+ X
@@ -162,10 +162,10 @@ layers:
   - '&caps_word'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - DEL
+  - <
+  - '>'
+  - '?'
+  - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: RET, type: held}
@@ -257,4 +257,4 @@ layers:
   - RET
   - SPACE
   - {t: ▽, type: trans}
-  - {t: mouse, h: mouse}
+  - CANCEL
