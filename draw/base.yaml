@@ -37,19 +37,19 @@ layers:
   - .
   - /
   - \
-  - function
+  - ''
   - {t: TAB, h: LSHFT}
   - {t: RET, h: symbol}
-  - {t: SPACE, h: nav}
+  - {t: SPACE, h: nav_fn}
   - {t: '&num_dance', h: number}
   - '&smart_mouse'
-  nav:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  nav_fn:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
   - PG UP
   - BSPC
   - '&up'
@@ -68,12 +68,12 @@ layers:
   - '&right'
   - Ctl+ F4
   - BSPC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
   - Gui+ TAB
   - Sft+Ctl+ TAB
   - {t: ▽, type: trans}
@@ -85,7 +85,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: nav, h: nav}
+  - {t: nav_fn, h: nav_fn}
   number:
   - '`'
   - '1'
@@ -159,7 +159,7 @@ layers:
   - Ctl+ X
   - Ctl+ INS
   - Sft+ INS
-  - CLCK
+  - '&caps_word'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -170,49 +170,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: RET, type: held}
   - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  function:
-  - CANCEL
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   system:
@@ -300,4 +257,4 @@ layers:
   - RET
   - SPACE
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: mouse, h: mouse}

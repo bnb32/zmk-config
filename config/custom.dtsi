@@ -162,13 +162,13 @@ MAKE_NAV_TAP_DANCE_HOLD(right, RIGHT, RIGHT, END)
     hold-trigger-on-release; \
   )
 
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS, 150)
+MAKE_HRM(hml, &kp, &kp, KEYS_R KEYS_L THUMBS, 150)
 
 // left-hand gui - tend to hold this longer during normal typing
-MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 300)
+MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 350)
 
 // left-hand shift - tend to hold this longer during normal typing
-MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 300)
+MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 350)
 
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 
@@ -244,7 +244,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 #define MOUSE_TOG &lht MOUSE MOUSE
 #define SYM_TOG &lht SYM SYM
 #define NUM_TOG &lht NUM NUM
-#define FN_TOG &lht FN FN
 
 #define HOME_MT &mt LC(HOME) HOME
 #define END_MT &mt LC(END) END

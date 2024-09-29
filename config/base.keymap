@@ -50,9 +50,8 @@
 #define NAV 1
 #define NUM 2
 #define SYM 3
-#define FN 4
-#define SYS 5
-#define MOUSE 6
+#define SYS 4
+#define MOUSE 5
 
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -60,64 +59,93 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "custom.dtsi"
 
+#define XXX &none
+#define ___ &trans
+
 /* Keymap ----------------------------------------------------------------------------------------------------------- */
 
 ZMK_CONDITIONAL_LAYER(settings, SYM NAV, SYS)
 
 #define LMOD_ROW &kp LGUI &kp LSHFT &kp LCTRL &kp LALT
+#define LS_TAB &mt LSHFT TAB
+#define NAV_SPC &lt NAV SPACE
+
 
 ZMK_LAYER(default,
-  X_TOP
-  &kp ESC    &kp Q    &kp W  &kp E  &kp R   &kp T                                      &kp Y      &kp U         &kp I      &kp O    &kp P     &kp MINUS
-  &kp TAB    HRML(A,  S,     D,     F)      &kp G                                      &kp H      HRMR(J,       K,         L,       SEMI)     APOS_RET
-  &sk LSHFT  &kp Z    &kp X  &kp C  &kp V   &kp B                   X_ENC              &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                             X_LT   &mo FN  &mt LSHFT TAB  &lt SYM RET  &lt NAV SPACE  SMART_NUM  &smart_mouse  X_RT
+
+                                                                                          X_TOP
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp MINUS
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp TAB       HRML(A,       S,            D,            F)            &kp G                     &kp H         HRMR(J,       K,            L,            SEMI)         APOS_RET
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &sk LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B           X_ENC     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                X_LT          XXX           LS_TAB        &lt SYM RET               NAV_SPC       SMART_NUM     &smart_mouse  X_RT
+//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
 )
 
-ZMK_LAYER(nav,
-  X_TOP
-  &trans  &trans  &trans  &trans  &trans  &trans                  &kp PG_UP  C_BSPC    NAV_U   C_DEL     FORMAT  &trans
-  &trans            LMOD_ROW              &trans                  &kp PG_DN  NAV_L     NAV_D   NAV_R     CLOSE   C_BSPC
-  &trans  &trans  &trans  &trans  &trans  &trans        X_ENC     NEXT_APP   PREV_WIN  &trans  NEXT_WIN  &trans  C_DEL
-                          X_LT    &trans  &trans  &trans  &trans  &trans     NAV_TOG   X_RT
+ZMK_LAYER(nav_fn,
+                                                                                          X_TOP
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                    &kp PG_UP     C_BSPC        NAV_U         C_DEL         FORMAT        ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___                                 LMOD_ROW                          ___                       &kp PG_DN     NAV_L         NAV_D         NAV_R         CLOSE         C_BSPC
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12         X_ENC     NEXT_APP      PREV_WIN      ___           NEXT_WIN      ___           C_DEL
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                X_LT          ___           ___           ___                       ___           ___           NAV_TOG       X_RT
+//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
 )
 
 ZMK_LAYER(number,
-  X_TOP
-  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &kp EQUAL
-  &trans                LMOD_ROW             &trans                      &trans   &trans  &trans  &trans  &trans  C_BSPC
-  &trans     &trans  &trans  &trans  &trans  &trans       X_ENC          &trans   &trans  &trans  &trans  &trans  C_DEL
-                             X_LT    &trans  &trans  &kp RET  &kp SPACE  NUM_TOG  &trans  X_RT
+                                                                                          X_TOP
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp EQUAL
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___                                 LMOD_ROW                          ___                       ___           ___           ___           ___           ___           C_BSPC
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___           ___           ___             X_ENC     ___           ___           ___           ___           ___           C_DEL
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                X_LT          ___           ___           &kp RET                   &kp SPACE     NUM_TOG       ___           X_RT
+//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
 )
 
 ZMK_LAYER(symbol,
-  X_TOP
-  &kp TILDE  &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp PLUS
-  &trans                    LMOD_ROW                  &trans                        &trans     &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT  C_BSPC
-  &kp PSCRN  &kp K_CMENU  CUT     COPY      PASTE     &kp CLCK        X_ENC         &trans     &trans    &trans     &trans    &trans    C_DEL
-                                  X_LT      &trans    &trans     &kp RET &kp SPACE  &trans     &trans    X_RT
-)
-
-ZMK_LAYER(function,
-  X_TOP
-  CANCEL  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                 &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-  &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans   &kp F12
-  &trans  &trans  &trans  &trans  &trans  &trans      X_ENC      &trans  &trans  &trans  &trans  &trans   &trans
-                          X_LT    &trans  &trans  &trans &trans  &trans  &trans  X_RT
+                                                                                          X_TOP
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp TILDE     &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                 &kp CARET     &kp AMPS      &kp ASTRK     &kp LPAR      &kp RPAR      &kp PLUS
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___                                 LMOD_ROW                          ___                       ___           &kp LBRC      &kp RBRC      &kp LBKT      &kp RBKT      C_BSPC
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp PSCRN     &kp K_CMENU   CUT           COPY          PASTE         &caps_word      X_ENC     ___           ___           ___           ___           ___           C_DEL
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                X_LT          ___           ___           &kp RET                   &kp SPACE     ___           ___           X_RT
+//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
 )
 
 ZMK_LAYER(system,
-  X_TOP
-  _BT_SEL_KEYS_                                                      &trans       MUTE    VOL_U   PAUSE   &trans  &trans
-  _RGB_HOME_                                                         &trans       PREV    VOL_D   NEXT    &trans  &trans
-  _RGB_BOTTOM_                          &bootloader      X_ENC       &bootloader  &trans  &trans  &trans  &trans  &trans
-                          X_LT  &trans  &trans       &trans  &trans  &trans       &trans  X_RT
+                                                                                          X_TOP
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                                      _BT_SEL_KEYS_                                                 ___           MUTE          VOL_U         PAUSE         ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                        _RGB_HOME_                                                  ___           PREV          VOL_D         NEXT          ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                      _RGB_BOTTOM_                        &bootloader     X_ENC     &bootloader   ___           ___           ___           ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                X_LT          ___           ___           ___                       ___           ___           ___           X_RT
+//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
 )
 
 ZMK_LAYER(mouse,
-  X_TOP
-  CANCEL  &trans  U_CL_L  WIN_U   U_CL_R  &trans                     U_WH_U  U_CL_L  U_MS_U  U_CL_R  U_CL_F  &trans
-  &trans  &trans  WIN_L   WIN_D   WIN_R   &trans                     U_WH_D  U_MS_L  U_MS_D  U_MS_R  U_CL_B  C_BSPC
-  &trans  &trans  &trans  &trans  &trans  &trans       X_ENC         &trans  U_WH_L  &trans  U_WH_R  &trans  C_DEL
-                          X_LT    &trans  &trans  &kp RET &kp SPACE  &trans  &trans  X_RT
+                                                                                          X_TOP
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    CANCEL        ___           U_CL_L        WIN_U         U_CL_R        ___                       U_WH_U        U_CL_L        U_MS_U        U_CL_R        U_CL_F        ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           WIN_L         WIN_D         WIN_R         ___                       U_WH_D        U_MS_L        U_MS_D        U_MS_R        U_CL_B        C_BSPC
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___           ___           ___             X_ENC     ___           U_WH_L        ___           U_WH_R        ___           C_DEL
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                X_LT          ___           ___           &kp RET                   &kp SPACE     ___           MOUSE_TOG     X_RT
+//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
 )
