@@ -78,12 +78,12 @@
 
 MAKE_HOLD_TAP(ht, &kp, &kp)
 
-#define HOME_MT &mt LC(HOME) HOME
-#define END_MT &mt LC(END) END
-
 // custom backspace and delete macros
 MAKE_TAP_DANCE_HOLD(bspc, BSPC, BSPC, LC(BSPC))
 MAKE_TAP_DANCE_HOLD(del, DEL, DEL, LC(DEL))
+
+// tap dance for apostrophe + return
+MAKE_TAP_DANCE(apos_ret, &kp APOS, &kp RET)
 
 // Layer bindings ----------------------------------------------------------------------------------------------------------------------
 
@@ -246,3 +246,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 #define NUM_TOG &lht NUM NUM
 #define FN_TOG &lht FN FN
 
+#define HOME_MT &mt LC(HOME) HOME
+#define END_MT &mt LC(END) END
+
+#define APOS_RET &apos_ret

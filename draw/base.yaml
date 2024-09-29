@@ -24,7 +24,7 @@ layers:
   - {t: K, h: RCTRL}
   - {t: L, h: RSHFT}
   - {t: ;, h: RGUI}
-  - ''''
+  - '&apos_ret'
   - {t: LSHFT, h: sticky}
   - Z
   - X
