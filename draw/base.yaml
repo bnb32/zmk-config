@@ -14,7 +14,7 @@ layers:
   - P
   - '-'
   - TAB
-  - {t: A, h: LGUI}
+  - A
   - {t: S, h: LSHFT}
   - {t: D, h: LCTRL}
   - {t: F, h: LALT}
@@ -23,7 +23,7 @@ layers:
   - {t: J, h: RALT}
   - {t: K, h: RCTRL}
   - {t: L, h: RSHFT}
-  - {t: ;, h: RGUI}
+  - ;
   - '&apos_ret'
   - {t: LSHFT, h: sticky, s: '&caps_word'}
   - Z
@@ -57,7 +57,7 @@ layers:
   - Sft+AGr+ F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LGUI
+  - {t: ▽, type: trans}
   - LSHFT
   - LCTRL
   - LALT
@@ -100,7 +100,7 @@ layers:
   - '0'
   - '&equal_bspc'
   - {t: ▽, type: trans}
-  - LGUI
+  - {t: ▽, type: trans}
   - LSHFT
   - LCTRL
   - LALT
@@ -143,7 +143,7 @@ layers:
   - {t: ), s: ']'}
   - '&plus_bspc'
   - {t: ▽, type: trans}
-  - LGUI
+  - {t: ▽, type: trans}
   - LSHFT
   - LCTRL
   - LALT

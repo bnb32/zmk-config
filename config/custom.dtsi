@@ -52,20 +52,20 @@
 
 // General bindings --------------------------------------------------------------------------------------------------------------------
 
-#define MAKE_TAP_DANCE(NAME, TAP, DANCE) \
+#define MAKE_TAP_DANCE(NAME, TAP, DANCE, TAPPING_TERM) \
   ZMK_TAP_DANCE(NAME, \
-    tapping-term-ms = <200>; \
+    tapping-term-ms = <TAPPING_TERM>; \
     bindings = <TAP>, <DANCE>; \
   )
 
 #define MAKE_TAP_DANCE_HOLD(NAME, TAP, DANCE, HOLD) \
-  MAKE_TAP_DANCE(NAME, &kp TAP, &ht HOLD DANCE)
+  MAKE_TAP_DANCE(NAME, &kp TAP, &ht HOLD DANCE, 200)
 
 #define MAKE_HOLD_TAP_DANCE(NAME, HOLD, TAP, DANCE) \
-  MAKE_TAP_DANCE(NAME, &ht HOLD TAP, &kp DANCE)
+  MAKE_TAP_DANCE(NAME, &ht HOLD TAP, &kp DANCE, 200)
 
 #define MAKE_HOLD_TAP_DANCE_HOLD(NAME, HOLD1, TAP, DANCE, HOLD2) \
-  MAKE_TAP_DANCE(NAME, &ht HOLD1 TAP, &ht HOLD2 DANCE)
+  MAKE_TAP_DANCE(NAME, &ht HOLD1 TAP, &ht HOLD2 DANCE, 200)
 
 #define MAKE_HOLD_TAP(NAME, HOLD, TAP) \
   ZMK_HOLD_TAP(NAME, \
@@ -83,16 +83,16 @@ MAKE_TAP_DANCE_HOLD(bspc, BSPC, BSPC, LC(BSPC))
 MAKE_TAP_DANCE_HOLD(del, DEL, DEL, LC(DEL))
 
 // tap dance for apostrophe + return
-MAKE_TAP_DANCE(apos_ret, &kp APOS, &kp RET)
+MAKE_TAP_DANCE(apos_ret, &kp APOS, &kp RET, 200)
 
 // tap dance for minus + bspc
-MAKE_TAP_DANCE(minus_bspc, &kp MINUS, &kp BSPC)
+MAKE_TAP_DANCE(minus_bspc, &kp MINUS, &kp BSPC, 120)
 
 // tap dance for equal + bspc
-MAKE_TAP_DANCE(equal_bspc, &kp EQUAL, &kp BSPC)
+MAKE_TAP_DANCE(equal_bspc, &kp EQUAL, &kp BSPC, 120)
 
 // tap dance for plus + bspc
-MAKE_TAP_DANCE(plus_bspc, &kp PLUS, &kp BSPC)
+MAKE_TAP_DANCE(plus_bspc, &kp PLUS, &kp BSPC, 120)
 
 // reuse basic mod-morph scheme
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
@@ -206,8 +206,8 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 350)
 
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, 150)
 
-#define HRMR(k0,k1,k2,k3) &hmr RALT k0 &hmr RCTRL k1 &hmr RSHFT k2 &hmr RGUI k3
-#define HRML(k0,k1,k2,k3) &hmlg LGUI k0 &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
+#define HRMR(k1,k2,k3) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3
+#define HRML(k1,k2,k3) &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // MACROS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
