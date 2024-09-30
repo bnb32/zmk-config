@@ -159,7 +159,7 @@ layers:
   - Ctl+ X
   - Ctl+ INS
   - Sft+ INS
-  - '&caps_word'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - <
