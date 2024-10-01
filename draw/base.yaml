@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RSHFT}
   - ;
   - '&apos_ret'
-  - {t: LSHFT, h: sticky, s: '&caps_word'}
+  - '&caps_word'
   - Z
   - X
   - C
@@ -44,12 +44,12 @@ layers:
   - {t: '&num_dance', h: number}
   - '&smart_mouse'
   nav_fn:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
+  - {t: '0', h: F1}
+  - {t: '0', h: F2}
+  - {t: '0', h: F3}
+  - {t: '0', h: F4}
+  - {t: '0', h: F5}
+  - {t: '0', h: F6}
   - PG UP
   - BSPC
   - '&up'
@@ -58,9 +58,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHFT
-  - LCTRL
-  - LALT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG DN
   - '&left'
@@ -68,17 +68,17 @@ layers:
   - '&right'
   - Ctl+ F4
   - {t: ▽, type: trans}
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
+  - {t: '0', h: F7}
+  - {t: '0', h: F8}
+  - {t: '0', h: F9}
+  - {t: '0', h: F10}
+  - {t: '0', h: F11}
+  - {t: '0', h: F12}
   - Gui+ TAB
   - Sft+Ctl+ TAB
   - {t: ▽, type: trans}
   - Ctl+ TAB
-  - {t: ▽, type: trans}
+  - AGr+ F4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -101,9 +101,9 @@ layers:
   - '&equal_bspc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHFT
-  - LCTRL
-  - LALT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -144,9 +144,9 @@ layers:
   - '&plus_bspc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHFT
-  - LCTRL
-  - LALT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '[', s: '{'}
