@@ -34,9 +34,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // thumbs
 #define MOUSE_KEYS RT0 RT1 RT2 RT3 RT4 \
                    RM0 RM1 RM2 RM3 RM4 RM5 \
-                   RB0 RB1 RB2 RB3 RB4 \
-                   LT3 LT2 LT1 \
-                   LM3 LM2 LM1
+                   RB0 RB1 RB2 RB3 RB4
 
 #define QUICK_TAP_MS 150
 #define HT_TAP_TERM 180
@@ -150,25 +148,25 @@ MAKE_TAP_DANCE(right, &kp RIGHT, &nht END RIGHT, 150)
 
 // HOMEROW MODS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS, TAPPING_TERM) \
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS, TAPPING_TERM, QUICK_TAP, IDLE_TIME) \
   ZMK_HOLD_TAP(NAME, \
     flavor = "balanced"; \
     tapping-term-ms = <TAPPING_TERM>; \
-    quick-tap-ms = <QUICK_TAP_MS>; \
-    require-prior-idle-ms = <200>; \
+    quick-tap-ms = <QUICK_TAP>; \
+    require-prior-idle-ms = <IDLE_TIME>; \
     bindings = <HOLD>, <TAP>; \
     hold-trigger-key-positions = <TRIGGER_POS>; \
     hold-trigger-on-release; \
   )
 
-MAKE_HRM(hml, &kp, &kp, KEYS_R KEYS_L THUMBS, HRM_TAP_TERM)
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, HRM_TAP_TERM)
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200)
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200)
 
 // left-hand gui - tend to hold this longer during normal typing
-MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 350)
+MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 350, QUICK_TAP_MS, 200)
 
 // left-hand shift - tend to hold this longer during normal typing
-MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 350)
+MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 350, QUICK_TAP_MS, 200)
 
 #define HRMR(k1,k2,k3) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3
 #define HRML(k1,k2,k3) &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
