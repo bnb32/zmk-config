@@ -78,7 +78,7 @@ layers:
   - Sft+Ctl+ TAB
   - {t: ▽, type: trans}
   - Ctl+ TAB
-  - AGr+ F4
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -125,7 +125,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RET
+  - {t: ▽, type: trans}
   - SPACE
   - {t: number, h: toggle, type: held}
   - {t: ▽, type: trans}
@@ -218,9 +218,9 @@ layers:
   mouse:
   - CANCEL
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - '&win_up'
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&msc SCRL_UP'
   - '&mkp LCLK'
@@ -230,9 +230,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&win_left'
-  - '&win_down'
-  - '&win_right'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&msc SCRL_DOWN'
   - '&mmv MOVE_LEFT'
@@ -257,4 +257,4 @@ layers:
   - RET
   - SPACE
   - {t: ▽, type: trans}
-  - CANCEL
+  - {t: ▽, type: trans}
