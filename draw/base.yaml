@@ -23,7 +23,7 @@ layers:
   - {t: J, h: RALT}
   - {t: K, h: RCTRL}
   - {t: L, h: RSHFT}
-  - ;
+  - {t: ;, h: RGUI}
   - '&apos_ret'
   - '&caps_word'
   - Z
@@ -96,8 +96,8 @@ layers:
   - '6'
   - '7'
   - '8'
-  - '9'
-  - '0'
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - '&equal_bspc'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -107,6 +107,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '['
+  - ']'
+  - ':'
+  - '"'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -115,14 +119,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - <
+  - '>'
+  - '?'
+  - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -149,9 +149,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
   - {t: ▽, type: trans}
+  - '['
+  - ']'
   - ':'
   - '"'
   - PSCRN

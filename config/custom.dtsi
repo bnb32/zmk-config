@@ -34,7 +34,8 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // thumbs
 #define MOUSE_KEYS RT0 RT1 RT2 RT3 RT4 \
                    RM0 RM1 RM2 RM3 RM4 RM5 \
-                   RB0 RB1 RB2 RB3 RB4
+                   RB0 RB1 RB2 RB3 RB4 \
+                   LM2 // don't deactivate mouse layer when control is held
 
 #define QUICK_TAP_MS 150
 #define HT_TAP_TERM 180
@@ -68,6 +69,7 @@
     bindings = <HOLD>, <TAP>; \
   )
 
+// basic hold tap binding
 MAKE_HOLD_TAP(ht, &kp, &kp, HT_TAP_TERM, QUICK_TAP_MS, 200)
 
 // Make fast hold tap for "just hold" emulation
@@ -109,10 +111,31 @@ ZMK_MOD_MORPH(smart_shft,
 )
 
 SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
-SIMPLE_MORPH(lpar, SFT, &kp LPAR, &lbkt)
-SIMPLE_MORPH(lbkt, CTL, &kp LBKT, &kp LBRC)
-SIMPLE_MORPH(rpar, SFT, &kp RPAR, &rbkt)
-SIMPLE_MORPH(rbkt, CTL, &kp RBKT, &kp RBRC)
+
+// no mod outputs lpar / rpar, ctrl outputs lbkt / rbkt, and ctrl + shft outputs lbrc / rbrc
+ZMK_MOD_MORPH(lpar,
+    bindings = <&kp LPAR>, <&kp LBKT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+)
+
+ZMK_MOD_MORPH(rpar,
+    bindings = <&kp RPAR>, <&kp RBKT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+)
+
+// no mod outputs the number, shift outputs lpar / rpar, ctrl outputs lbkt / rbkt, and ctrl + shft outputs lbrc / rbrc
+ZMK_MOD_MORPH(nine,
+    bindings = <&kp N9>, <&lpar>;
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+    keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+)
+
+ZMK_MOD_MORPH(zero,
+    bindings = <&kp N0>, <&rpar>;
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+    keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+)
+
 
 // Layer bindings ----------------------------------------------------------------------------------------------------------------------
 
@@ -138,7 +161,7 @@ MAKE_HOLD_TAP(lht, &mo, &tog, 220, QUICK_TAP_MS, 220)
 // Navigation bindings -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // hold tap for navigation - shorter tapping term and no prior idle time
-MAKE_HOLD_TAP(nht, &kp, &kp, 150, QUICK_TAP_MS, 0)
+MAKE_HOLD_TAP(nht, &kp, &kp, 175, 175, 0)
 
 MAKE_TAP_DANCE(down, &kp DOWN, &nht LC(END) DOWN, 150)
 MAKE_TAP_DANCE(up, &kp UP, &nht LC(HOME) UP, 150)
@@ -168,7 +191,7 @@ MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 350, QUICK_TAP_MS, 200)
 // left-hand shift - tend to hold this longer during normal typing
 MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 350, QUICK_TAP_MS, 200)
 
-#define HRMR(k1,k2,k3) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3
+#define HRMR(k1,k2,k3,k4) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3 &hmr RGUI k4
 #define HRML(k1,k2,k3) &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // Behaviors --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -180,8 +203,8 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 350, QUICK_TAP_MS, 200)
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
