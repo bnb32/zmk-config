@@ -40,16 +40,16 @@ layers:
   - LGUI
   - {t: TAB, h: LSHFT}
   - {t: RET, h: symbol}
-  - {t: SPACE, h: nav_fn, s: '&dot_spc'}
+  - {t: SPACE, h: navigate, s: '&dot_spc'}
   - {t: '&num_dance', h: number}
   - '&smart_mouse'
-  nav_fn:
-  - {t: '0', h: F1}
-  - {t: '0', h: F2}
-  - {t: '0', h: F3}
-  - {t: '0', h: F4}
-  - {t: '0', h: F5}
-  - {t: '0', h: F6}
+  navigate:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PG UP
   - BSPC
   - '&up'
@@ -68,12 +68,12 @@ layers:
   - '&right'
   - Ctl+ F4
   - RET
-  - {t: '0', h: F7}
-  - {t: '0', h: F8}
-  - {t: '0', h: F9}
-  - {t: '0', h: F10}
-  - {t: '0', h: F11}
-  - {t: '0', h: F12}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Gui+ TAB
   - Sft+Ctl+ TAB
   - {t: ▽, type: trans}
@@ -99,23 +99,23 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - '&equal_bspc'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - ':'
-  - '"'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '~'
+  - '!'
+  - {t: '@', h: LSHFT}
+  - {t: '#', h: LCTRL}
+  - {t: $, h: LALT}
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - {t: (, s: '['}
+  - {t: ), s: ']'}
+  - +
+  - PSCRN
+  - CMENU
+  - Ctl+ X
+  - Ctl+ INS
+  - Sft+ INS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,18 +142,18 @@ layers:
   - {t: (, s: '['}
   - {t: ), s: ']'}
   - '&plus_bspc'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - ':'
-  - '"'
+  - '`'
+  - '1'
+  - {t: '2', h: LSHFT}
+  - {t: '3', h: LCTRL}
+  - {t: '4', h: LALT}
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - '='
   - PSCRN
   - CMENU
   - Ctl+ X
@@ -227,25 +227,25 @@ layers:
   - '&mmv MOVE_UP'
   - '&mkp RCLK'
   - '&mkp MB5'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BSPC
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
   - '&msc SCRL_DOWN'
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
   - '&mkp MB4'
-  - BSPC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
   - {t: ▽, type: trans}
   - '&msc SCRL_LEFT'
   - {t: ▽, type: trans}

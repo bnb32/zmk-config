@@ -39,7 +39,7 @@
 
 #define QUICK_TAP_MS 150
 #define HT_TAP_TERM 180
-#define TD_TAP_TERM 170
+#define TD_TAP_TERM 190
 #define HRM_TAP_TERM 180
 
 // Set default mod tap tapping term
@@ -153,7 +153,7 @@ ZMK_TRI_STATE(smart_mouse,
 MAKE_HOLD_TAP(smart_num, &mo, &num_dance, HT_TAP_TERM, QUICK_TAP_MS, 0)
 
 // num_word on tap and stick number layer on double tap
-MAKE_TAP_DANCE(num_dance, &num_word NUM, &sl NUM, TD_TAP_TERM)
+MAKE_TAP_DANCE(num_dance, &num_word NUM, &tog NUM, TD_TAP_TERM)
 
 // layer hold tap
 MAKE_HOLD_TAP(lht, &mo, &tog, 220, QUICK_TAP_MS, 220)
@@ -186,13 +186,13 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200)
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200)
 
 // left-hand gui - tend to hold this longer during normal typing
-MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 250, QUICK_TAP_MS, 200)
+MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 
 // left-hand shift - tend to hold this longer during normal typing
-MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 250, QUICK_TAP_MS, 200)
+MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 
 #define HRMR(k1,k2,k3,k4) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3 &hmr RGUI k4
-#define HRML(k1,k2,k3) &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
+#define HRML(k1,k2,k3) &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // Behaviors --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
