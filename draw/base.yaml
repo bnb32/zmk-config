@@ -55,7 +55,7 @@ layers:
   - '&up'
   - DEL
   - Sft+AGr+ F
-  - {t: ▽, type: trans}
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,7 +67,7 @@ layers:
   - '&down'
   - '&right'
   - Ctl+ F4
-  - {t: ▽, type: trans}
+  - RET
   - {t: '0', h: F7}
   - {t: '0', h: F8}
   - {t: '0', h: F9}
@@ -119,10 +119,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - <
-  - '>'
-  - '?'
-  - '|'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

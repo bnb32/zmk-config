@@ -186,10 +186,10 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200)
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200)
 
 // left-hand gui - tend to hold this longer during normal typing
-MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 350, QUICK_TAP_MS, 200)
+MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 250, QUICK_TAP_MS, 200)
 
 // left-hand shift - tend to hold this longer during normal typing
-MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 350, QUICK_TAP_MS, 200)
+MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 250, QUICK_TAP_MS, 200)
 
 #define HRMR(k1,k2,k3,k4) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3 &hmr RGUI k4
 #define HRML(k1,k2,k3) &hmls LSHFT k1 &hml LCTRL k2 &hml LALT k3
@@ -260,10 +260,12 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R KEYS_L THUMBS, 350, QUICK_TAP_MS, 200)
 #define PREV_WIN &kp LS(RC(TAB))
 #define NEXT_APP &kp LG(TAB)
 
-#define CUT &kp LC(X)
-#define COPY &kp LC(INS)
-#define PASTE &kp LS(INS)
 #define SAVE &kp LC(S)
+
+// C_ for "custom"
+#define C_CUT &kp LC(X)
+#define C_COPY &kp LC(INS)
+#define C_PASTE &kp LS(INS)
 #define C_BSPC &kp BSPC
 #define C_DEL &kp DEL
 
