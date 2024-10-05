@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - ESC
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -13,19 +13,19 @@ layers:
   - O
   - P
   - '-'
-  - TAB
+  - $$material:keyboard_tab$$
   - A
-  - {t: S, h: LSHFT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LALT}
+  - {t: S, h: '$$material:shift$$'}
+  - {t: D, h: '$$material:keyboard_control_key$$'}
+  - {t: F, h: '$$material:keyboard_option_key$$'}
   - G
   - H
-  - {t: J, h: RALT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: RSHFT}
-  - {t: ;, h: RGUI}
-  - '&apos_ret'
-  - '&caps_word'
+  - {t: J, h: '$$material:keyboard_option_key$$'}
+  - {t: K, h: '$$material:keyboard_control_key$$'}
+  - {t: L, h: '$$material:shift$$'}
+  - {t: ;, h: '$$material:keyboard_command_key$$'}
+  - {t: '''', s: '$$material:keyboard_return$$'}
+  - $$mdi:alpha-w-box$$
   - Z
   - X
   - C
@@ -37,55 +37,55 @@ layers:
   - .
   - /
   - \
-  - LGUI
-  - {t: TAB, h: LSHFT}
-  - {t: RET, h: symbol}
-  - {t: SPACE, h: navigate, s: '&dot_spc'}
-  - {t: '&num_dance', h: number}
-  - '&smart_mouse'
+  - $$material:keyboard_command_key$$
+  - {t: '$$material:keyboard_tab$$', h: '$$material:shift$$'}
+  - {t: '$$material:keyboard_return$$', h: SYM}
+  - {t: '$$material:space_bar$$', h: NAV}
+  - {t: '$$material:123$$', h: NUM}
+  - $$material:mouse$$
   navigate:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
-  - BSPC
-  - '&up'
-  - DEL
-  - Sft+AGr+ F
-  - BSPC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:backspace$$
+  - $$material:arrow_upward$$
+  - $$mdi:backspace-reverse$$
+  - $$mdi:format-section$$
+  - $$mdi:backspace$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
-  - '&left'
-  - '&down'
-  - '&right'
-  - Ctl+ F4
-  - RET
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Gui+ TAB
-  - Sft+Ctl+ TAB
-  - {t: ▽, type: trans}
-  - Ctl+ TAB
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$material:arrow_back$$
+  - $$material:arrow_downward$$
+  - $$material:arrow_forward$$
+  - $$material:close$$
+  - $$material:keyboard_return$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - NEXT APP
+  - PREV WIN
+  - {t: '$$mdi:transfer$$', type: trans}
+  - NEXT WIN
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   number:
   - '`'
   - '1'
@@ -98,12 +98,12 @@ layers:
   - '8'
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - '&equal_bspc'
+  - {t: '=', s: '$$mdi:backspace$$'}
   - '~'
   - '!'
-  - {t: '@', h: LSHFT}
-  - {t: '#', h: LCTRL}
-  - {t: $, h: LALT}
+  - {t: '@', h: '$$material:shift$$'}
+  - {t: '#', h: '$$material:keyboard_control_key$$'}
+  - {t: $, h: '$$material:keyboard_option_key$$'}
   - '%'
   - ^
   - '&'
@@ -113,22 +113,22 @@ layers:
   - +
   - PSCRN
   - CMENU
-  - Ctl+ X
-  - Ctl+ INS
-  - Sft+ INS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SPACE
-  - {t: number, h: toggle, type: held}
-  - {t: ▽, type: trans}
+  - $$material:content_cut$$"
+  - $$material:content_copy$$"
+  - $$material:content_paste$$"
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$material:space_bar$$
+  - TOG NUM
+  - {t: '$$mdi:transfer$$', type: trans}
   symbol:
   - '~'
   - '!'
@@ -141,12 +141,12 @@ layers:
   - '*'
   - {t: (, s: '['}
   - {t: ), s: ']'}
-  - '&plus_bspc'
+  - {t: +, s: '$$mdi:backspace$$'}
   - '`'
   - '1'
-  - {t: '2', h: LSHFT}
-  - {t: '3', h: LCTRL}
-  - {t: '4', h: LALT}
+  - {t: '2', h: '$$material:shift$$'}
+  - {t: '3', h: '$$material:keyboard_control_key$$'}
+  - {t: '4', h: '$$material:keyboard_option_key$$'}
   - '5'
   - '6'
   - '7'
@@ -156,22 +156,22 @@ layers:
   - '='
   - PSCRN
   - CMENU
-  - Ctl+ X
-  - Ctl+ INS
-  - Sft+ INS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$material:content_cut$$"
+  - $$material:content_copy$$"
+  - $$material:content_paste$$"
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - <
   - '>'
   - '?'
   - '|'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: RET, type: held}
-  - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$material:keyboard_return$$
+  - $$material:space_bar$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   system:
   - BT CLR
   - {t: BT, h: '0'}
@@ -179,24 +179,24 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - MUTE
-  - VOL UP
-  - PP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$material:volume_off$$
+  - $$material:volume_up$$
+  - $$material:pause$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB BRD
   - RGB BRI
   - RGB HUD
   - RGB HUI
   - RGB SAD
   - RGB SAI
-  - {t: ▽, type: trans}
-  - PREV
-  - VOL DN
-  - NEXT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$material:skip_previous$$
+  - $$material:volume_down$$
+  - $$material:skip_next$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
   - RGB EFF
   - OUT TOG
@@ -204,57 +204,57 @@ layers:
   - ''
   - '&bootloader'
   - '&bootloader'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   mouse:
   - CANCEL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&msc SCRL_UP'
-  - '&mkp LCLK'
-  - '&mmv MOVE_UP'
-  - '&mkp RCLK'
-  - '&mkp MB5'
-  - BSPC
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - U SCROLL
+  - L CLICK
+  - U MOVE
+  - R CLICK
+  - F CLICK
+  - $$mdi:backspace$$
   - F1
   - F2
   - F3
   - F4
   - F5
   - F6
-  - '&msc SCRL_DOWN'
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - '&mkp MB4'
-  - RET
+  - D SCROLL
+  - L MOVE
+  - D MOVE
+  - R MOVE
+  - B CLICK
+  - $$material:keyboard_return$$
   - F7
   - F8
   - F9
   - F10
   - F11
   - F12
-  - {t: ▽, type: trans}
-  - '&msc SCRL_LEFT'
-  - {t: ▽, type: trans}
-  - '&msc SCRL_RIGHT'
-  - {t: ▽, type: trans}
-  - DEL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RET
-  - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - L SCROLL
+  - {t: '$$mdi:transfer$$', type: trans}
+  - R SCROLL
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$material:keyboard_return$$
+  - $$material:space_bar$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
