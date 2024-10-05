@@ -39,7 +39,7 @@
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
     #define _RGB_HOME_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
-    #define _RGB_BOTTOM_ &rgb_ug RGB_TOG &rgb_ug RGB_EFF &out OUT_TOG &out OUT_BLE &none
+    #define _RGB_BOTTOM_ &out OUT_TOG &out OUT_BLE &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none
 #else
     #define _RGB_HOME_ &none &none &none &none &none &none
     #define _RGB_BOTTOM_ &none &none &none &none &none
@@ -80,7 +80,7 @@ ZMK_LAYER(default,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭───────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp MINUS
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp TAB       &kp A         HRML(S,       D,            F)            &kp G                     &kp H         HRMR(J,       K,            L,            SEMI)         APOS_RET
+    &kp TAB       &kp A         HRML(S,       D,            F)            &kp G                     &kp H         HRMR(J,       K,            L,            SEMI)         &kp APOS
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &caps_word    &kp Z         &kp X         &kp C         &kp V         &kp B           X_ENC     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

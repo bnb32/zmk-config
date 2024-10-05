@@ -152,8 +152,8 @@ ZMK_TRI_STATE(smart_mouse,
 // smart number activates number layer on hold and num_dance on tap
 MAKE_HOLD_TAP(smart_num, &mo, &num_dance, HT_TAP_TERM, QUICK_TAP_MS, 0)
 
-// num_word on tap and stick number layer on double tap
-MAKE_TAP_DANCE(num_dance, &num_word NUM, &tog NUM, TD_TAP_TERM)
+// toggle num layer on tap and num_word on double tap
+MAKE_TAP_DANCE(num_dance, &tog NUM, &num_word NUM, TD_TAP_TERM)
 
 // layer hold tap
 MAKE_HOLD_TAP(lht, &mo, &tog, 220, QUICK_TAP_MS, 220)

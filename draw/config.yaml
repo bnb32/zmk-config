@@ -254,17 +254,19 @@ draw_config:
         stroke: var(--color--key--border);
     }
     .tap {
+        font-size: 10px;
         fill: var(--color--key--text--tap);
     }
     .shifted,
     .hold {
-        font-size: 18px;
+        font-size: 12px;
         text-anchor: middle;
     }
     .shifted {
+        font-size: 10px;
         dominant-baseline: hanging;
         fill: var(--color--key--text--shifted);
-        translate: -25px 2px;
+        // translate: -25px 2px;
     }
     .hold {
         dominant-baseline: ideographic;
@@ -336,6 +338,7 @@ draw_config:
     /*
      * Overrides
      */
+    /*
     .shifted.mdi\:alpha-w-box {
       translate: 25px 0px;
     }
@@ -344,6 +347,36 @@ draw_config:
     }
     .hold.mdi\:bluetooth {
       translate: 25px -25px;
+    }
+    */
+
+    /* Outer column + thumb keys */
+    .keypos-0,
+    .keypos-11,
+    .keypos-12,
+    .keypos-23,
+    .keypos-24,
+    .keypos-35,
+    .keypos-36,
+    .keypos-37,
+    .keypos-38,
+    .keypos-39,
+    .keypos-40,
+    .keypos-41 {
+        --color--key--bg: var(--color--material--blue-gray--100);
+        --color--key--border: var(--color--material--blue-gray--50);
+    }
+
+    .keypos-12 {
+        --color--key--bg: var(--color--material--red--300);
+        --color--key--border: var(--color--material--red--200);
+        --color--key--text--shifted: var(--color--key--text--tap);
+        --color--key--text--hold: var(--color--key--text--tap);
+    }
+
+    .keypos-23 {
+        --color--key--bg: var(--color--material--teal--200);
+        --color--key--border: var(--color--material--teal--100);
     }
 
 
@@ -364,45 +397,6 @@ parse_config:
   trans_legend:
     tap: $$mdi:transfer$$
     type: trans
-  raw_binding_map:
-    "&smart_num": $$mdi:alpha-w-box$$
-    "&up": $$material:arrow_upward$$
-    "&down": $$material:arrow_downward$$
-    "&right": $$material:arrow_forward$$
-    "&left": $$material:arrow_back$$
-    "&caps_word": $$mdi:alpha-w-box$$
-    "&smart_mouse": $$material:mouse$$
-    "&apos_ret": {"t":"'", "s": $$material:keyboard_return$$}
-    "PLUS_BSPC": {"t":"+", "s":$$mdi:backspace$$}
-    "EQUAL_BSPC": {"t":"=", "s":$$mdi:backspace$$}
-    "C_CUT": $$material:content_cut$$"
-    "C_COPY": $$material:content_copy$$"
-    "C_PASTE": $$material:content_paste$$"
-    "NEXT_APP": "NEXT APP"
-    "&dot_spc": "$$mdi:circle-small$$"
-    "WIN_CLOSE": "$$material:close$$"
-    "NEXT_WIN": "NEXT WIN"
-    "PREV_WIN": "PREV WIN"
-    "FORMAT": "$$mdi:format-section$$"
-    "navigate": "NAV"
-    "number": "NUM"
-    "symbol": "SYM"
-    "U_CL_L": "L CLICK"
-    "U_CL_R": "R CLICK"
-    "U_CL_F": "F CLICK"
-    "U_CL_B": "B CLICK"
-    "U_WH_L": "L SCROLL"
-    "U_WH_R": "R SCROLL"
-    "U_WH_U": "U SCROLL"
-    "U_WH_D": "D SCROLL"
-    "U_MS_L": "L MOVE"
-    "U_MS_R": "R MOVE"
-    "U_MS_U": "U MOVE"
-    "U_MS_D": "D MOVE"
-    "&tog NUM": "TOG NUM"
-    "SYM_RET": {"h":"SYM", "t":$$material:keyboard_return$$}
-    "SMART_NUM": {"h":"NUM", "t":$$material:123$$}
-    "NAV_SPC": {"h":"NAV", "t":$$material:space_bar$$}
   toggle_label: toggle
   tap_toggle_label: tap-toggle
   modifier_fn_map:
@@ -419,163 +413,367 @@ parse_config:
     special_combinations:
       left_ctrl+left_alt+left_gui+left_shift: Hyper
       left_ctrl+left_alt+left_shift: Meh
-  qmk_remove_keycode_prefix:
-  - KC_
-  qmk_keycode_map:
-    XXXXXXX: ''
-    'NO': ''
-    MINUS: '-'
-    MINS: '-'
-    EQUAL: '='
-    EQL: '='
-    LEFT_BRACKET: '['
-    LBRC: '['
-    RIGHT_BRACKET: ']'
-    RBRC: ']'
-    BACKSLASH: \
-    BSLS: \
-    NONUS_HASH: '#'
-    NUHS: '#'
-    SEMICOLON: ;
-    SCLN: ;
-    QUOTE: ''''
-    QUOT: ''''
-    GRAVE: '`'
-    GRV: '`'
-    COMMA: ','
-    COMM: ','
-    DOT: .
-    SLASH: /
-    SLSH: /
-    TILDE: '~'
-    TILD: '~'
-    EXCLAIM: '!'
-    EXLM: '!'
-    AT: '@'
-    HASH: '#'
-    DOLLAR: $
-    DLR: $
-    PERCENT: '%'
-    PERC: '%'
-    CIRCUMFLEX: ^
-    CIRC: ^
-    AMPERSAND: '&'
-    AMPR: '&'
-    ASTERISK: '*'
-    ASTR: '*'
-    LEFT_PAREN: (
-    LPRN: (
-    RIGHT_PAREN: )
-    RPRN: )
-    UNDERSCORE: _
-    UNDS: _
-    PLUS: +
-    LEFT_CURLY_BRACE: '{'
-    LCBR: '{'
-    RIGHT_CURLY_BRACE: '}'
-    RCBR: '}'
-    PIPE: '|'
-    COLON: ':'
-    COLN: ':'
-    DOUBLE_QUOTE: '"'
-    DQUO: '"'
-    DQT: '"'
-    LEFT_ANGLE_BRACKET: <
-    LABK: <
-    LT: <
-    RIGHT_ANGLE_BRACKET: '>'
-    RABK: '>'
-    GT: '>'
-    QUESTION: '?'
-    QUES: '?'
   zmk_remove_keycode_prefix: []
+  mark_alternate_layer_activators: true
+  sticky_label: $$mdi:gesture-tap-hold$$
+  trans_legend:
+    tap: $$mdi:transfer$$
+    type: trans
+
+  raw_binding_map:
+    "&up": $$mdi:arrow-up-bold$$
+    "&down": $$mdi:arrow-down-bold$$
+    "&left": $$mdi:arrow-left-bold$$
+    "&right": $$mdi:arrow-right-bold$$
+    "&caps_word": $$mdi:alpha-w-box$$
+    "&smart_mouse": $$material:mouse$$
+    "&apos_ret": {"t":"'", "s": $$mdi:keyboard-return$$}
+    "PLUS_BSPC": {"t":"+", "s":$$mdi:backspace$$}
+    "EQUAL_BSPC": {"t":"=", "s":$$mdi:backspace$$}
+    "C_CUT": $$material:content_cut$$"
+    "C_COPY": $$material:content_copy$$"
+    "C_PASTE": $$material:content_paste$$"
+    "NEXT_APP": "NEXT APP"
+    "&dot_spc": "$$mdi:circle-small$$"
+    "WIN_CLOSE": "$$material:close$$"
+    "NEXT_WIN": "NEXT WIN"
+    "PREV_WIN": "PREV WIN"
+    "FORMAT": "$$mdi:format-section$$"
+    "navigate": "NAV"
+    "number": "NUM"
+    "symbol": "SYM"
+    "U_CL_L": "$$mdi:mouse-left-click$$"
+    "U_CL_R": "$$mdi:mouse-right-click$$"
+    "U_CL_F": "F CLICK"
+    "U_CL_B": "B CLICK"
+    U_WH_L:
+      hold: "$$mdi:mouse-scroll-wheel$$"
+      tap: "$$mdi:arrow-left$$"
+    U_WH_R:
+      hold: "$$mdi:mouse-scroll-wheel$$"
+      tap: "$$mdi:arrow-right$$"
+    U_WH_U:
+      hold: "$$mdi:mouse-scroll-wheel$$"
+      tap: "$$mdi:arrow-up$$"
+    U_WH_D:
+      hold: "$$mdi:mouse-scroll-wheel$$"
+      tap: "$$mdi:arrow-down$$"
+    "U_MS_L": "L MOVE"
+    "U_MS_R": "R MOVE"
+    "U_MS_U": "$$mdi:mouse-move-up$$"
+    "U_MS_D": "$$mdi:mouse-move-down$$"
+    "&tog NUM": "TOG NUM"
+    "SYM_RET": {"h":"SYM", "t":$$material:keyboard_return$$}
+    "NAV_SPC": {"h":"NAV", "t":$$mdi:keyboard-space$$}
+    CANCEL: $$mdi:close-box$$
+
+    # Sound
+    C_MUTE: $$mdi:volume-off$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+
+    # Media
+    C_NEXT: $$mdi:skip-next$$
+    C_PREV: $$mdi:skip-previous$$
+    C_PP: $$mdi:play-pause$$
+
+    # Bluetooth
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
+
+    # Layers
+    "SMART_NUM":
+      shifted: $$mdi:alpha-w-box$$
+      tap: $$mdi:gesture-tap-hold$$
+
+    "SMART_MOUSE":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:gesture-tap-hold$$
+
+    # Modifiers
+    "&caps_word": $$mdi:alpha-w-box$$
+    "&kt RSHIFT":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: $$mdi:toggle-switch$$
+
+    # Empty
+    "&none":
+      tap: $$mdi:minus-circle-outline$$
+      type: none
+
+    # Whitespace
+    "&bkspc_del":
+      type: backspace
+      tap: $$mdi:backspace$$
+      shifted: $$mdi:backspace-reverse-outline$$
+
+    # Bluetooth
+    "&bt BT_SEL 0":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 1
+    "&bt BT_SEL 1":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 2
+    "&bt BT_SEL 2":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 3
+    "&bt BT_SEL 3":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 4
+    "&bt BT_SEL 4":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: 5
+    "&out OUT_TOG":
+      shifted: $$mdi:usb$$
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
+    "&rgb_ug RGB_TOG":
+      shifted: $$mdi:led-strip$$
+      tap: $$mdi:toggle-switch$$
+
+    # Reset
+    "&sys_reset":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+    "&bootloader":
+      tap: $$mdi:progress-download$$
+
+  # ZMK
   zmk_keycode_map:
-    EXCLAMATION: '!'
-    EXCL: '!'
-    AT_SIGN: '@'
-    AT: '@'
-    HASH: '#'
-    POUND: '#'
+    # Symbols
+    EXCLAMATION: "!"
+    EXCL: "!"
+    AT_SIGN: "@"
+    AT: "@"
+    HASH: "#"
+    POUND: "#"
     DOLLAR: $
     DLLR: $
-    PERCENT: '%'
-    PRCNT: '%'
+    PERCENT: "%"
+    PRCNT: "%"
     CARET: ^
-    AMPERSAND: '&'
-    AMPS: '&'
-    ASTERISK: '*'
-    ASTRK: '*'
-    STAR: '*'
+    AMPERSAND: "&"
+    AMPS: "&"
+    ASTERISK: "*"
+    ASTRK: "*"
+    STAR: "*"
     LEFT_PARENTHESIS: (
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
-    EQUAL: '='
+    EQUAL:
+      tap: "="
+      shifted: "+"
     PLUS: +
-    MINUS: '-'
+    MINUS:
+      tap: "-"
+      shifted: "_"
     UNDERSCORE: _
     UNDER: _
-    SLASH: /
-    FSLH: /
-    QUESTION: '?'
-    QMARK: '?'
-    BACKSLASH: \
-    BSLH: \
-    PIPE: '|'
+    SLASH:
+      tap: "/"
+      shifted: "?"
+    FSLH:
+      tap: "/"
+      shifted: "?"
+    QUESTION: "?"
+    QMARK: "?"
+    BACKSLASH:
+      tap: '\'
+      shifted: "|"
+    BSLH:
+      tap: '\'
+      shifted: "|"
+    PIPE: "|"
     NON_US_BACKSLASH: \
-    PIPE2: '|'
-    NON_US_BSLH: '|'
-    SEMICOLON: ;
-    SEMI: ;
-    COLON: ':'
-    SINGLE_QUOTE: ''''
-    SQT: ''''
-    APOSTROPHE: ''''
-    APOS: ''''
+    PIPE2: "|"
+    NON_US_BSLH: "|"
+    SEMICOLON:
+      tap: ";"
+      shifted: ":"
+    SEMI:
+      tap: ";"
+      shifted: ":"
+    COLON: ":"
+    SINGLE_QUOTE:
+      tap: "'"
+      shifted: '"'
+    APOS:
+      tap: "'"
+      shifted: '"'
     DOUBLE_QUOTES: '"'
     DQT: '"'
-    COMMA: ','
     LESS_THAN: <
     LT: <
-    PERIOD: .
-    DOT: .
-    GREATER_THAN: '>'
-    GT: '>'
-    LEFT_BRACKET: '['
-    LBKT: '['
-    LEFT_BRACE: '{'
-    LBRC: '{'
-    RIGHT_BRACKET: ']'
-    RBKT: ']'
-    RIGHT_BRACE: '}'
-    RBRC: '}'
-    GRAVE: '`'
-    TILDE: '~'
-    NON_US_HASH: '#'
-    NUHS: '#'
-    TILDE2: '~'
-    LSHFT: "$$material:shift$$"
-    RSHFT: "$$material:shift$$"
-    LCTRL: "$$material:keyboard_control_key$$"
-    RCTRL: "$$material:keyboard_control_key$$"
-    LALT: "$$material:keyboard_option_key$$"
-    RALT: "$$material:keyboard_option_key$$"
-    LGUI: "$$material:keyboard_command_key$$"
-    RGUI: "$$material:keyboard_command_key$$"
-    GUI: "$$material:keyboard_command_key$$"
-    SPACE: "$$material:space_bar$$"
-    BSPC: $$mdi:backspace$$
-    DEL: $$mdi:backspace-reverse$$
-    TAB: "$$material:keyboard_tab$$"
-    C_VOL_UP: "$$material:volume_up$$"
-    C_VOL_DN: "$$material:volume_down$$"
-    C_PP: "$$material:pause$$"
-    C_MUTE: "$$material:volume_off$$"
-    C_PREV: "$$material:skip_previous$$"
-    C_NEXT: "$$material:skip_next$$"
-    RET: "$$material:keyboard_return$$"
-    ESC: "$$mdi:keyboard-esc$$"
-  zmk_combos: {}
+    DOT:
+      tap: "."
+      shifted: ">"
+    COMMA:
+      tap: ","
+      shifted: "<"
+    GREATER_THAN: ">"
+    GT: ">"
+    LEFT_BRACKET:
+      tap: "["
+      shifted: "{"
+    LBKT:
+      tap: "["
+      shifted: "{"
+    LEFT_BRACE: "{"
+    LBRC: "{"
+    RIGHT_BRACKET:
+      tap: "]"
+      shifted: "}"
+    RBKT:
+      tap: "]"
+      shifted: "}"
+    RIGHT_BRACE: "}"
+    RBRC: "}"
+    GRAVE:
+      tap: "`"
+      shifted: "~"
+    TILDE: "~"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    TILDE2: "~"
+
+    # Numbers
+    N1:
+      tap: 1
+      shifted: "!"
+    N2:
+      tap: 2
+      shifted: "@"
+    N3:
+      tap: 3
+      shifted: "#"
+    N4:
+      tap: 4
+      shifted: "$"
+    N5:
+      tap: 5
+      shifted: "%"
+    N6:
+      tap: 6
+      shifted: "^"
+    N7:
+      tap: 7
+      shifted: "&"
+    N8:
+      tap: 8
+      shifted: "*"
+    N9:
+      tap: 9
+      shifted: "("
+    N0:
+      tap: 0
+      shifted: ")"
+
+    # Modifiers
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    # "Meh" key
+    LS(LC(LALT)): $$mdi:star-three-points$$
+
+    # Whitespace
+    RET:
+      type: enter
+      tap: $$mdi:keyboard-return$$
+    ESC: $$mdi:keyboard-esc$$
+    TAB: $$mdi:keyboard-tab$$
+    LS(TAB): $$mdi:keyboard-tab-reverse$$
+    SPACE: $$mdi:keyboard-space$$
+    BACKSPACE:
+      type: backspace
+      tap: $$mdi:backspace$$
+    BSPC:
+      type: backspace
+      tap: $$mdi:backspace$$
+    DELETE: $$mdi:backspace-reverse-outline$$
+    DEL: $$mdi:backspace-reverse-outline$$
+
+    # Locks
+    CAPSLOCK: $$mdi:apple-keyboard-caps$$
+    CAPS: $$mdi:apple-keyboard-caps$$
+
+    # Sound
+    C_MUTE: $$mdi:volume-off$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+
+    # Media
+    C_NEXT: $$mdi:skip-next$$
+    C_PREV: $$mdi:skip-previous$$
+    C_PP: $$mdi:play-pause$$
+
+    # Bluetooth
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
+
+    # Settings
+    C_BRI_UP: $$mdi:brightness-5$$
+    C_BRI_DN: $$mdi:brightness-7$$
+
+    # System
+    C_POWER: $$mdi:power-standby$$
+    C_AL_LOCK: $$mdi:lock$$
+    K_CANCEL: $$mdi:close-box$$
+
+    # Zoom
+    RG(RS(A)):
+      tap: $$mdi:microphone$$
+      hold: zoom
+    RG(RS(V)):
+      tap: $$mdi:video$$
+      hold: zoom
+
+  zmk_combos:
+    combo_to_2:
+      align: top
+    combo_to_3:
+      align: top
+    combo_bt_clear:
+      align: top
+      offset: 0.03
+    combo_mute:
+      align: top
+      offset: 0.15
+    combo_minus:
+      key:
+        shifted: "_"
+        hold: "-"
+    combo_equal:
+      key:
+        shifted: "+"
+        hold: "="
+    combo_backslash:
+      key:
+        shifted: "|"
+        hold: \
+    combo_lbkt:
+      key:
+        shifted: "{"
+        hold: "["
+    combo_rbkt:
+      key:
+        shifted: "}"
+        hold: "]"
+    combo_semicolon:
+      key:
+        shifted: ":"
+        hold: ";"
+    combo_apostrophe:
+      key:
+        shifted: "'"
+        hold: '"'
   zmk_preamble: "#include <zmk-helpers/key-labels/42.h>"
   zmk_additional_includes:
     - "modules/helpers/include"
