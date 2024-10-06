@@ -40,13 +40,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: SYM}
-  - {t: '$$material:keyboard_return$$', h: NAV}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   navigate:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$material:close$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -55,19 +55,19 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:format-section$$
-  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:format-section$$
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$material:close$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -75,15 +75,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - NEXT APP
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - PREV WIN
-  - {t: '$$mdi:transfer$$', type: trans}
   - NEXT WIN
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   number:
@@ -98,7 +98,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '=', s: '$$mdi:backspace$$'}
+  - {t: '=', s: +}
   - '~'
   - '!'
   - {t: '@', h: '$$mdi:apple-keyboard-shift$$'}
@@ -118,7 +118,7 @@ layers:
   - $$material:content_paste$$"
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -126,7 +126,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
   - TOG NUM
   - {t: '$$mdi:transfer$$', type: trans}
   symbol:
@@ -141,7 +141,7 @@ layers:
   - '*'
   - {t: (, s: '['}
   - {t: ), s: ']'}
-  - {t: +, s: '$$mdi:backspace$$'}
+  - +
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-shift$$', s: '@'}
@@ -161,15 +161,15 @@ layers:
   - $$material:content_paste$$"
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - <
   - '>'
   - '?'
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   system:
@@ -212,7 +212,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
@@ -227,7 +227,7 @@ layers:
   - $$mdi:mouse-move-up$$
   - $$mdi:mouse-right-click$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -239,7 +239,7 @@ layers:
   - $$mdi:mouse-move-down$$
   - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-right$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F7
   - F8
   - F9
@@ -247,14 +247,14 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-left$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-right$$'}
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
