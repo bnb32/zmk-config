@@ -1,34 +1,45 @@
 draw_config:
-  key_w: 60.0
-  key_h: 56.0
-  split_gap: 30.0
-  combo_w: 28.0
-  combo_h: 26.0
-  key_rx: 6.0
-  key_ry: 6.0
-  n_columns: 1
-  separate_combo_diagrams: false
-  combo_diagrams_scale: 2
-  inner_pad_w: 2.0
-  inner_pad_h: 2.0
-  outer_pad_w: 30.0
-  outer_pad_h: 56.0
-  line_spacing: 1.2
-  arc_radius: 6.0
-  append_colon_to_layer_header: true
-  small_pad: 2.0
-  legend_rel_x: 0.0
-  legend_rel_y: 0.0
-  draw_key_sides: false
-  key_side_pars:
-    rel_x: 0
-    rel_y: 4
-    rel_w: 12
-    rel_h: 12
-    rx: 4
-    ry: 4
+  # key dimensions, non-ortho layouts use key_h for width as well
+  # key_w: 100 # This doesn't seem to do anything? 🤔
+  key_h: 80
 
-  # Custom CSS
+  # keys border radius
+  key_rx: 4
+  key_ry: 4
+
+  # key labels line spacing for multi-line labels
+  line_spacing: 1
+
+  # combo box dimensions
+  combo_w: 36
+  combo_h: 36
+
+  # padding from the edge of cap to top and bottom legends
+  small_pad: 4
+
+  # Padding between keys
+  inner_pad_w: 1.5
+  inner_pad_h: 1.5
+
+  # padding between layers
+  outer_pad_w: 0
+  outer_pad_h: 0
+
+  # gap between two halves for ortho layout generator
+  # split_gap: 20 # This doesn't seem to have any effect either? 🤔
+
+  # as it reads on the tin can, this comment is here for consistency
+  append_colon_to_layer_header: false
+
+  # shrink font size for legends wider than this many chars, set to 0 to disable
+  # ideal value depends on the font size defined in svg_style and width of the boxes
+  shrink_wide_legends: 5
+
+  # Glyphs dimensions
+  glyph_tap_size: 26
+  glyph_hold_size: 18
+  glyph_shifted_size: 18
+
   svg_style: |
     /* latin-ext */
     @font-face {
@@ -177,7 +188,7 @@ draw_config:
 
         --color--layer--text: var(--color--material--blue-gray--400);
 
-        --color--key--bg: white;
+        --color--key--bg: var(--color--material--blue-gray--50);
         --color--key--border: white;
         --color--key--text--tap: var(--color--text);
         --color--key--text--shifted: var(--color--material--blue-gray--500);
@@ -215,7 +226,7 @@ draw_config:
          */
 
         font-family: REM,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 14px;
+        font-size: 24px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: var(--color--text);
@@ -254,19 +265,17 @@ draw_config:
         stroke: var(--color--key--border);
     }
     .tap {
-        font-size: 13px;
         fill: var(--color--key--text--tap);
     }
     .shifted,
     .hold {
-        font-size: 15px;
+        font-size: 18px;
         text-anchor: middle;
     }
     .shifted {
-        font-size: 13px;
         dominant-baseline: hanging;
         fill: var(--color--key--text--shifted);
-        // translate: -25px 2px;
+        translate: -25px 2px;
     }
     .hold {
         dominant-baseline: ideographic;
@@ -338,7 +347,6 @@ draw_config:
     /*
      * Overrides
      */
-    /*
     .shifted.mdi\:alpha-w-box {
       translate: 25px 0px;
     }
@@ -348,7 +356,30 @@ draw_config:
     .hold.mdi\:bluetooth {
       translate: 25px -25px;
     }
-    */
+
+    .shifted.mdi\:alarm-light-off {
+      translate: -25px 25px;
+    }
+    .shifted.mdi\:alarm-light {
+      translate: -25px 25px;
+    }
+    .hold.mdi\:alarm-light {
+      translate: 25px -25px;
+    }
+
+    .shifted.mdi\:arrow-up {
+      translate: 20px 25px;
+    }
+    .shifted.mdi\:arrow-down {
+      translate: 20px 25px;
+    }
+
+    .shifted.mdi\:page-previous {
+      translate: 20px 25px;
+    }
+    .shifted.mdi\:page-next {
+      translate: 20px 25px;
+    }
 
     /* Outer column + thumb keys */
     .keypos-0,
@@ -363,57 +394,23 @@ draw_config:
     .keypos-39,
     .keypos-40,
     .keypos-41 {
-        --color--key--bg: white;
+        --color--key--bg: var(--color--material--blue-gray--100);
         --color--key--border: var(--color--material--blue-gray--50);
     }
 
-    .keypos-12 {
+
+    .keypos-38 {
         --color--key--bg: var(--color--material--red--300);
         --color--key--border: var(--color--material--red--200);
         --color--key--text--shifted: var(--color--key--text--tap);
         --color--key--text--hold: var(--color--key--text--tap);
     }
 
-    .keypos-23 {
+    .keypos-39 {
         --color--key--bg: var(--color--material--teal--200);
         --color--key--border: var(--color--material--teal--100);
     }
-
-
-  svg_extra_style: ''
-  footer_text: "bnb32/zmk-config"
-  dark_mode: auto
-  shrink_wide_legends: 7
-  style_layer_activators: true
-  glyph_tap_size: 14
-  glyph_hold_size: 12
-  glyph_shifted_size: 10
-  glyphs: {}
 parse_config:
-  preprocess: true
-  skip_binding_parsing: false
-  mark_alternate_layer_activators: true
-  sticky_label: $$mdi:gesture-tap-hold$$
-  trans_legend:
-    tap: $$mdi:transfer$$
-    type: trans
-  toggle_label: toggle
-  tap_toggle_label: tap-toggle
-  modifier_fn_map:
-    left_ctrl: Ctl
-    right_ctrl: Ctl
-    left_shift: Sft
-    right_shift: Sft
-    left_alt: Alt
-    right_alt: AGr
-    left_gui: Gui
-    right_gui: Gui
-    keycode_combiner: '{mods}+ {key}'
-    mod_combiner: '{mod_1}+{mod_2}'
-    special_combinations:
-      left_ctrl+left_alt+left_gui+left_shift: Hyper
-      left_ctrl+left_alt+left_shift: Meh
-  zmk_remove_keycode_prefix: []
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
   trans_legend:
@@ -421,53 +418,62 @@ parse_config:
     type: trans
 
   raw_binding_map:
-    "&up": $$mdi:arrow-up-bold$$
-    "&down": $$mdi:arrow-down-bold$$
-    "&left": $$mdi:arrow-left-bold$$
-    "&right": $$mdi:arrow-right-bold$$
     "&caps_word": $$mdi:alpha-w-box$$
-    "&smart_mouse": $$material:mouse$$
     "&apos_ret": {"t":"'", "s": $$mdi:keyboard-return$$}
     "PLUS_BSPC": {"t":"+", "s":$$mdi:backspace$$}
     "EQUAL_BSPC": {"t":"=", "s":$$mdi:backspace$$}
     "C_CUT": $$material:content_cut$$"
     "C_COPY": $$material:content_copy$$"
     "C_PASTE": $$material:content_paste$$"
-    "NEXT_APP": "NEXT APP"
     "&dot_spc": "$$mdi:circle-small$$"
-    "WIN_CLOSE": "$$material:close$$"
-    "NEXT_WIN": "NEXT WIN"
-    "PREV_WIN": "PREV WIN"
-    "FORMAT": "$$mdi:format-section$$"
     "navigate": "NAV"
     "number": "NUM"
     "symbol": "SYM"
+    "&kp PSCRN": "$$mdi:monitor-screenshot$$"
+    "&kp K_CMENU": "$$mdi:menu$$"
+    CANCEL: $$mdi:close-box$$
+
+    # Navigate
+    "FORMAT": "$$mdi:format-section$$"
+    "NEXT_APP": "NEXT APP"
+    "WIN_CLOSE": "$$material:close$$"
+    "NEXT_WIN": "NEXT WIN"
+    "PREV_WIN": "PREV WIN"
+    "&up": $$mdi:arrow-up-bold$$
+    "&down": $$mdi:arrow-down-bold$$
+    "&left": $$mdi:arrow-left-bold$$
+    "&right": $$mdi:arrow-right-bold$$
+
+    # Mouse
+    "&smart_mouse": $$material:mouse$$
     "U_CL_L": "$$mdi:mouse-left-click$$"
     "U_CL_R": "$$mdi:mouse-right-click$$"
-    "U_CL_F": "F CLICK"
-    "U_CL_B": "B CLICK"
+    U_CL_F:
+      tap: "$$mdi:mouse-left-click$$"
+      shifted: "$$mdi:page-next$$"
+    U_CL_B:
+      tap: "$$mdi:mouse-left-click$$"
+      shifted: "$$mdi:page-previous$$"
     U_WH_L:
-      hold: "$$mdi:mouse-scroll-wheel$$"
-      tap: "$$mdi:arrow-left$$"
+      tap: "$$mdi:mouse-scroll-wheel$$"
+      hold: "$$mdi:arrow-left$$"
     U_WH_R:
-      hold: "$$mdi:mouse-scroll-wheel$$"
-      tap: "$$mdi:arrow-right$$"
+      tap: "$$mdi:mouse-scroll-wheel$$"
+      hold: "$$mdi:arrow-right$$"
     U_WH_U:
-      hold: "$$mdi:mouse-scroll-wheel$$"
-      tap: "$$mdi:arrow-up$$"
+      tap: "$$mdi:mouse-scroll-wheel$$"
+      shifted: "$$mdi:arrow-up$$"
     U_WH_D:
-      hold: "$$mdi:mouse-scroll-wheel$$"
-      tap: "$$mdi:arrow-down$$"
-    "U_MS_L": "L MOVE"
-    "U_MS_R": "R MOVE"
+      tap: "$$mdi:mouse-scroll-wheel$$"
+      shifted: "$$mdi:arrow-down$$"
+    U_MS_L:
+      tap: "$$mdi:mouse$$"
+      hold: "$$mdi:arrow-left$$"
+    U_MS_R:
+      tap: "$$mdi:mouse$$"
+      hold: "$$mdi:arrow-right$$"
     "U_MS_U": "$$mdi:mouse-move-up$$"
     "U_MS_D": "$$mdi:mouse-move-down$$"
-    "&tog NUM": "TOG NUM"
-    "SYM_RET": {"h":"SYM", "t":$$material:keyboard_return$$}
-    "NAV_SPC": {"h":"NAV", "t":$$mdi:keyboard-space$$}
-    "NAV_RET": {"h":"NAV", "t":$$material:keyboard_return$$}
-    "SYM_SPC": {"h":"SYM", "t":$$mdi:keyboard-space$$}
-    CANCEL: $$mdi:close-box$$
 
     # Sound
     C_MUTE: $$mdi:volume-off$$
@@ -484,10 +490,14 @@ parse_config:
     BT_SEL: $$mdi:bluetooth-connect$$
 
     # Layers
+    "&tog NUM": "TOG NUM"
+    "SYM_RET": {"h":"SYM", "t":$$material:keyboard_return$$}
+    "NAV_SPC": {"h":"NAV", "t":$$mdi:keyboard-space$$}
+    "NAV_RET": {"h":"NAV", "t":$$material:keyboard_return$$}
+    "SYM_SPC": {"h":"SYM", "t":$$mdi:keyboard-space$$}
     "SMART_NUM":
       shifted: $$mdi:alpha-w-box$$
       tap: $$mdi:gesture-tap-hold$$
-
     "SMART_MOUSE":
       shifted: $$mdi:mouse$$
       tap: $$mdi:gesture-tap-hold$$
@@ -529,9 +539,21 @@ parse_config:
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
       hold: $$mdi:bluetooth$$
+    "&out OUT_BLE":
+      hold: $$mdi:bluetooth$$
+      tap: $$mdi:gesture-tap-hold$$
+
+    # RGB
     "&rgb_ug RGB_TOG":
-      shifted: $$mdi:led-strip$$
+      shifted: $$mdi:alarm-light-off$$
       tap: $$mdi:toggle-switch$$
+      hold: $$mdi:alarm-light$$
+    "&rgb_ug RGB_BRI":
+      tap: $$mdi:alarm-light$$
+      shifted: $$mdi:arrow-up$$
+    "&rgb_ug RGB_BRD":
+      tap: $$mdi:alarm-light$$
+      shifted: $$mdi:arrow-down$$
 
     # Reset
     "&sys_reset":

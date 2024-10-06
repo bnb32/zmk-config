@@ -78,8 +78,8 @@ layers:
   - PREV WIN
   - {t: '$$mdi:transfer$$', type: trans}
   - NEXT WIN
-  - B CLICK
-  - F CLICK
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -111,8 +111,8 @@ layers:
   - {t: (, s: '['}
   - {t: ), s: ']'}
   - +
-  - PSCRN
-  - CMENU
+  - $$mdi:monitor-screenshot$$
+  - $$mdi:menu$$
   - $$material:content_cut$$"
   - $$material:content_copy$$"
   - $$material:content_paste$$"
@@ -152,10 +152,10 @@ layers:
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '=', s: +}
-  - PSCRN
-  - CMENU
+  - ':'
+  - '"'
+  - $$mdi:monitor-screenshot$$
+  - $$mdi:menu$$
   - $$material:content_cut$$"
   - $$material:content_copy$$"
   - $$material:content_paste$$"
@@ -185,8 +185,8 @@ layers:
   - $$mdi:play-pause$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - RGB BRD
-  - RGB BRI
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-up$$'}
   - RGB HUD
   - RGB HUI
   - RGB SAD
@@ -198,8 +198,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
-  - OUT BLE
-  - {t: '$$mdi:toggle-switch$$', s: '$$mdi:led-strip$$'}
+  - {t: '$$mdi:gesture-tap-hold$$', h: '$$mdi:bluetooth$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
   - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
@@ -222,7 +222,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-up$$', h: '$$mdi:mouse-scroll-wheel$$'}
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
   - $$mdi:mouse-left-click$$
   - $$mdi:mouse-move-up$$
   - $$mdi:mouse-right-click$$
@@ -234,11 +234,11 @@ layers:
   - F4
   - F5
   - F6
-  - {t: '$$mdi:arrow-down$$', h: '$$mdi:mouse-scroll-wheel$$'}
-  - L MOVE
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-left$$'}
   - $$mdi:mouse-move-down$$
-  - R MOVE
-  - B CLICK
+  - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-right$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - F7
   - F8
@@ -247,11 +247,11 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-left$$', h: '$$mdi:mouse-scroll-wheel$$'}
+  - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-left$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-right$$', h: '$$mdi:mouse-scroll-wheel$$'}
-  - B CLICK
-  - F CLICK
+  - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-right$$'}
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
