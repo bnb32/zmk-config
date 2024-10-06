@@ -54,7 +54,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:arrow-up-bold$$
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:format-section$$
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -66,7 +66,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$material:close$$
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -78,8 +78,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - PREV WIN
   - NEXT WIN
-  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
-  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -226,7 +226,7 @@ layers:
   - $$mdi:mouse-left-click$$
   - $$mdi:mouse-move-up$$
   - $$mdi:mouse-right-click$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -238,7 +238,7 @@ layers:
   - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-left$$'}
   - $$mdi:mouse-move-down$$
   - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-right$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - F7
   - F8
@@ -250,8 +250,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-left$$'}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-right$$'}
-  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
-  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
