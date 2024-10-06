@@ -39,8 +39,8 @@ layers:
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$material:keyboard_return$$', h: SYM}
-  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:keyboard-space$$', h: SYM}
+  - {t: '$$material:keyboard_return$$', h: NAV}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   navigate:
@@ -78,8 +78,8 @@ layers:
   - PREV WIN
   - {t: '$$mdi:transfer$$', type: trans}
   - NEXT WIN
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - B CLICK
+  - F CLICK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -125,8 +125,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - TOG NUM
   - {t: '$$mdi:transfer$$', type: trans}
   symbol:
@@ -168,8 +168,8 @@ layers:
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   system:
@@ -226,7 +226,7 @@ layers:
   - $$mdi:mouse-left-click$$
   - $$mdi:mouse-move-up$$
   - $$mdi:mouse-right-click$$
-  - F CLICK
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', type: backspace}
   - F1
   - F2
@@ -250,11 +250,11 @@ layers:
   - {t: '$$mdi:arrow-left$$', h: '$$mdi:mouse-scroll-wheel$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:arrow-right$$', h: '$$mdi:mouse-scroll-wheel$$'}
+  - B CLICK
+  - F CLICK
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

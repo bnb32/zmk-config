@@ -177,7 +177,7 @@ draw_config:
 
         --color--layer--text: var(--color--material--blue-gray--400);
 
-        --color--key--bg: var(--color--material--blue-gray--50);
+        --color--key--bg: white;
         --color--key--border: white;
         --color--key--text--tap: var(--color--text);
         --color--key--text--shifted: var(--color--material--blue-gray--500);
@@ -254,16 +254,16 @@ draw_config:
         stroke: var(--color--key--border);
     }
     .tap {
-        font-size: 10px;
+        font-size: 13px;
         fill: var(--color--key--text--tap);
     }
     .shifted,
     .hold {
-        font-size: 12px;
+        font-size: 15px;
         text-anchor: middle;
     }
     .shifted {
-        font-size: 10px;
+        font-size: 13px;
         dominant-baseline: hanging;
         fill: var(--color--key--text--shifted);
         // translate: -25px 2px;
@@ -363,7 +363,7 @@ draw_config:
     .keypos-39,
     .keypos-40,
     .keypos-41 {
-        --color--key--bg: var(--color--material--blue-gray--100);
+        --color--key--bg: white;
         --color--key--border: var(--color--material--blue-gray--50);
     }
 
@@ -465,6 +465,8 @@ parse_config:
     "&tog NUM": "TOG NUM"
     "SYM_RET": {"h":"SYM", "t":$$material:keyboard_return$$}
     "NAV_SPC": {"h":"NAV", "t":$$mdi:keyboard-space$$}
+    "NAV_RET": {"h":"NAV", "t":$$material:keyboard_return$$}
+    "SYM_SPC": {"h":"SYM", "t":$$mdi:keyboard-space$$}
     CANCEL: $$mdi:close-box$$
 
     # Sound
