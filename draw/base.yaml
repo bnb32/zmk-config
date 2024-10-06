@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '-', s: _}
-  - $$mdi:keyboard-tab$$
+  - $$mdi:close-box$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -216,24 +216,24 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
-  - $$mdi:close-box$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
-  - $$mdi:mouse-left-click$$
-  - $$mdi:mouse-move-up$$
-  - $$mdi:mouse-right-click$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
   - F4
   - F5
   - F6
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
+  - $$mdi:mouse-left-click$$
+  - $$mdi:mouse-move-up$$
+  - $$mdi:mouse-right-click$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$'}
   - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-left$$'}
   - $$mdi:mouse-move-down$$

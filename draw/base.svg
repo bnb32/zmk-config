@@ -581,7 +581,7 @@ path.combo {
 </g>
 <g transform="translate(40, 150)" class="key keypos-12">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:keyboard-tab"/>
+<use href="#mdi:close-box" xlink:href="#mdi:close-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:close-box"/>
 </g>
 <g transform="translate(120, 150)" class="key keypos-13">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1484,27 +1484,27 @@ path.combo {
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:close-box" xlink:href="#mdi:close-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:close-box"/>
+<text x="0" y="0" class="key tap">F1</text>
 </g>
-<g transform="translate(120, 70)" class="key trans keypos-1">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(120, 70)" class="key keypos-1">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">F2</text>
 </g>
-<g transform="translate(200, 50)" class="key trans keypos-2">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(200, 50)" class="key keypos-2">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">F3</text>
 </g>
-<g transform="translate(280, 40)" class="key trans keypos-3">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(280, 40)" class="key keypos-3">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">F4</text>
 </g>
-<g transform="translate(360, 50)" class="key trans keypos-4">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(360, 50)" class="key keypos-4">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">F5</text>
 </g>
-<g transform="translate(440, 60)" class="key trans keypos-5">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(440, 60)" class="key keypos-5">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">F6</text>
 </g>
 <g transform="translate(760, 60)" class="key keypos-6">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1531,29 +1531,29 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(40, 150)" class="key keypos-12">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">F1</text>
+<g transform="translate(40, 150)" class="key trans keypos-12">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(120, 150)" class="key keypos-13">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">F2</text>
+<g transform="translate(120, 150)" class="key trans keypos-13">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(200, 130)" class="key keypos-14">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">F3</text>
+<g transform="translate(200, 130)" class="key trans keypos-14">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(280, 120)" class="key keypos-15">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">F4</text>
+<g transform="translate(280, 120)" class="key trans keypos-15">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(360, 130)" class="key keypos-16">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">F5</text>
+<g transform="translate(360, 130)" class="key trans keypos-16">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(440, 140)" class="key keypos-17">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">F6</text>
+<g transform="translate(440, 140)" class="key trans keypos-17">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g transform="translate(760, 140)" class="key keypos-18">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
