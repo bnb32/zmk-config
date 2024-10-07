@@ -45,24 +45,24 @@ layers:
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   navigate:
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$material:close$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - $$mdi:volume-high$$
   - $$mdi:play-pause$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG UP
+  - $$mdi:page-layout-header$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:arrow-up-bold$$
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:format-section$$
-  - $$mdi:skip-previous$$
-  - $$mdi:volume-low$$
-  - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG DN
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:page-layout-footer$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -70,9 +70,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:skip-previous$$
+  - $$mdi:volume-low$$
+  - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - NEXT APP
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -101,9 +101,6 @@ layers:
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -118,7 +115,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -159,8 +159,8 @@ layers:
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
   - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:progress-download$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-left$$'}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-right$$'}
@@ -183,10 +183,10 @@ combos:
   k: $$mdi:format-section$$
   l: [default]
 - p: [14, 15]
-  k: Ctl+ S
+  k: $$mdi:content-save$$
   l: [default]
 - p: [2, 3]
-  k: $$material:close$$
+  k: $$mdi:close-circle$$
   l: [default]
 - p: [7, 8]
   k: {t: '$$mdi:backspace$$', type: backspace}
@@ -240,13 +240,13 @@ combos:
   k: $$mdi:menu$$
   l: [default]
 - p: [14, 26]
-  k: $$material:content_cut$$"
+  k: $$mdi:content-cut$$"
   l: [default]
 - p: [15, 27]
-  k: $$material:content_copy$$"
+  k: $$mdi:content-copy$$"
   l: [default]
 - p: [16, 28]
-  k: $$material:content_paste$$"
+  k: $$mdi:content-paste$$"
   l: [default]
 - p: [0, 12]
   k: '~'
@@ -301,6 +301,12 @@ combos:
   l: [mouse]
 - p: [11, 23]
   k: F12
+  l: [mouse]
+- p: [30, 31]
+  k: $$mdi:progress-download$$
+  l: [mouse]
+- p: [29, 28]
+  k: $$mdi:progress-download$$
   l: [mouse]
 - p: [6, 18]
   k: ^

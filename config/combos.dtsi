@@ -84,6 +84,9 @@ ZMK_COMBO(f10,   &kp F10,      RT3 RM3,                 MOUSE, COMBO_TERM_SLOW, 
 ZMK_COMBO(f11,   &kp F11,      RT4 RM4,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(f12,   &kp F12,      RT5 RM5,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
+ZMK_COMBO(bl,    &bootloader,  RB0 RB1,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bl,    &bootloader,  LB0 LB1,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
 ZMK_COMBO(caret, &kp CARET,    RT0 RM0,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(amps,  &kp AMPS,     RT1 RM1,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(star,  &kp STAR,     RT2 RM2,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)

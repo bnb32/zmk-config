@@ -383,35 +383,6 @@ draw_config:
       translate: 20px 25px;
     }
 
-    /* Outer column + thumb keys */
-    .keypos-0,
-    .keypos-11,
-    .keypos-12,
-    .keypos-23,
-    .keypos-24,
-    .keypos-35,
-    .keypos-36,
-    .keypos-37,
-    .keypos-38,
-    .keypos-39,
-    .keypos-40,
-    .keypos-41 {
-        --color--key--bg: var(--color--material--blue-gray--100);
-        --color--key--border: var(--color--material--blue-gray--50);
-    }
-
-
-    .keypos-38 {
-        --color--key--bg: var(--color--material--red--300);
-        --color--key--border: var(--color--material--red--200);
-        --color--key--text--shifted: var(--color--key--text--tap);
-        --color--key--text--hold: var(--color--key--text--tap);
-    }
-
-    .keypos-39 {
-        --color--key--bg: var(--color--material--teal--200);
-        --color--key--border: var(--color--material--teal--100);
-    }
 parse_config:
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
@@ -424,12 +395,13 @@ parse_config:
     "&apos_ret": {"t":"'", "s": $$mdi:keyboard-return$$}
     "PLUS_BSPC": {"t":"+", "s":$$mdi:backspace$$}
     "EQUAL_BSPC": {"t":"=", "s":$$mdi:backspace$$}
-    "C_CUT": $$material:content_cut$$"
-    "C_COPY": $$material:content_copy$$"
-    "C_PASTE": $$material:content_paste$$"
-    "&kp LC(X)": $$material:content_cut$$"
-    "&kp LC(INS)": $$material:content_copy$$"
-    "&kp LS(INS)": $$material:content_paste$$"
+    "C_CUT": $$mdi:content-cut$$"
+    "C_COPY": $$mdi:content-copy$$"
+    "C_PASTE": $$mdi:content-paste$$"
+    "&kp LC(X)": $$mdi:content-cut$$"
+    "&kp LC(S)": $$mdi:content-save$$
+    "&kp LC(INS)": $$mdi:content-copy$$"
+    "&kp LS(INS)": $$mdi:content-paste$$"
     "&dot_spc": "$$mdi:circle-small$$"
     "navigate": "NAV"
     "number": "NUM"
@@ -440,9 +412,9 @@ parse_config:
     # Navigate
     "FORMAT": "$$mdi:format-section$$"
     "NEXT_APP": "NEXT APP"
-    "WIN_CLOSE": "$$material:close$$"
-    "PAGE_UP": "$$mdi:page-layout-header$$"
-    "PAGE_DOWN": "$$mdi:page-layout-footer$$"
+    "WIN_CLOSE": "$$mdi:close-circle$$"
+    "&kp PG_UP": "$$mdi:page-layout-header$$"
+    "&kp PG_DN": "$$mdi:page-layout-footer$$"
     "NEXT_WIN": "$$mdi:page-next$$"
     "PREV_WIN": "$$mdi:page-previous$$"
     "&up": $$mdi:arrow-up-bold$$
