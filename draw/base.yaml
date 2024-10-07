@@ -271,18 +271,6 @@ combos:
 - p: [31, 32]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [default]
-- p: [19, 7]
-  k: {h: '[', s: '{'}
-  l: [symbol]
-- p: [20, 8]
-  k: {h: ']', s: '}'}
-  l: [symbol]
-- p: [21, 9]
-  k: '{'
-  l: [symbol]
-- p: [22, 10]
-  k: '}'
-  l: [symbol]
 - p: [0, 12]
   k: '~'
   l: [default, navigate, number]
@@ -319,3 +307,15 @@ combos:
 - p: [11, 23]
   k: +
   l: [default, navigate, number]
+- p: [19, 31]
+  k: {h: '[', s: '{'}
+  l: [symbol, default]
+- p: [20, 32]
+  k: {h: ']', s: '}'}
+  l: [symbol, default]
+- p: [21, 33]
+  k: '{'
+  l: [symbol, default]
+- p: [22, 34]
+  k: '}'
+  l: [symbol, default]
