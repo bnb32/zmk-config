@@ -353,10 +353,10 @@ draw_config:
       translate: 25px 0px;
     }
     .shifted.mdi\:usb {
-      translate: -25px 25px;
+      translate: -20px 25px;
     }
     .hold.mdi\:bluetooth {
-      translate: 25px -25px;
+      translate: 20px -25px;
     }
 
     .shifted.mdi\:alarm-light-off {

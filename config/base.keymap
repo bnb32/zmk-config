@@ -62,6 +62,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/outputs.h>
 #include "custom.dtsi"
+#include "combos.dtsi"
 
 #define XXX &none
 #define ___ &trans

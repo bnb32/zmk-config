@@ -194,6 +194,14 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 #define HRMR(k1,k2,k3,k4) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3 &hmr RGUI k4
 #define HRML(k1,k2,k3) &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
+// Combos ----------------------------------------------------------------------------------------------------------------
+
+// HRM combo hack - workaround for lack of tap-only combos (ZMK issue #544)
+#define ZMK_COMBO_8(NAME, TAP, KEYPOS, LAYERS, COMBO_TERM, COMBO_IDLE, HOLD, SIDE) \
+    MAKE_HRM(hm_combo_ ## NAME, &kp, TAP, SIDE THUMBS, HRM_TAP_TERM, QUICK_TAP_MS, 200) \
+    ZMK_COMBO_6(NAME, &hm_combo_ ## NAME HOLD 0, KEYPOS, LAYERS, COMBO_TERM, COMBO_IDLE)
+
+
 // Behaviors --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #define AS(keycode) &as LS(keycode) keycode  // Autoshift Macro
