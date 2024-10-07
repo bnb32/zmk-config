@@ -99,23 +99,23 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '=', s: +}
-  - '~'
-  - '!'
-  - {t: '@', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '#', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: $, h: '$$mdi:apple-keyboard-option$$'}
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - {t: (, s: '['}
-  - {t: ), s: ']'}
-  - +
-  - $$mdi:monitor-screenshot$$
-  - $$mdi:menu$$
-  - $$material:content_cut$$"
-  - $$material:content_copy$$"
-  - $$material:content_paste$$"
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -125,8 +125,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - TOG NUM
   - {t: '$$mdi:transfer$$', type: trans}
   symbol:
@@ -142,16 +142,16 @@ layers:
   - {t: (, s: '['}
   - {t: ), s: ']'}
   - +
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', h: '$$mdi:apple-keyboard-shift$$', s: '@'}
-  - {t: '3', h: '$$mdi:apple-keyboard-control$$', s: '#'}
-  - {t: '4', h: '$$mdi:apple-keyboard-option$$', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - ':'
   - '"'
   - $$mdi:monitor-screenshot$$
