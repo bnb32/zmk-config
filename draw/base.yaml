@@ -262,60 +262,114 @@ combos:
 - p: [0, 1]
   k: $$mdi:keyboard-esc$$
   l: [default, navigate, number]
+- p: [12, 13]
+  k: $$mdi:close-box$$
+  l: [default, navigate, number]
 - p: [7, 8]
   k: {t: '$$mdi:backspace$$', type: backspace}
-  l: [default]
+  l: [symbol, default, navigate, number]
 - p: [8, 9]
   k: $$mdi:backspace-reverse-outline$$
-  l: [default]
+  l: [symbol, default, navigate, number]
 - p: [31, 32]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [symbol, default, navigate, number]
+- p: [0, 12]
+  k: {t: '`', s: '~'}
+  l: [default]
+- p: [1, 13]
+  k: {t: '1', s: '!'}
+  l: [default]
+- p: [2, 14]
+  k: {t: '2', s: '@'}
+  l: [default]
+- p: [3, 15]
+  k: {t: '3', s: '#'}
+  l: [default]
+- p: [4, 16]
+  k: {t: '4', s: $}
+  l: [default]
+- p: [5, 17]
+  k: {t: '5', s: '%'}
+  l: [default]
+- p: [12, 24]
+  k: $$mdi:monitor-screenshot$$
+  l: [default]
+- p: [13, 25]
+  k: $$mdi:menu$$
+  l: [default]
+- p: [14, 26]
+  k: $$material:content_cut$$"
+  l: [default]
+- p: [15, 27]
+  k: $$material:content_copy$$"
+  l: [default]
+- p: [16, 28]
+  k: $$material:content_paste$$"
   l: [default]
 - p: [0, 12]
   k: '~'
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [1, 13]
   k: '!'
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [2, 14]
   k: '@'
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [3, 15]
   k: '#'
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [4, 16]
   k: $
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [5, 17]
   k: '%'
-  l: [default, navigate, number]
+  l: [symbol]
+- p: [6, 18]
+  k: {t: '6', s: ^}
+  l: [default]
+- p: [7, 19]
+  k: {t: '7', s: '&'}
+  l: [default]
+- p: [8, 20]
+  k: {t: '8', s: '*'}
+  l: [default]
+- p: [9, 21]
+  k: {t: '9', s: (}
+  l: [default]
+- p: [10, 22]
+  k: {t: '0', s: )}
+  l: [default]
+- p: [11, 23]
+  k: {h: '=', s: +}
+  l: [default]
 - p: [6, 18]
   k: ^
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [7, 19]
   k: '&'
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [8, 20]
   k: '*'
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [9, 21]
   k: (
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [10, 22]
   k: )
-  l: [default, navigate, number]
+  l: [symbol]
 - p: [11, 23]
   k: +
-  l: [default, navigate, number]
-- p: [19, 31]
+  l: [symbol]
+- p: [21, 33]
   k: {h: '[', s: '{'}
-  l: [symbol, default]
-- p: [20, 32]
+  l: [default]
+- p: [22, 34]
   k: {h: ']', s: '}'}
-  l: [symbol, default]
+  l: [default]
 - p: [21, 33]
   k: '{'
-  l: [symbol, default]
+  l: [symbol]
 - p: [22, 34]
   k: '}'
-  l: [symbol, default]
+  l: [symbol]

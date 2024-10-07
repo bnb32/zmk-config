@@ -21,7 +21,7 @@ draw_config:
 
   # Padding between keys
   inner_pad_w: 1.5
-  inner_pad_h: 1.5
+  inner_pad_h: 2.5
 
   # padding between layers
   outer_pad_w: 25
@@ -427,6 +427,9 @@ parse_config:
     "C_CUT": $$material:content_cut$$"
     "C_COPY": $$material:content_copy$$"
     "C_PASTE": $$material:content_paste$$"
+    "&kp LC(X)": $$material:content_cut$$"
+    "&kp LC(INS)": $$material:content_copy$$"
+    "&kp LS(INS)": $$material:content_paste$$"
     "&dot_spc": "$$mdi:circle-small$$"
     "navigate": "NAV"
     "number": "NUM"
