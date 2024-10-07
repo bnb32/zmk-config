@@ -297,7 +297,6 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 
 #define NAV_TOG &lht NAV NAV
 #define MOUSE_TOG &lht MOUSE MOUSE
-#define SYM_TOG &lht SYM SYM
 #define NUM_TOG &lht NUM NUM
 
 #define HOME_MT &mt LC(HOME) HOME

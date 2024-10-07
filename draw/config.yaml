@@ -1,5 +1,5 @@
 draw_config:
-  n_columns: 2
+  n_columns: 1
 
   # key dimensions, non-ortho layouts use key_h for width as well
   # key_w: 100 # This doesn't seem to do anything? 🤔
@@ -433,7 +433,6 @@ parse_config:
     "&dot_spc": "$$mdi:circle-small$$"
     "navigate": "NAV"
     "number": "NUM"
-    "symbol": "SYM"
     "&kp PSCRN": "$$mdi:monitor-screenshot$$"
     "&kp K_CMENU": "$$mdi:menu$$"
     CANCEL: $$mdi:close-box$$
@@ -442,8 +441,10 @@ parse_config:
     "FORMAT": "$$mdi:format-section$$"
     "NEXT_APP": "NEXT APP"
     "WIN_CLOSE": "$$material:close$$"
-    "NEXT_WIN": "NEXT WIN"
-    "PREV_WIN": "PREV WIN"
+    "PAGE_UP": "$$mdi:page-layout-header$$"
+    "PAGE_DOWN": "$$mdi:page-layout-footer$$"
+    "NEXT_WIN": "$$mdi:page-next$$"
+    "PREV_WIN": "$$mdi:page-previous$$"
     "&up": $$mdi:arrow-up-bold$$
     "&down": $$mdi:arrow-down-bold$$
     "&left": $$mdi:arrow-left-bold$$
@@ -496,10 +497,8 @@ parse_config:
 
     # Layers
     "&tog NUM": "TOG NUM"
-    "SYM_RET": {"h":"SYM", "t":$$material:keyboard_return$$}
     "NAV_SPC": {"h":"NAV", "t":$$mdi:keyboard-space$$}
     "NAV_RET": {"h":"NAV", "t":$$material:keyboard_return$$}
-    "SYM_SPC": {"h":"SYM", "t":$$mdi:keyboard-space$$}
     "SMART_NUM":
       shifted: $$mdi:alpha-w-box$$
       tap: $$mdi:gesture-tap-hold$$
