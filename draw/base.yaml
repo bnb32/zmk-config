@@ -264,7 +264,7 @@ combos:
   l: [default, navigate, number]
 - p: [12, 13]
   k: $$mdi:close-box$$
-  l: [default, navigate, number]
+  l: [default, navigate, number, mouse]
 - p: [7, 8]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [symbol, default, navigate, number]
@@ -292,6 +292,24 @@ combos:
 - p: [5, 17]
   k: {t: '5', s: '%'}
   l: [default]
+- p: [0, 12]
+  k: F1
+  l: [mouse]
+- p: [1, 13]
+  k: F2
+  l: [mouse]
+- p: [2, 14]
+  k: F3
+  l: [mouse]
+- p: [3, 15]
+  k: F4
+  l: [mouse]
+- p: [4, 16]
+  k: F5
+  l: [mouse]
+- p: [5, 17]
+  k: F6
+  l: [mouse]
 - p: [12, 24]
   k: $$mdi:monitor-screenshot$$
   l: [default]
@@ -344,23 +362,41 @@ combos:
   k: {h: '=', s: +}
   l: [default]
 - p: [6, 18]
+  k: F7
+  l: [mouse]
+- p: [7, 19]
+  k: F8
+  l: [mouse]
+- p: [8, 20]
+  k: F9
+  l: [mouse]
+- p: [9, 21]
+  k: F10
+  l: [mouse]
+- p: [10, 22]
+  k: F11
+  l: [mouse]
+- p: [11, 23]
+  k: F12
+  l: [mouse]
+- p: [6, 18]
   k: ^
-  l: [symbol]
+  l: [number]
 - p: [7, 19]
   k: '&'
-  l: [symbol]
+  l: [number]
 - p: [8, 20]
   k: '*'
-  l: [symbol]
+  l: [number]
 - p: [9, 21]
   k: (
-  l: [symbol]
+  l: [number]
 - p: [10, 22]
   k: )
-  l: [symbol]
+  l: [number]
 - p: [11, 23]
   k: +
-  l: [symbol]
+  l: [number]
 - p: [21, 33]
   k: {h: '[', s: '{'}
   l: [default]
@@ -369,7 +405,7 @@ combos:
   l: [default]
 - p: [21, 33]
   k: '{'
-  l: [symbol]
+  l: [symbol, number]
 - p: [22, 34]
   k: '}'
-  l: [symbol]
+  l: [symbol, number]
