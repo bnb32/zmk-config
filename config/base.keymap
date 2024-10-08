@@ -31,7 +31,7 @@
 
 #ifdef CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
-    #define _BT_SEL_KEYS_ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+    #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
 #else
     #define _BT_SEL_KEYS_ &none &none &none &none &none &none
 #endif
@@ -39,15 +39,15 @@
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
     #define _RGB_HOME_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
-    #define _RGB_BOTTOM_ &out OUT_TOG &out OUT_BLE &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none
+    #define _RGB_BOTTOM_ &out OUT_TOG &out OUT_BLE &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none
 #else
     #define _RGB_HOME_ &none &none &none &none &none &none
-    #define _RGB_BOTTOM_ &none &none &none &none &none
+    #define _RGB_BOTTOM_ &none &none &none &none &none &none
 #endif
 
 #define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
 #define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB &kp SPACE NAV_SPC SYS_TOG SMART_MOUSE X_RT
+#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB &kp SPACE NAV_SPC &mo SYS SMART_MOUSE X_RT
 #define NON_DEF_THUMB_ROW X_LT ___ ___ ___ &kp SPACE ___ ___ X_RT
 
 #define DEF 0
@@ -104,10 +104,9 @@ ZMK_LAYER(system,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                         _RGB_HOME_                                                  ___           ___           ___           ___           ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                       _RGB_BOTTOM_                       ___             X_ENC                                          BOTTOM_FN
+                                       _RGB_BOTTOM_                                       X_ENC                                          BOTTOM_FN
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                X_LT          ___           ___           ___                       ___           SYS_TOG       ___           X_RT
-//                                          ╰─────────────┴─────────────┴─────────────╯ ╰───────╯ ╰─────────────╰─────────────┴─────────────╯
+                                                                                    NON_DEF_THUMB_ROW
 )
 
 ZMK_LAYER(mouse,

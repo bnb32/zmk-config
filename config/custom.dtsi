@@ -72,9 +72,6 @@
 // basic hold tap binding
 MAKE_HOLD_TAP(ht, &kp, &kp, HT_TAP_TERM, QUICK_TAP_MS, 200)
 
-// Make fast hold tap for "just hold" emulation
-MAKE_HOLD_TAP(fht, &kp, &kp, 100, QUICK_TAP_MS, 100)
-
 // custom backspace and delete macros
 MAKE_TAP_DANCE(bspc, &kp BSPC, &ht LC(BSPC) BSPC, TD_TAP_TERM)
 MAKE_TAP_DANCE(del, &kp DEL, &ht LC(DEL) DEL, TD_TAP_TERM)
@@ -224,31 +221,6 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 / {
 
   macros {
-
-    win_right: win_right {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp RG(RIGHT) &kp ESC>;
-    };
-
-    win_left: win_left {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp RG(LEFT) &kp ESC>;
-    };
-
-    win_up: win_up {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp RG(UP) &kp ESC>;
-    };
-
-    win_down: win_down {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp RG(DOWN) &kp ESC>;
-    };
-
     dot_spc: dot_spc {
       compatible = "zmk,behavior-macro";
       wait-ms = <0>;
@@ -289,11 +261,6 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 #define PAUSE &kp C_PP
 #define NEXT &kp C_NEXT
 #define PREV &kp C_PREV
-
-#define WIN_U &win_up
-#define WIN_D &win_down
-#define WIN_R &win_right
-#define WIN_L &win_left
 
 #define NAV_TOG &lht NAV NAV
 #define MOUSE_TOG &lht MOUSE MOUSE

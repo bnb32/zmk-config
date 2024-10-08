@@ -41,7 +41,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: system, h: system}
+  - system
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   navigate:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -87,12 +87,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   system:
-  - $$mdi:bluetooth-off$$
   - {t: '1', s: '$$mdi:bluetooth-connect$$'}
   - {t: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: '3', s: '$$mdi:bluetooth-connect$$'}
   - {t: '4', s: '$$mdi:bluetooth-connect$$'}
   - {t: '5', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F1
   - F2
   - F3
@@ -116,7 +116,7 @@ layers:
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
   - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F7
   - F8
   - F9
@@ -126,8 +126,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: system, h: system, type: held}
+  - $$mdi:keyboard-space$$
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
   - {t: '$$mdi:transfer$$', type: trans}
