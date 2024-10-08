@@ -23,7 +23,7 @@
 
 */
 
-#include <behaviors/num_word.dtsi> // requires auto-layer module
+// #include <behaviors/num_word.dtsi> // requires auto-layer module
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 \
                LM0 LM1 LM2 LM3 LM4 \

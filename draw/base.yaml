@@ -41,7 +41,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: system, h: toggle}
+  - {t: system, h: system}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   navigate:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -127,7 +127,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: system, h: toggle}
+  - {t: system, h: system, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
   - {t: '$$mdi:transfer$$', type: trans}

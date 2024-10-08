@@ -689,8 +689,9 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <a href="#system">
 <text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 83%">system</tspan></text>
-</a><text x="0" y="34" class="key hold"><tspan style="font-size: 83%">toggle</tspan></text>
-</g>
+</a><a href="#system">
+<text x="0" y="34" class="key hold layer-activator"><tspan style="font-size: 83%">system</tspan></text>
+</a></g>
 <g transform="translate(880, 293)" class="key keypos-41">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:gesture-tap-hold"/>
@@ -1182,12 +1183,13 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(792, 304) rotate(-15.0)" class="key keypos-40">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<g transform="translate(792, 304) rotate(-15.0)" class="key held keypos-40">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
 <a href="#system">
-<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 83%">system</tspan></text>
-</a><text x="0" y="34" class="key hold"><tspan style="font-size: 83%">toggle</tspan></text>
-</g>
+<text x="0" y="0" class="key held tap layer-activator"><tspan style="font-size: 83%">system</tspan></text>
+</a><a href="#system">
+<text x="0" y="34" class="key held hold layer-activator"><tspan style="font-size: 83%">system</tspan></text>
+</a></g>
 <g transform="translate(880, 293)" class="key trans keypos-41">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
