@@ -30,16 +30,16 @@
 #define COMBO_IDLE_SLOW 50
 
 /* Horizontal combos - left hand */
-ZMK_COMBO(esc,   &kp ESC,      LT5 LT4,         NAV NUM MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(cncl,  &kp K_CANCEL, LM5 LM4,         NAV NUM MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(esc,   &kp ESC,      LT5 LT4,         NAV SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cncl,  &kp K_CANCEL, LM5 LM4,         NAV SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(save,  &kp LC(S),    LM3 LM2,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(close, WIN_CLOSE,    LT3 LT2,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(bspc,  &kp BSPC,     RT1 RT2,     DEF     NUM      , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(del,   &kp DEL,      RT2 RT3,     DEF     NUM      , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(ret,   &kp RET,      RB1 RB2,     DEF     NUM      , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(bspc,  &kp BSPC,     RT1 RT2,     DEF     SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(del,   &kp DEL,      RT2 RT3,     DEF     SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(ret,   &kp RET,      RB1 RB2,     DEF     SYS      , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(grave, &kp GRAVE,    LT5 LM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -49,25 +49,11 @@ ZMK_COMBO(three, &kp N3,       LT2 LM2,     DEF              , COMBO_TERM_SLOW, 
 ZMK_COMBO(four,  &kp N4,       LT1 LM1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(five,  &kp N5,       LT0 LM0,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(f1,    &kp F1,       LT5 LM5,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f2,    &kp F2,       LT4 LM4,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f3,    &kp F3,       LT3 LM3,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f4,    &kp F4,       LT2 LM2,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f5,    &kp F5,       LT1 LM1,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f6,    &kp F6,       LT0 LM0,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
 ZMK_COMBO(pscrn, &kp PSCRN,    LM5 LB5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(menu,  &kp K_CMENU,  LM4 LB4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(cut,   &kp LC(X),    LM3 LB3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(copy,  &kp LC(INS),  LM2 LB2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
-ZMK_COMBO(tilde, &kp TILDE,    LT5 LM5,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(excl,  &kp EXCL,     LT4 LM4,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(at,    &kp AT,       LT3 LM3,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(hash,  &kp HASH,     LT2 LM2,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(dllr,  &kp DLLR,     LT1 LM1,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(prcnt, &kp PRCNT,    LT0 LM0,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Vertical combos - right hand */
 ZMK_COMBO(six,   &kp N6,       RT0 RM0,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -77,24 +63,8 @@ ZMK_COMBO(nine,  &kp N9,       RT3 RM3,     DEF              , COMBO_TERM_SLOW, 
 ZMK_COMBO(zero,  &kp N0,       RT4 RM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(equal, &kp EQUAL,    RT5 RM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(f7,    &kp F7,       RT0 RM0,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f8,    &kp F8,       RT1 RM1,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f9,    &kp F9,       RT2 RM2,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f10,   &kp F10,      RT3 RM3,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f11,   &kp F11,      RT4 RM4,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f12,   &kp F12,      RT5 RM5,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
-ZMK_COMBO(bl,    &bootloader,  RB0 RB1,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(bl,    &bootloader,  LB0 LB1,                 MOUSE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
-ZMK_COMBO(caret, &kp CARET,    RT0 RM0,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(amps,  &kp AMPS,     RT1 RM1,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(star,  &kp STAR,     RT2 RM2,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(lpar,  &kp LPAR,     RT3 RM3,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(rpar,  &kp RPAR,     RT4 RM4,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(plus,  &kp PLUS,     RT5 RM5,             NUM      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bl,    &bootloader,  RB0 RB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bl,    &bootloader,  LB0 LB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(lbkt,  &kp LBKT,     RM3 RB3,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt,  &kp RBKT,     RM4 RB4,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(lbrc,  &kp LBRC,     RM3 RB3,             NUM      , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(rbrc,  &kp RBRC,     RM4 RB4,             NUM      , COMBO_TERM_FAST, COMBO_IDLE_FAST)

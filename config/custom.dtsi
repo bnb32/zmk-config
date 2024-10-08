@@ -35,7 +35,7 @@
 #define MOUSE_KEYS RT0 RT1 RT2 RT3 RT4 \
                    RM0 RM1 RM2 RM3 RM4 RM5 \
                    RB0 RB1 RB2 RB3 RB4 \
-                   LB0 LB1 LM2 // don't deactivate mouse layer when control is held
+                   LM2 // don't deactivate mouse layer when control is held
 
 #define QUICK_TAP_MS 150
 #define HT_TAP_TERM 180
@@ -147,13 +147,13 @@ ZMK_TRI_STATE(smart_mouse,
 )
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
+// #define SMART_NUM &smart_num NUM 0
 
 // smart number activates number layer on hold and num_dance on tap
-MAKE_HOLD_TAP(smart_num, &mo, &num_dance, HT_TAP_TERM, QUICK_TAP_MS, 0)
+// MAKE_HOLD_TAP(smart_num, &mo, &num_dance, HT_TAP_TERM, QUICK_TAP_MS, 0)
 
 // toggle num layer on tap and num_word on double tap
-MAKE_TAP_DANCE(num_dance, &num_word NUM, &tog NUM, 200)
+// MAKE_TAP_DANCE(num_dance, &num_word NUM, &tog NUM, 200)
 
 // layer hold tap
 MAKE_HOLD_TAP(lht, &mo, &tog, 220, QUICK_TAP_MS, 220)
@@ -297,7 +297,7 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 
 #define NAV_TOG &lht NAV NAV
 #define MOUSE_TOG &lht MOUSE MOUSE
-#define NUM_TOG &lht NUM NUM
+#define SYS_TOG &lht SYS SYS
 
 #define HOME_MT &mt LC(HOME) HOME
 #define END_MT &mt LC(END) END

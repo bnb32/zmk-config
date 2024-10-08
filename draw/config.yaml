@@ -21,7 +21,7 @@ draw_config:
 
   # Padding between keys
   inner_pad_w: 1.5
-  inner_pad_h: 2.5
+  inner_pad_h: 1.5
 
   # padding between layers
   outer_pad_w: 25
