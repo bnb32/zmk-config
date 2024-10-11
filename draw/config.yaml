@@ -391,7 +391,6 @@ parse_config:
     type: trans
 
   raw_binding_map:
-    "&caps_word": $$mdi:alpha-w-box$$
     "&apos_ret": {"t":"'", "s": $$mdi:keyboard-return$$}
     "PLUS_BSPC": {"t":"+", "s":$$mdi:backspace$$}
     "EQUAL_BSPC": {"t":"=", "s":$$mdi:backspace$$}
@@ -463,10 +462,6 @@ parse_config:
     C_PREV: $$mdi:skip-previous$$
     C_PP: $$mdi:play-pause$$
 
-    # Bluetooth
-    BT_CLR: $$mdi:bluetooth-off$$
-    BT_SEL: $$mdi:bluetooth-connect$$
-
     # Layers
     "&tog NUM": "TOG NUM"
     "NAV_SPC": {"h":"NAV", "t":$$mdi:keyboard-space$$}
@@ -496,6 +491,14 @@ parse_config:
       shifted: $$mdi:backspace-reverse-outline$$
 
     # Bluetooth
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
+    "&bt BT_NXT":
+      tap: "$$mdi:bluetooth-connect$$"
+      hold: "$$mdi:arrow-right$$"
+    "&bt BT_PRV":
+      tap: "$$mdi:bluetooth-connect$$"
+      hold: "$$mdi:arrow-left$$"
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
       tap: 1
@@ -537,6 +540,16 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
+
+    # Misc
+    "&nine_morph":
+      tap: 9
+      shifted: "("
+      hold: "["
+    "&zero_morph":
+      tap: 0
+      shifted: ")"
+      hold: "]"
 
   # ZMK
   zmk_keycode_map:

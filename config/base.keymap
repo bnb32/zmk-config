@@ -47,7 +47,7 @@
 
 #define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
 #define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB &kp SPACE NAV_SPC &mo SYS SMART_MOUSE X_RT
+#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB SYS_SPC NAV_SPC RS_TAB SYS SMART_MOUSE X_RT
 #define NON_DEF_THUMB_ROW X_LT ___ ___ ___ &kp SPACE ___ ___ X_RT
 
 #define DEF 0
@@ -70,6 +70,8 @@
 #define LMOD_ROW &kp LSHFT &kp LCTRL &kp LALT
 #define LS_TAB &mt LSHFT TAB
 #define NAV_SPC &lt_spc NAV 0
+#define SYS_SPC &lt_spc SYS 0
+#define RS_TAB &mt RSHFT TAB
 
 
 ZMK_LAYER(default,
@@ -88,9 +90,9 @@ ZMK_LAYER(default,
 ZMK_LAYER(navigate,
                                                                                           X_TOP
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           MUTE          VOL_U         PAUSE         ___                       &kp PG_UP     C_BSPC        NAV_U         C_DEL         U_CL_F        ___
+    ___           ___           MUTE          VOL_U         PAUSE         &kp PG_UP                 U_WH_U        C_BSPC        NAV_U         C_DEL         U_CL_F        ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___           ___                       &kp PG_DN     NAV_L         NAV_D         NAV_R         U_CL_B        ___
+    ___           ___           ___           ___           ___           &kp PG_DN                 U_WH_D        NAV_L         NAV_D         NAV_R         U_CL_B        ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           ___           PREV          VOL_D         NEXT          ___             X_ENC     NEXT_APP      &kp RET       PREV_WIN      NEXT_WIN      ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

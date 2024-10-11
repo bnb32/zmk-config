@@ -121,13 +121,13 @@ ZMK_MOD_MORPH(rpar,
 )
 
 // no mod outputs the number, shift outputs lpar / rpar, ctrl outputs lbkt / rbkt, and ctrl + shft outputs lbrc / rbrc
-ZMK_MOD_MORPH(nine,
+ZMK_MOD_MORPH(nine_morph,
     bindings = <&kp N9>, <&lpar>;
     mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
     keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 )
 
-ZMK_MOD_MORPH(zero,
+ZMK_MOD_MORPH(zero_morph,
     bindings = <&kp N0>, <&rpar>;
     mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
     keep-mods = <(MOD_LCTL|MOD_RCTL)>;

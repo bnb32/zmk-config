@@ -59,8 +59,8 @@ ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, 
 ZMK_COMBO(six,   &kp N6,       RT0 RM0,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(seven, &kp N7,       RT1 RM1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(eight, &kp N8,       RT2 RM2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(nine,  &kp N9,       RT3 RM3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(zero,  &kp N0,       RT4 RM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(nine,  &nine_morph,  RT3 RM3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(zero,  &zero_morph,  RT4 RM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(equal, &kp EQUAL,    RT5 RM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(blr,   &bootloader,  RB0 RB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)

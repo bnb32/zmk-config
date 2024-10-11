@@ -87,8 +87,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   system:
-  - BT PRV
-  - BT NXT
+  - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-left$$'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-right$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -240,10 +240,10 @@ combos:
   k: {t: '8', s: '*'}
   l: [default]
 - p: [9, 21]
-  k: {t: '9', s: (}
+  k: {t: '9', h: '[', s: (}
   l: [default]
 - p: [10, 22]
-  k: {t: '0', s: )}
+  k: {t: '0', h: ']', s: )}
   l: [default]
 - p: [11, 23]
   k: {h: '=', s: +}
