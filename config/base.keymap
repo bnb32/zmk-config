@@ -31,7 +31,7 @@
 
 #ifdef CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
-    #define _BT_SEL_KEYS_ &bt BT_PRV &bt BT_NXT &none &none &none &none
+    #define _BT_SEL_KEYS_ &out OUT_TOG &bt BT_PRV &bt BT_NXT &none &none &bt BT_CLR
 #else
     #define _BT_SEL_KEYS_ &none &none &none &none &none &none
 #endif
