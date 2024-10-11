@@ -47,7 +47,7 @@
 
 #define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
 #define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB SYS_SPC NAV_SPC RS_TAB SYS SMART_MOUSE X_RT
+#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB SYS_SPC NAV_SPC RS_TAB SMART_MOUSE X_RT
 #define NON_DEF_THUMB_ROW X_LT ___ ___ ___ &kp SPACE ___ ___ X_RT
 
 #define DEF 0
