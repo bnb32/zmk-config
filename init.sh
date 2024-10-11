@@ -8,6 +8,7 @@ mkdir -p ~/.config/direnv
 echo "source $HOME/.nix-profile/share/nix-direnv/direnvrc" >> ~/.config/direnv/direnvrc
 source ~/.bashrc
 
-cd '/workspaces/zmk-config'
+cd "$HOME/repos/zmk-config"
+pipx install rust-just keymap-drawer zmk west
 direnv allow
 just init
