@@ -87,11 +87,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   system:
-  - {t: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '4', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '5', s: '$$mdi:bluetooth-connect$$'}
+  - BT PRV
+  - BT NXT
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F1
   - F2
@@ -99,22 +99,22 @@ layers:
   - F4
   - F5
   - F6
-  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-down$$'}
-  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-up$$'}
-  - RGB HUD
-  - RGB HUI
-  - RGB SAD
-  - RGB SAI
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
-  - {t: '$$mdi:gesture-tap-hold$$', h: '$$mdi:bluetooth$$'}
-  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
-  - RGB EFF
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F7
