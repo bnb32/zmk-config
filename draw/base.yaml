@@ -39,9 +39,9 @@ layers:
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: system, s: '$$mdi:circle-small$$'}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - system
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   navigate:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -49,8 +49,8 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:volume-high$$
   - $$mdi:play-pause$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:page-layout-header$$
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:arrow-up-bold$$
   - $$mdi:backspace-reverse-outline$$
@@ -61,8 +61,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:page-layout-footer$$
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -125,9 +125,9 @@ layers:
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
   - {type: held}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
   - {t: '$$mdi:transfer$$', type: trans}
