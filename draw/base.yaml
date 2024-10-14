@@ -181,13 +181,13 @@ combos:
   l: [navigate, system, mouse]
 - p: [16, 17]
   k: $$mdi:format-section$$
-  l: [default]
+  l: [navigate]
 - p: [14, 15]
   k: $$mdi:content-save$$
-  l: [default]
+  l: [navigate]
 - p: [2, 3]
   k: $$mdi:close-circle$$
-  l: [default]
+  l: [navigate]
 - p: [7, 8]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [default, system, mouse]
