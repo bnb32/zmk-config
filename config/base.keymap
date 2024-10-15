@@ -30,29 +30,30 @@
 
 #ifdef CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
-    #define _BT_SEL_KEYS_ &out OUT_TOG &bt BT_PRV &bt BT_NXT &none &none &bt BT_CLR
+    #define BT_SEL_KEYS &out OUT_TOG &bt BT_PRV &bt BT_NXT &none &none &bt BT_CLR
 #else
-    #define _BT_SEL_KEYS_ &none &none &none &none &none &none
+    #define BT_SEL_KEYS &none &none &none &none &none &none
 #endif
 
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
-    #define _RGB_HOME_ &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
-    #define _RGB_BOTTOM_ &out OUT_TOG &out OUT_BLE &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none
+    #define RGB_HOME &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
+    #define RGB_BOTTOM &out OUT_TOG &out OUT_BLE &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none
 #else
-    #define _RGB_HOME_ &none &none &none &none &none &none
-    #define _RGB_BOTTOM_ &none &none &none &none &none &none
+    #define RGB_HOME &none &none &none &none &none &none
+    #define RGB_BOTTOM &none &none &none &none &none &none
 #endif
 
 #define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
 #define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB SYS_SPC NAV_SPC RS_TAB SMART_MOUSE X_RT
+#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB NUM_SPC NAV_SPC RS_TAB SMART_MOUSE X_RT
 #define NON_DEF_THUMB_ROW X_LT ___ ___ ___ &kp SPACE ___ ___ X_RT
 
 #define DEF 0
 #define NAV 1
-#define SYS 2
-#define MOUSE 3
+#define NUM 2
+#define SYS 3
+#define MOUSE 4
 
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -69,9 +70,11 @@
 #define LMOD_ROW &kp LSHFT &kp LCTRL &kp LALT
 #define LS_TAB &mt LSHFT TAB
 #define NAV_SPC &lt_spc NAV 0
+#define NUM_SPC &lt_spc NUM 0
 #define SYS_SPC &lt_spc SYS 0
 #define RS_TAB &mt RSHFT TAB
 
+ZMK_CONDITIONAL_LAYER(sys, NAV NUM, SYS)  // NAV + NUM --> SYS
 
 ZMK_LAYER(default,
 
@@ -98,14 +101,26 @@ ZMK_LAYER(navigate,
                                                                                     NON_DEF_THUMB_ROW
 )
 
+ZMK_LAYER(number,
+                                                                                          X_TOP
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                    &kp N6        &kp N7        &kp N8        &nine_morph   &zero_morph   &kp EQUAL
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___           ___           ___                       ___           ___           ___           ___           ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___           ___           ___             X_ENC     ___           ___           ___           ___           ___           ___
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                                                                    NON_DEF_THUMB_ROW
+)
+
 ZMK_LAYER(system,
                                                                                           X_TOP
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                       _BT_SEL_KEYS_                                                                                      TOP_FN
+                                          TOP_FN                                                                                        BOTTOM_FN
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                        _RGB_HOME_                                                  ___           ___           ___           ___           ___           ___
+    ___           ___           ___           ___           ___           ___                                                            RGB_HOME
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                       _RGB_BOTTOM_                                       X_ENC                                          BOTTOM_FN
+                                        BT_SEL_KEYS                                       X_ENC                                         RGB_BOTTOM
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                                                     NON_DEF_THUMB_ROW
 )
