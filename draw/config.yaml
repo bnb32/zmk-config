@@ -545,11 +545,9 @@ parse_config:
     "&nine_morph":
       tap: 9
       shifted: "("
-      hold: "["
     "&zero_morph":
       tap: 0
       shifted: ")"
-      hold: "]"
 
   # ZMK
   zmk_keycode_map:

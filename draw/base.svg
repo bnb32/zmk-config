@@ -775,13 +775,11 @@ path.combo {
 <g class="combo combopos-17">
 <rect rx="4" ry="4" x="982" y="72" width="36" height="36" class="combo"/>
 <text x="1000" y="90" class="combo tap">9</text>
-<text x="1000" y="104" class="combo hold">[</text>
 <text x="1000" y="76" class="combo shifted">(</text>
 </g>
 <g class="combo combopos-18">
 <rect rx="4" ry="4" x="1062" y="92" width="36" height="36" class="combo"/>
 <text x="1080" y="110" class="combo tap">0</text>
-<text x="1080" y="124" class="combo hold">]</text>
 <text x="1080" y="96" class="combo shifted">)</text>
 </g>
 <g class="combo combopos-19">
@@ -1051,13 +1049,11 @@ path.combo {
 <g transform="translate(1000, 50)" class="key keypos-9">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">9</text>
-<text x="0" y="34" class="key hold">[</text>
 <text x="0" y="-34" class="key shifted">(</text>
 </g>
 <g transform="translate(1080, 70)" class="key keypos-10">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">0</text>
-<text x="0" y="34" class="key hold">]</text>
 <text x="0" y="-34" class="key shifted">)</text>
 </g>
 <g transform="translate(1160, 70)" class="key keypos-11">
