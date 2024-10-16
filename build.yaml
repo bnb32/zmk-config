@@ -13,7 +13,10 @@
 #
 ---
 board: [ "nice_nano_v2" ]
-shield: [ "corne_left", "corne_right",
+shield: [
+          # "corne_left", "corne_right",
           "sofle_left", "sofle_right",
+          "lily58_left", "lily58_right",
           "corne_left nice_view_adapter nice_view",
-          "corne_right nice_view_adapter nice_view" ]
+          "corne_right nice_view_adapter nice_view"
+        ]

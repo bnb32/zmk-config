@@ -46,8 +46,8 @@
 
 #define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
 #define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-#define DEF_THUMB_ROW X_LT &kp LGUI LS_TAB NUM_SPC NAV_SPC RS_TAB SMART_MOUSE X_RT
-#define NON_DEF_THUMB_ROW X_LT ___ ___ ___ &kp SPACE ___ ___ X_RT
+#define DEF_THUMB_ROW X_LT LS_TAB NUM_SPC NAV_SPC RS_TAB X_RT
+#define NON_DEF_THUMB_ROW X_LT ___ ___ &kp SPACE ___ X_RT
 
 #define DEF 0
 #define NAV 1
@@ -82,7 +82,7 @@ ZMK_LAYER(default,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp MINUS
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    CANCEL        &kp A         HRML(S,       D,            F)            &kp G                     &kp H         HRMR(J,       K,            L,            SEMI)         &kp APOS
+    CANCEL        HRML(A,       S,            D,            F)            &kp G                     &kp H         HRMR(J,       K,            L,            SEMI)         &kp APOS
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &caps_word    &kp Z         &kp X         &kp C         &kp V         &kp B           X_ENC     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

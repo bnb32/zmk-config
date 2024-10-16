@@ -1,0 +1,385 @@
+layout: {qmk_keyboard: lily58_rotated}
+layers:
+  default:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '=', s: +}
+  - $$mdi:keyboard-esc$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '-', s: _}
+  - $$mdi:close-box$$
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-option$$'}
+  - G
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$', s: ':'}
+  - {t: '''', s: '"'}
+  - $$mdi:alpha-w-box$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: \, s: '|'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-space$$', h: number, s: '$$mdi:circle-small$$'}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  navigate:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:volume-off$$
+  - $$mdi:volume-high$$
+  - $$mdi:play-pause$$
+  - $$mdi:page-layout-header$$
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:page-layout-footer$$
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$'}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:skip-previous$$
+  - $$mdi:volume-low$$
+  - $$mdi:skip-next$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - NEXT APP
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:page-previous$$
+  - $$mdi:page-next$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  number:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '=', s: +}
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  system:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '=', s: +}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-left$$'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-right$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  mouse:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
+  - $$mdi:mouse-left-click$$
+  - $$mdi:mouse-move-up$$
+  - $$mdi:mouse-right-click$$
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-next$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-left$$'}
+  - $$mdi:mouse-move-down$$
+  - {t: '$$mdi:mouse$$', h: '$$mdi:arrow-right$$'}
+  - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-left$$'}
+  - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-right$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+combos:
+- p: [0, 1]
+  k: $$mdi:keyboard-esc$$
+  l: [navigate, system, mouse]
+- p: [12, 13]
+  k: $$mdi:close-box$$
+  l: [navigate, system, mouse]
+- p: [16, 17]
+  k: $$mdi:format-section$$
+  l: [navigate]
+- p: [14, 15]
+  k: $$mdi:content-save$$
+  l: [navigate]
+- p: [2, 3]
+  k: $$mdi:close-circle$$
+  l: [navigate]
+- p: [7, 8]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+  l: [default, system, mouse]
+- p: [8, 9]
+  k: $$mdi:backspace-reverse-outline$$
+  l: [default, system, mouse]
+- p: [31, 32]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [default, system]
+- p: [0, 12]
+  k: {t: '`', s: '~'}
+  l: [default]
+- p: [1, 13]
+  k: {t: '1', s: '!'}
+  l: [default]
+- p: [2, 14]
+  k: {t: '2', s: '@'}
+  l: [default]
+- p: [3, 15]
+  k: {t: '3', s: '#'}
+  l: [default]
+- p: [4, 16]
+  k: {t: '4', s: $}
+  l: [default]
+- p: [5, 17]
+  k: {t: '5', s: '%'}
+  l: [default]
+- p: [12, 24]
+  k: $$mdi:monitor-screenshot$$
+  l: [default]
+- p: [13, 25]
+  k: $$mdi:menu$$
+  l: [default]
+- p: [14, 26]
+  k: $$mdi:content-cut$$"
+  l: [default]
+- p: [15, 27]
+  k: $$mdi:content-copy$$"
+  l: [default]
+- p: [16, 28]
+  k: $$mdi:content-paste$$"
+  l: [default]
+- p: [6, 18]
+  k: {t: '6', s: ^}
+  l: [default]
+- p: [7, 19]
+  k: {t: '7', s: '&'}
+  l: [default]
+- p: [8, 20]
+  k: {t: '8', s: '*'}
+  l: [default]
+- p: [9, 21]
+  k: {t: '9', s: (}
+  l: [default]
+- p: [10, 22]
+  k: {t: '0', s: )}
+  l: [default]
+- p: [11, 23]
+  k: {h: '=', s: +}
+  l: [default]
+- p: [30, 31]
+  k: $$mdi:progress-download$$
+  l: [system]
+- p: [29, 28]
+  k: $$mdi:progress-download$$
+  l: [system]
+- p: [21, 33]
+  k: {h: '[', s: '{'}
+  l: [default]
+- p: [22, 34]
+  k: {h: ']', s: '}'}
+  l: [default]

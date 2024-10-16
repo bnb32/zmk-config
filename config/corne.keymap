@@ -32,6 +32,8 @@
 #define CONFIG_RGB
 */
 
+#define X_RT &kp RGUI
+#define X_LT SMART_MOUSE
 #define CONFIG_WIRELESS
 #include "zmk-helpers/key-labels/42.h"
 #include "base.keymap"

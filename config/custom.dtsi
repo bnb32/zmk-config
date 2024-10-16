@@ -189,7 +189,7 @@ MAKE_HRM(hmlg, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 
 #define HRMR(k1,k2,k3,k4) &hmr RALT k1 &hmr RCTRL k2 &hmr RSHFT k3 &hmr RGUI k4
-#define HRML(k1,k2,k3) &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
+#define HRML(k0,k1,k2,k3) &hml LGUI k0 &hml LSHFT k1 &hml LCTRL k2 &hml LALT k3
 
 // Combos ----------------------------------------------------------------------------------------------------------------
 
