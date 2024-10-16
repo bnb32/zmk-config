@@ -46,14 +46,13 @@
 
 #define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
 #define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-#define DEF_THUMB_ROW X_LT LS_TAB NUM_SPC NAV_SPC RS_TAB X_RT
+#define DEF_THUMB_ROW X_LT LS_TAB SYS_SPC NAV_SPC RS_TAB X_RT
 #define NON_DEF_THUMB_ROW X_LT ___ ___ &kp SPACE ___ X_RT
 
 #define DEF 0
 #define NAV 1
-#define NUM 2
-#define SYS 3
-#define MOUSE 4
+#define SYS 2
+#define MOUSE 3
 
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -70,11 +69,8 @@
 #define LMOD_ROW &kp LSHFT &kp LCTRL &kp LALT
 #define LS_TAB &mt LSHFT TAB
 #define NAV_SPC &lt_spc NAV 0
-#define NUM_SPC &lt_spc NUM 0
 #define SYS_SPC &lt_spc SYS 0
 #define RS_TAB &mt RSHFT TAB
-
-ZMK_CONDITIONAL_LAYER(sys, NAV NUM, SYS)  // NAV + NUM --> SYS
 
 ZMK_LAYER(default,
 
@@ -97,18 +93,6 @@ ZMK_LAYER(navigate,
     ___           ___           ___           ___           ___           &kp PG_DN                 U_WH_D        NAV_L         NAV_D         NAV_R         U_CL_B        ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           ___           PREV          VOL_D         NEXT          ___             X_ENC     NEXT_APP      &kp RET       PREV_WIN      NEXT_WIN      ___           ___
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                                                    NON_DEF_THUMB_ROW
-)
-
-ZMK_LAYER(number,
-                                                                                          X_TOP
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                    &kp N6        &kp N7        &kp N8        &nine_morph   &zero_morph   &kp EQUAL
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___           ___                       ___           ___           ___           ___           ___           ___
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___           ___             X_ENC     ___           ___           ___           ___           ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                                                     NON_DEF_THUMB_ROW
 )

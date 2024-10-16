@@ -54,7 +54,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-space$$', h: number, s: '$$mdi:circle-small$$'}
+  - {t: '$$mdi:keyboard-space$$', h: system, s: '$$mdi:circle-small$$'}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '[', s: '{'}
@@ -114,65 +114,6 @@ layers:
   - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  number:
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '=', s: +}
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '=', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:gesture-tap-hold$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{'}
@@ -296,90 +237,90 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
 combos:
-- p: [0, 1]
+- p: [12, 13]
   k: $$mdi:keyboard-esc$$
   l: [navigate, system, mouse]
-- p: [12, 13]
+- p: [24, 25]
   k: $$mdi:close-box$$
   l: [navigate, system, mouse]
-- p: [16, 17]
+- p: [28, 29]
   k: $$mdi:format-section$$
   l: [navigate]
-- p: [14, 15]
+- p: [26, 27]
   k: $$mdi:content-save$$
   l: [navigate]
-- p: [2, 3]
+- p: [14, 15]
   k: $$mdi:close-circle$$
   l: [navigate]
-- p: [7, 8]
+- p: [19, 20]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [default, system, mouse]
-- p: [8, 9]
+- p: [20, 21]
   k: $$mdi:backspace-reverse-outline$$
   l: [default, system, mouse]
-- p: [31, 32]
+- p: [45, 46]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [default, system]
-- p: [0, 12]
+- p: [12, 24]
   k: {t: '`', s: '~'}
   l: [default]
-- p: [1, 13]
+- p: [13, 25]
   k: {t: '1', s: '!'}
   l: [default]
-- p: [2, 14]
+- p: [14, 26]
   k: {t: '2', s: '@'}
   l: [default]
-- p: [3, 15]
+- p: [15, 27]
   k: {t: '3', s: '#'}
   l: [default]
-- p: [4, 16]
+- p: [16, 28]
   k: {t: '4', s: $}
   l: [default]
-- p: [5, 17]
+- p: [17, 29]
   k: {t: '5', s: '%'}
   l: [default]
-- p: [12, 24]
+- p: [24, 36]
   k: $$mdi:monitor-screenshot$$
   l: [default]
-- p: [13, 25]
+- p: [25, 37]
   k: $$mdi:menu$$
   l: [default]
-- p: [14, 26]
+- p: [26, 38]
   k: $$mdi:content-cut$$"
   l: [default]
-- p: [15, 27]
+- p: [27, 39]
   k: $$mdi:content-copy$$"
   l: [default]
-- p: [16, 28]
+- p: [28, 40]
   k: $$mdi:content-paste$$"
   l: [default]
-- p: [6, 18]
+- p: [18, 30]
   k: {t: '6', s: ^}
   l: [default]
-- p: [7, 19]
+- p: [19, 31]
   k: {t: '7', s: '&'}
   l: [default]
-- p: [8, 20]
+- p: [20, 32]
   k: {t: '8', s: '*'}
   l: [default]
-- p: [9, 21]
+- p: [21, 33]
   k: {t: '9', s: (}
   l: [default]
-- p: [10, 22]
+- p: [22, 34]
   k: {t: '0', s: )}
   l: [default]
-- p: [11, 23]
+- p: [23, 35]
   k: {h: '=', s: +}
   l: [default]
-- p: [30, 31]
+- p: [44, 45]
   k: $$mdi:progress-download$$
   l: [system]
-- p: [29, 28]
+- p: [41, 40]
   k: $$mdi:progress-download$$
   l: [system]
-- p: [21, 33]
+- p: [33, 47]
   k: {h: '[', s: '{'}
   l: [default]
-- p: [22, 34]
+- p: [34, 48]
   k: {h: ']', s: '}'}
   l: [default]
