@@ -92,10 +92,12 @@
 #define RH2 56
 #define RH3 57
 
-#define DEF_X_TOP &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
-#define NON_DEF_X_TOP ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
-#define X_RT &kp LBKT &kp RBKT
-#define X_LT &none SMART_MOUSE
+#define X_TOP_DEF &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+#define X_TOP_NON_DEF ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
+#define X_RT_DEF &kp LBKT &kp RBKT
+#define X_LT_DEF &none SMART_MOUSE
+#define X_RT_NON_DEF ___ ___
+#define X_LT_NON_DEF ___ ___
 #define X_ENC &none &none
 
 #define CONFIG_WIRELESS
