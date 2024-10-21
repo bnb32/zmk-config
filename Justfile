@@ -6,8 +6,9 @@ build := absolute_path('.build')
 out := absolute_path('firmware')
 draw := absolute_path('draw')
 
+
 # parse combos.dtsi and adjust settings to not run out of slots
-_parse_combos:
+_parse_combos $dconf:
     #!/usr/bin/env bash
     set -euo pipefail
     cconf="{{ config / 'combos.dtsi' }}"
@@ -19,7 +20,7 @@ _parse_combos:
                 sort | uniq -c | sort -nr |
                 awk 'NR==1{print $1}'
         )
-        sed -Ei "/CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY/s/=.+/=$count/" "{{ config }}"/*.conf
+        sed -Ei "/CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY/s/=.+/=$count/" "{{ '$dconf' }}"/*.conf
         echo "Setting MAX_COMBOS_PER_KEY to $count"
 
         # set MAX_KEYS_PER_COMBO to the most frequent key count
@@ -29,27 +30,27 @@ _parse_combos:
                 cut -d : -f 1 | uniq -c | sort -nr |
                 awk 'NR==1{print $1}'
         )
-        sed -Ei "/CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO/s/=.+/=$count/" "{{ config }}"/*.conf
+        sed -Ei "/CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO/s/=.+/=$count/" "{{ '$dconf' }}"/*.conf
         echo "Setting MAX_KEYS_PER_COMBO to $count"
     fi
 
 # parse build.yaml and filter targets by expression
 _parse_targets $expr:
     #!/usr/bin/env bash
-    attrs="[.board, .shield]"
+    attrs="[.board, .shield, .dconf]"
     filter="(($attrs | map(. // [.]) | combinations), ((.include // {})[] | $attrs)) | join(\",\")"
     echo "$(yq -r "$filter" build.yaml | grep -v "^," | grep -i "${expr/#all/.*}")"
 
 # build firmware for single board & shield combination
-_build_single $board $shield *west_args:
+_build_single $board $shield $dconf *west_args:
     #!/usr/bin/env bash
     set -euo pipefail
     artifact="${shield:+${shield// /+}-}${board}"
     build_dir="{{ build / '$artifact' }}"
 
-    echo "Building firmware for $artifact..."
+    echo "Building firmware for $artifact with config $dconf"
     west build -s zmk/app -d "$build_dir" -b $board {{ west_args }} -- \
-        -DZMK_CONFIG="{{ config }}" ${shield:+-DSHIELD="$shield"}
+        -DZMK_CONFIG="{{ '$dconf' }}" ${shield:+-DSHIELD="$shield"}
 
     if [[ -f "$build_dir/zephyr/zmk.uf2" ]]; then
         mkdir -p "{{ out }}" && cp "$build_dir/zephyr/zmk.uf2" "{{ out }}/$artifact.uf2"
@@ -58,14 +59,15 @@ _build_single $board $shield *west_args:
     fi
 
 # build firmware for matching targets
-build expr *west_args: _parse_combos
+build expr *west_args:
     #!/usr/bin/env bash
     set -euo pipefail
     targets=$(just _parse_targets {{ expr }})
 
     [[ -z $targets ]] && echo "No matching targets found. Aborting..." >&2 && exit 1
-    echo "$targets" | while IFS=, read -r board shield; do
-        just _build_single "$board" "$shield" {{ west_args }}
+    echo "$targets" | while IFS=, read -r board shield dconf; do
+        just _parse_combos "$dconf"
+        just _build_single "$board" "$shield" "$dconf" {{ west_args }}
     done
 
 # clear build cache and artifacts
@@ -85,7 +87,7 @@ draw:
     #!/usr/bin/env bash
     set -euo pipefail
     echo "Drawing corne keymap"
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/corne.keymap" >"{{ draw }}/corne.yaml"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/corne_mx/corne.keymap" >"{{ draw }}/corne.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/corne.yaml" -k "splitkb/aurora/corne/rev1" >"{{ draw }}/corne.svg"
 
     echo "Drawing sofle keymap"

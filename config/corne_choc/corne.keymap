@@ -38,4 +38,4 @@
 #define X_LT_NON_DEF ___
 #define CONFIG_WIRELESS
 #include "zmk-helpers/key-labels/42.h"
-#include "base.keymap"
+#include "../base.keymap"
