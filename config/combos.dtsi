@@ -23,18 +23,9 @@
 
 */
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
-
-#define COMBO_IDLE_FAST 150
-#define COMBO_IDLE_SLOW 50
-
 /* Horizontal combos - left hand */
 ZMK_COMBO(esc,   &kp ESC,      LT5 LT4,         NAV SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cncl,  &kp K_CANCEL, LM5 LM4,         NAV SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(save,  &kp LC(S),    LM3 LM2,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(close, WIN_CLOSE,    LT3 LT2,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(bspc,  &kp BSPC,     RT1 RT2,     DEF     SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -51,9 +42,6 @@ ZMK_COMBO(five,  &kp N5,       LT0 LM0,     DEF              , COMBO_TERM_SLOW, 
 
 ZMK_COMBO(pscrn, &kp PSCRN,    LM5 LB5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(menu,  &kp K_CMENU,  LM4 LB4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(cut,   &kp LC(X),    LM3 LB3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(copy,  &kp LC(INS),  LM2 LB2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Vertical combos - right hand */
 ZMK_COMBO(six,   &kp N6,       RT0 RM0,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -62,9 +50,6 @@ ZMK_COMBO(eight, &kp N8,       RT2 RM2,     DEF              , COMBO_TERM_SLOW, 
 ZMK_COMBO(nine,  &nine_morph,  RT3 RM3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(zero,  &zero_morph,  RT4 RM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(equal, &kp EQUAL,    RT5 RM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
-ZMK_COMBO(blr,   &bootloader,  RB0 RB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(bll,   &bootloader,  LB0 LB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(lbkt,  &kp LBKT,     RM3 RB3,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt,  &kp RBKT,     RM4 RB4,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)

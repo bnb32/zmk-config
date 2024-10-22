@@ -59,12 +59,31 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/outputs.h>
 #include "custom.dtsi"
-#include "combos.dtsi"
+
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
+#ifdef INCLUDE_COMBOS // include combos for smaller boards
+    #include "combos.dtsi"
+#endif
+
+// universal combos
+ZMK_COMBO(cut,   &kp LC(X),    LM3 LB3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(copy,  &kp LC(INS),  LM2 LB2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(blr,   &bootloader,  RB0 RB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bll,   &bootloader,  LB0 LB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(close, WIN_CLOSE,    LT3 LT2,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+
+/* Keymap ----------------------------------------------------------------------------------------------------------- */
 
 #define XXX &none
 #define ___ &trans
-
-/* Keymap ----------------------------------------------------------------------------------------------------------- */
 
 #define LS_TAB &mt LSHFT TAB
 #define NAV_SPC &lt_spc NAV 0

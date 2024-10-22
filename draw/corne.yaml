@@ -105,22 +105,22 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-up$$'}
+  - RGB HUD
+  - RGB HUI
+  - RGB SAD
+  - RGB SAI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - {t: '$$mdi:gesture-tap-hold$$', h: '$$mdi:bluetooth$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
+  - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -179,15 +179,6 @@ combos:
 - p: [12, 13]
   k: $$mdi:close-box$$
   l: [navigate, system, mouse]
-- p: [16, 17]
-  k: $$mdi:format-section$$
-  l: [navigate]
-- p: [14, 15]
-  k: $$mdi:content-save$$
-  l: [navigate]
-- p: [2, 3]
-  k: $$mdi:close-circle$$
-  l: [navigate]
 - p: [7, 8]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [default, system, mouse]
@@ -221,15 +212,6 @@ combos:
 - p: [13, 25]
   k: $$mdi:menu$$
   l: [default]
-- p: [14, 26]
-  k: $$mdi:content-cut$$"
-  l: [default]
-- p: [15, 27]
-  k: $$mdi:content-copy$$"
-  l: [default]
-- p: [16, 28]
-  k: $$mdi:content-paste$$"
-  l: [default]
 - p: [6, 18]
   k: {t: '6', s: ^}
   l: [default]
@@ -248,15 +230,30 @@ combos:
 - p: [11, 23]
   k: {h: '=', s: +}
   l: [default]
-- p: [30, 31]
-  k: $$mdi:progress-download$$
-  l: [system]
-- p: [29, 28]
-  k: $$mdi:progress-download$$
-  l: [system]
 - p: [21, 33]
   k: {h: '[', s: '{'}
   l: [default]
 - p: [22, 34]
   k: {h: ']', s: '}'}
   l: [default]
+- p: [14, 26]
+  k: $$mdi:content-cut$$"
+  l: [default]
+- p: [15, 27]
+  k: $$mdi:content-copy$$"
+  l: [default]
+- p: [16, 28]
+  k: $$mdi:content-paste$$"
+  l: [default]
+- p: [30, 31]
+  k: $$mdi:progress-download$$
+  l: [system]
+- p: [29, 28]
+  k: $$mdi:progress-download$$
+  l: [system]
+- p: [16, 17]
+  k: $$mdi:format-section$$
+  l: [navigate]
+- p: [2, 3]
+  k: $$mdi:close-circle$$
+  l: [navigate]

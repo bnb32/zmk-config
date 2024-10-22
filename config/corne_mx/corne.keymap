@@ -23,19 +23,19 @@
 
 */
 
-/*
 // number of keys per side, plus six?
 &led_strip {
     chain-length = <27>;
 };
 
 #define CONFIG_RGB
-*/
 
 #define X_RT_DEF &kp RGUI
 #define X_LT_DEF SMART_MOUSE
 #define X_RT_NON_DEF ___
 #define X_LT_NON_DEF ___
 #define CONFIG_WIRELESS
+#define INCLUDE_COMBOS
 #include "zmk-helpers/key-labels/42.h"
+
 #include "../base.keymap"
