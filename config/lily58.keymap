@@ -98,7 +98,7 @@
 #define X_LT_DEF &kp LGUI SMART_MOUSE
 #define X_RT_NON_DEF ___ ___
 #define X_LT_NON_DEF ___ ___
-#define X_ENC &kp NAV_L &kp NAV_R
+#define X_ENC &kp LEFT &kp RIGHT
 
 #define CONFIG_WIRELESS
 #include "base.keymap"

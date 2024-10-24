@@ -103,24 +103,24 @@ layers:
   - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-left$$'}
   - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-right$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:gesture-tap-hold$$', h: '$$mdi:bluetooth$$'}
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-down$$'}
-  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-up$$'}
+  - RGB EFF
   - RGB HUD
   - RGB HUI
-  - RGB SAD
-  - RGB SAI
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-up$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
-  - {t: '$$mdi:gesture-tap-hold$$', h: '$$mdi:bluetooth$$'}
-  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
-  - RGB EFF
+  - RGB SAD
+  - RGB SAI
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}

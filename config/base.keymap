@@ -30,15 +30,15 @@
 
 #ifdef CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
-    #define BT_SEL_KEYS &out OUT_TOG &bt BT_PRV &bt BT_NXT &none &none &bt BT_CLR
+    #define BT_SEL_KEYS &out OUT_TOG &bt BT_PRV &bt BT_NXT &none &out OUT_BLE &bt BT_CLR
 #else
     #define BT_SEL_KEYS &none &none &none &none &none &none
 #endif
 
 #ifdef CONFIG_RGB
     #include <dt-bindings/zmk/rgb.h>
-    #define RGB_HOME &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI
-    #define RGB_BOTTOM &out OUT_TOG &out OUT_BLE &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none
+    #define RGB_BOTTOM &rgb_ug RGB_SAD &rgb_ug RGB_SAI &none &none &none &none
+    #define RGB_HOME &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG
 #else
     #define RGB_HOME &none &none &none &none &none &none
     #define RGB_BOTTOM &none &none &none &none &none &none

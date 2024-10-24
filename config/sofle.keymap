@@ -25,7 +25,7 @@
 
 #define X_TOP_DEF &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
 #define X_TOP_NON_DEF ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
-#define X_RT_DEF &kp RGUI &kp LBKT &kp RBKT
+#define X_RT_DEF &kp LBKT &kp RBKT &none
 #define X_LT_DEF &none &none SMART_MOUSE
 #define X_RT_NON_DEF ___ ___ ___
 #define X_LT_NON_DEF ___ ___ ___
