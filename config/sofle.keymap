@@ -29,13 +29,16 @@
 #define X_LT_DEF &none &none SMART_MOUSE
 #define X_RT_NON_DEF ___ ___ ___
 #define X_LT_NON_DEF ___ ___ ___
-#define X_ENC &none &none
+#define X_ENC &kp C_MUTE &none
 
 // number of keys per side, plus six?
 &led_strip {
     chain-length = <35>;
 };
 
+
+#define ENCODERS &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP
+#define INCLUDE_ENCODERS
 #define CONFIG_RGB
 #define CONFIG_WIRELESS
 #include "zmk-helpers/key-labels/sofle.h"

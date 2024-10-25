@@ -15,18 +15,18 @@
 
 include:
   - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view_battery
+    dconf: "/workspaces/zmk-config/config/corne_choc"
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view_battery
+    dconf: "/workspaces/zmk-config/config/corne_choc"
+
+  - board: nice_nano_v2
     shield: corne_left
     dconf: "/workspaces/zmk-config/config/corne_mx"
   - board: nice_nano_v2
     shield: corne_right
     dconf: "/workspaces/zmk-config/config/corne_mx"
-
-  - board: nice_nano_v2
-    shield: "corne_left nice_view_adapter nice_view"
-    dconf: "/workspaces/zmk-config/config/corne_choc"
-  - board: nice_nano_v2
-    shield: "corne_right nice_view_adapter nice_view"
-    dconf: "/workspaces/zmk-config/config/corne_choc"
 
   - board: nice_nano_v2
     shield: sofle_left
@@ -36,8 +36,8 @@ include:
     dconf: "/workspaces/zmk-config/config/"
 
   - board: nice_nano_v2
-    shield: lily58_left nice_view_adapter nice_view
+    shield: lily58_left nice_view_adapter nice_view_battery
     dconf: "/workspaces/zmk-config/config/"
   - board: nice_nano_v2
-    shield: lily58_right nice_view_adapter nice_view
+    shield: lily58_right nice_view_adapter nice_view_battery
     dconf: "/workspaces/zmk-config/config/"
