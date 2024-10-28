@@ -44,11 +44,11 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-command$$
   navigate:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - $$mdi:volume-high$$
   - $$mdi:play-pause$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -68,11 +68,11 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
   - $$mdi:page-layout-footer$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - $$mdi:volume-low$$
   - $$mdi:skip-next$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - NEXT APP
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -245,15 +245,15 @@ combos:
 - p: [16, 28]
   k: $$mdi:content-paste$$"
   l: [default]
-- p: [30, 31]
-  k: $$mdi:progress-download$$
-  l: [system]
-- p: [29, 28]
-  k: $$mdi:progress-download$$
-  l: [system]
 - p: [16, 17]
   k: $$mdi:format-section$$
   l: [navigate]
 - p: [2, 3]
   k: $$mdi:close-circle$$
   l: [navigate]
+- p: [30, 31]
+  k: $$mdi:progress-download$$
+  l: [navigate]
+- p: [29, 28]
+  k: $$mdi:progress-download$$
+  l: [system]

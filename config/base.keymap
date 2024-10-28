@@ -44,8 +44,6 @@
     #define RGB_BOTTOM &none &none &none &none &none &none
 #endif
 
-#define TOP_FN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
-#define BOTTOM_FN &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
 #define THUMB_ROW_DEF X_LT_DEF LS_TAB SYS_SPC NAV_SPC RS_TAB X_RT_DEF
 #define THUMB_ROW_NON_DEF X_LT_NON_DEF ___ ___ &kp SPACE ___ X_RT_NON_DEF
 
@@ -66,18 +64,23 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-#ifdef INCLUDE_COMBOS // include combos for smaller boards
-    #include "combos.dtsi"
+#ifdef SMALL_BOARD
+    #include "combos.dtsi" \\ include combos for smaller boards without number row
+    #define FN_ROW &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+#else
+    #define FN_ROW ___ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 \
+                   ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ &kp F12
 #endif
 
 // universal combos
 ZMK_COMBO(cut,   &kp LC(X),    LM3 LB3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(copy,  &kp LC(INS),  LM2 LB2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(blr,   &bootloader,  RB0 RB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(bll,   &bootloader,  LB0 LB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(close, WIN_CLOSE,    LT3 LT2,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+ZMK_COMBO(blr,   &bootloader,  RB0 RB1,         NAV          , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bll,   &bootloader,  LB0 LB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 
 /* Keymap ----------------------------------------------------------------------------------------------------------- */
@@ -108,19 +111,17 @@ ZMK_LAYER(default,
 ZMK_LAYER(navigate,
                                                                                       X_TOP_NON_DEF
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    MUTE          VOL_U         PAUSE         ___           ___           ___                       U_WH_U        C_BSPC        NAV_U         C_DEL         U_CL_F        &kp PG_UP
+    ___           ___           MUTE          VOL_U         PAUSE         ___                       U_WH_U        C_BSPC        NAV_U         C_DEL         U_CL_F        &kp PG_UP
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           ___           ___           ___           ___           ___                       U_WH_D        NAV_L         NAV_D         NAV_R         U_CL_B        &kp PG_DN
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    PREV          VOL_D         NEXT          ___           ___           ___             X_ENC     NEXT_APP      &kp RET       PREV_WIN      NEXT_WIN      ___           ___
+    ___           ___           PREV          VOL_D         NEXT          ___             X_ENC     NEXT_APP      &kp RET       PREV_WIN      NEXT_WIN      ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                                                     THUMB_ROW_NON_DEF
 )
 
 ZMK_LAYER(system,
-                                                                                      X_TOP_NON_DEF
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                          TOP_FN                                                                                        BOTTOM_FN
+                                                                                          FN_ROW
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                         BT_SEL_KEYS                                                                                      RGB_HOME
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

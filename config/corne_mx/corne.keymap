@@ -35,7 +35,6 @@
 #define X_RT_NON_DEF ___
 #define X_LT_NON_DEF ___
 #define CONFIG_WIRELESS
-#define INCLUDE_COMBOS
+#define SMALL_BOARD
 #include "zmk-helpers/key-labels/42.h"
-
 #include "../base.keymap"

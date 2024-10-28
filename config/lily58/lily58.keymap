@@ -101,4 +101,4 @@
 #define X_ENC &kp LEFT &kp RIGHT
 
 #define CONFIG_WIRELESS
-#include "base.keymap"
+#include "../base.keymap"

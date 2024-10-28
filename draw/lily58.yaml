@@ -72,11 +72,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - $$mdi:volume-high$$
   - $$mdi:play-pause$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -96,11 +96,11 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:mouse-left-click$$', s: '$$mdi:page-previous$$'}
   - $$mdi:page-layout-footer$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - $$mdi:volume-low$$
   - $$mdi:skip-next$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - LEFT
   - RIGHT
@@ -120,17 +120,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   system:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -142,6 +131,17 @@ layers:
   - F9
   - F10
   - F11
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F12
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {t: '$$mdi:bluetooth-connect$$', h: '$$mdi:arrow-left$$'}
@@ -246,15 +246,15 @@ combos:
 - p: [28, 40]
   k: $$mdi:content-paste$$"
   l: [default]
-- p: [44, 45]
-  k: $$mdi:progress-download$$
-  l: [system]
-- p: [41, 40]
-  k: $$mdi:progress-download$$
-  l: [system]
 - p: [28, 29]
   k: $$mdi:format-section$$
   l: [navigate]
 - p: [14, 15]
   k: $$mdi:close-circle$$
   l: [navigate]
+- p: [44, 45]
+  k: $$mdi:progress-download$$
+  l: [navigate]
+- p: [41, 40]
+  k: $$mdi:progress-download$$
+  l: [system]

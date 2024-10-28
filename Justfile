@@ -91,11 +91,11 @@ draw:
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/corne.yaml" -k "splitkb/aurora/corne/rev1" >"{{ draw }}/corne.svg"
 
     echo "Drawing sofle keymap"
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/sofle.keymap" >"{{ draw }}/sofle.yaml"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/sofle/sofle.keymap" >"{{ draw }}/sofle.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/sofle.yaml" -k "splitkb/aurora/sofle_v2/rev1" >"{{ draw }}/sofle.svg"
 
     echo "Drawing lily58 keymap"
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/lily58.keymap" >"{{ draw }}/lily58.yaml"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/lily58/lily58.keymap" >"{{ draw }}/lily58.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/lily58.yaml" -k "splitkb/aurora/lily58/rev1" >"{{ draw }}/lily58.svg"
 
 # initialize west
