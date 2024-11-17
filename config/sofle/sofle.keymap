@@ -29,7 +29,7 @@
 #define X_LT_DEF &none &none SMART_MOUSE
 #define X_RT_NON_DEF ___ ___ ___
 #define X_LT_NON_DEF ___ ___ ___
-#define X_ENC &kp C_MUTE &none
+#define X_ENC &bootloader &bootloader
 
 // number of keys per side, plus six?
 &led_strip {

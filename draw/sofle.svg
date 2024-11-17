@@ -696,11 +696,11 @@ path.combo {
 </g>
 <g transform="translate(530, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:volume-off" xlink:href="#mdi:volume-off" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:volume-off"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(750, 300)" class="key none keypos-43">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(750, 300)" class="key keypos-43">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(840, 300)" class="key keypos-44">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -970,11 +970,11 @@ path.combo {
 </g>
 <g transform="translate(530, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:volume-off" xlink:href="#mdi:volume-off" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:volume-off"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(750, 300)" class="key none keypos-43">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(750, 300)" class="key keypos-43">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(840, 300)" class="key keypos-44">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1238,17 +1238,17 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-13" y="-13" height="26" width="26.0" class="key enter tap glyph mdi:keyboard-return"/>
 </g>
-<g transform="translate(440, 300)" class="key trans keypos-41">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(440, 300)" class="key keypos-41">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 62%">&amp;studio…</tspan></text>
 </g>
 <g transform="translate(530, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:volume-off" xlink:href="#mdi:volume-off" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:volume-off"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(750, 300)" class="key none keypos-43">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(750, 300)" class="key keypos-43">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(840, 300)" class="key keypos-44">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1502,11 +1502,11 @@ path.combo {
 </g>
 <g transform="translate(530, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:volume-off" xlink:href="#mdi:volume-off" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:volume-off"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(750, 300)" class="key none keypos-43">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(750, 300)" class="key keypos-43">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(840, 300)" class="key trans keypos-44">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1749,11 +1749,11 @@ path.combo {
 </g>
 <g transform="translate(530, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:volume-off" xlink:href="#mdi:volume-off" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:volume-off"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(750, 300)" class="key none keypos-43">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(750, 300)" class="key keypos-43">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(840, 300)" class="key trans keypos-44">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>

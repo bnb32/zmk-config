@@ -1136,9 +1136,9 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-13" y="-13" height="26" width="26.0" class="key enter tap glyph mdi:keyboard-return"/>
 </g>
-<g transform="translate(440, 220)" class="key trans keypos-29">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(440, 220)" class="key keypos-29">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 62%">&amp;studio…</tspan></text>
 </g>
 <g transform="translate(760, 220)" class="key keypos-30">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>

@@ -49,8 +49,8 @@ _build_single $board $shield $dconf *west_args:
     build_dir="{{ build / '$artifact' }}"
 
     echo "Building firmware for $artifact with config $dconf"
-    west build -s zmk/app -d "$build_dir" -b $board {{ west_args }} -- \
-        -DZMK_CONFIG="{{ '$dconf' }}" ${shield:+-DSHIELD="$shield"}
+    west build -s zmk/app -d "$build_dir" -b $board {{ west_args }} \
+        -S studio-rpc-usb-uart -- -DZMK_CONFIG="{{ '$dconf' }}" ${shield:+-DSHIELD="$shield"}
 
     if [[ -f "$build_dir/zephyr/zmk.uf2" ]]; then
         mkdir -p "{{ out }}" && cp "$build_dir/zephyr/zmk.uf2" "{{ out }}/$artifact.uf2"
