@@ -77,8 +77,7 @@
 ZMK_COMBO(cut,   &kp LC(X),    LM3 LB3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(copy,  &kp LC(INS),  LM2 LB2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(close, WIN_CLOSE,    LT3 LT2,         NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,     DEF NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(blr,   &bootloader,  RB0 RB1,         NAV          , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(bll,   &bootloader,  LB0 LB1,             SYS      , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)

@@ -66,9 +66,6 @@
 <svg id="mdi:close-box">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-close-box" viewBox="0 0 24 24"><path d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" /></svg>
 </svg>
-<svg id="mdi:close-circle">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-close-circle" viewBox="0 0 24 24"><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg>
-</svg>
 <svg id="mdi:content-copy">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-content-copy" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" /></svg>
 </svg>
@@ -801,6 +798,10 @@ path.combo {
 <rect rx="4" ry="4" x="342" y="152" width="36" height="36" class="combo"/>
 <use href="#mdi:content-paste" xlink:href="#mdi:content-paste" x="347" y="157" height="26" width="26.0" class="combo tap glyph mdi:content-paste"/>
 </g>
+<g class="combo combopos-22">
+<rect rx="4" ry="4" x="382" y="117" width="36" height="36" class="combo"/>
+<use href="#mdi:format-section" xlink:href="#mdi:format-section" x="387" y="122" height="26" width="26.0" class="combo tap glyph mdi:format-section"/>
+</g>
 </g>
 </g>
 <g transform="translate(25, 392)" class="layer-navigate">
@@ -993,10 +994,6 @@ path.combo {
 <use href="#mdi:format-section" xlink:href="#mdi:format-section" x="387" y="122" height="26" width="26.0" class="combo tap glyph mdi:format-section"/>
 </g>
 <g class="combo combopos-3">
-<rect rx="4" ry="4" x="222" y="27" width="36" height="36" class="combo"/>
-<use href="#mdi:close-circle" xlink:href="#mdi:close-circle" x="227" y="32" height="26" width="26.0" class="combo tap glyph mdi:close-circle"/>
-</g>
-<g class="combo combopos-4">
 <rect rx="4" ry="4" x="782" y="197" width="36" height="36" class="combo"/>
 <use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="787" y="202" height="26" width="26.0" class="combo tap glyph mdi:progress-download"/>
 </g>

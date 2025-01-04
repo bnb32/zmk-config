@@ -43,8 +43,8 @@ layers:
   - C
   - V
   - B
-  - $$mdi:progress-download$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - N
   - M
   - {t: ',', s: <}
@@ -102,8 +102,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - NEXT APP
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:page-previous$$
@@ -161,8 +161,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&studio_unlock'
-  - $$mdi:progress-download$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -220,8 +220,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-left$$'}
@@ -279,8 +279,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -307,10 +307,7 @@ combos:
   l: [default]
 - p: [28, 29]
   k: $$mdi:format-section$$
-  l: [navigate]
-- p: [14, 15]
-  k: $$mdi:close-circle$$
-  l: [navigate]
+  l: [default, navigate]
 - p: [44, 45]
   k: $$mdi:progress-download$$
   l: [navigate]

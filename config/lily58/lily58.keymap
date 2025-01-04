@@ -92,13 +92,13 @@
 #define RH2 56
 #define RH3 57
 
-#define X_TOP_DEF &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+#define X_TOP_DEF &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &nine_morph &zero_morph &kp EQUAL
 #define X_TOP_NON_DEF ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
 #define X_RT_DEF &kp LBKT &kp RBKT
 #define X_LT_DEF &kp LGUI SMART_MOUSE
 #define X_RT_NON_DEF ___ ___
 #define X_LT_NON_DEF ___ ___
-#define X_ENC &bootloader &bootloader
+#define X_ENC ___ ___ // &bootloader &bootloader
 
 #define CONFIG_WIRELESS
 #include "../base.keymap"

@@ -317,10 +317,7 @@ combos:
   l: [default]
 - p: [28, 29]
   k: $$mdi:format-section$$
-  l: [navigate]
-- p: [14, 15]
-  k: $$mdi:close-circle$$
-  l: [navigate]
+  l: [default, navigate]
 - p: [44, 45]
   k: $$mdi:progress-download$$
   l: [navigate]
