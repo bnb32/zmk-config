@@ -23,15 +23,6 @@
 
 */
 
-/* Horizontal combos - left hand */
-ZMK_COMBO(esc,   &kp ESC,      LT5 LT4,         NAV SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(cncl,  &kp K_CANCEL, LM5 LM4,         NAV SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-
-/* Horizontal combos - right hand */
-ZMK_COMBO(bspc,  &kp BSPC,     RT1 RT2,     DEF     SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(del,   &kp DEL,      RT2 RT3,     DEF     SYS MOUSE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(ret,   &kp RET,      RB1 RB2,     DEF     SYS      , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-
 /* Vertical combos - left hand */
 ZMK_COMBO(grave, &kp GRAVE,    LT5 LM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(one,   &kp N1,       LT4 LM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)

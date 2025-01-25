@@ -1047,10 +1047,6 @@ path.combo {
 <rect rx="4" ry="4" x="382" y="197" width="36" height="36" class="combo"/>
 <use href="#mdi:format-section" xlink:href="#mdi:format-section" x="387" y="202" height="26" width="26.0" class="combo tap glyph mdi:format-section"/>
 </g>
-<g class="combo combopos-1">
-<rect rx="4" ry="4" x="862" y="277" width="36" height="36" class="combo"/>
-<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="867" y="282" height="26" width="26.0" class="combo tap glyph mdi:progress-download"/>
-</g>
 </g>
 </g>
 <g transform="translate(25, 976)" class="layer-system">
@@ -1313,10 +1309,6 @@ path.combo {
 <g transform="translate(1080, 370)" class="key trans keypos-59">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
-</g>
-<g class="combo combopos-0">
-<rect rx="4" ry="4" x="382" y="277" width="36" height="36" class="combo"/>
-<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="387" y="282" height="26" width="26.0" class="combo tap glyph mdi:progress-download"/>
 </g>
 </g>
 </g>

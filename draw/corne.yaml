@@ -216,21 +216,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [0, 1]
-  k: $$mdi:keyboard-esc$$
-  l: [navigate, system, mouse]
-- p: [12, 13]
-  k: $$mdi:close-box$$
-  l: [navigate, system, mouse]
-- p: [7, 8]
-  k: {t: '$$mdi:backspace$$', type: backspace}
-  l: [default, system, mouse]
-- p: [8, 9]
-  k: $$mdi:backspace-reverse-outline$$
-  l: [default, system, mouse]
-- p: [31, 32]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
-  l: [default, system]
 - p: [0, 12]
   k: {t: '`', s: '~'}
   l: [default]
@@ -291,9 +276,3 @@ combos:
 - p: [16, 17]
   k: $$mdi:format-section$$
   l: [default, navigate]
-- p: [30, 31]
-  k: $$mdi:progress-download$$
-  l: [navigate]
-- p: [29, 28]
-  k: $$mdi:progress-download$$
-  l: [system]
