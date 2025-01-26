@@ -262,8 +262,8 @@ MAKE_HRM(hmls, &kp, &kp, KEYS_R THUMBS, 220, QUICK_TAP_MS, 200)
 #define NEXT &kp C_NEXT
 #define PREV &kp C_PREV
 
+// #define NUM_TOG &lht NUM NUM
 #define NAV_TOG &lht NAV NAV
-#define NUM_TOG &lht NUM NUM
 #define MOUSE_TOG &lht MOUSE MOUSE
 #define SYS_TOG &lht SYS SYS
 
