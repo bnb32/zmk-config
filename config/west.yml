@@ -23,10 +23,10 @@ manifest:
     revision: v0.1 # Pin everything to v0.1
 
   remotes:
-    - name: upstream
-      url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
 
     - name: zmk
       revision: v0.1+mouse
