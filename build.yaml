@@ -31,10 +31,10 @@ include:
     dconf: "/workspaces/zmk-config/config/lily58"
 
   - board: nice_nano_v2
-    shield: corne_left nice_view_adapter nice_view_battery
+    shield: corne_left nice_view_adapter nice_view
     dconf: "/workspaces/zmk-config/config/corne_choc"
   - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_view_battery
+    shield: corne_right nice_view_adapter nice_view
     dconf: "/workspaces/zmk-config/config/corne_choc"
 
   - board: nice_nano_v2
