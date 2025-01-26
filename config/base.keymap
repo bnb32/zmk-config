@@ -44,7 +44,7 @@
     #define RGB_BOTTOM &none &none &none &none &none &none
 #endif
 
-#define THUMB_ROW_DEF X_LT_DEF LS_TAB SYS_SPC NAV_SPC &mo NUM X_RT_DEF
+#define THUMB_ROW_DEF X_LT_DEF LS_TAB SYS_SPC NAV_SPC NUM_TOG X_RT_DEF
 #define THUMB_ROW_NON_DEF X_LT_NON_DEF &kp LSHFT ___ &kp SPACE ___ X_RT_NON_DEF
 
 #define DEF 0

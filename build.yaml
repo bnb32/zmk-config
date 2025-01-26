@@ -50,3 +50,6 @@ include:
   - board: nice_nano_v2
     shield: sofle_right
     dconf: "/workspaces/zmk-config/config/sofle"
+
+  - board: nice_nano_v2
+    shield: settings_reset
