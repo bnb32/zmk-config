@@ -8,7 +8,7 @@ draw := absolute_path('draw')
 
 
 # parse combos.dtsi and adjust settings to not run out of slots
-_parse_combos $dconf:
+_parse_combos:
     #!/usr/bin/env bash
     set -euo pipefail
     cconf="{{ config / 'combos.dtsi' }}"
@@ -20,7 +20,7 @@ _parse_combos $dconf:
                 sort | uniq -c | sort -nr |
                 awk 'NR==1{print $1}'
         )
-        sed -Ei "/CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY/s/=.+/=$count/" "{{ '$dconf' }}"/*.conf
+        sed -Ei "/CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY/s/=.+/=$count/" "{{ config }}"/*.conf
         echo "Setting MAX_COMBOS_PER_KEY to $count"
 
         # set MAX_KEYS_PER_COMBO to the most frequent key count
@@ -30,27 +30,27 @@ _parse_combos $dconf:
                 cut -d : -f 1 | uniq -c | sort -nr |
                 awk 'NR==1{print $1}'
         )
-        sed -Ei "/CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO/s/=.+/=$count/" "{{ '$dconf' }}"/*.conf
+        sed -Ei "/CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO/s/=.+/=$count/" "{{ config }}"/*.conf
         echo "Setting MAX_KEYS_PER_COMBO to $count"
     fi
 
 # parse build.yaml and filter targets by expression
 _parse_targets $expr:
     #!/usr/bin/env bash
-    attrs="[.board, .shield, .dconf]"
+    attrs="[.board, .shield]"
     filter="(($attrs | map(. // [.]) | combinations), ((.include // {})[] | $attrs)) | join(\",\")"
     echo "$(yq -r "$filter" build.yaml | grep -v "^," | grep -i "${expr/#all/.*}")"
 
 # build firmware for single board & shield combination
-_build_single $board $shield $dconf *west_args:
+_build_single $board $shield *west_args:
     #!/usr/bin/env bash
     set -euo pipefail
     artifact="${shield:+${shield// /+}-}${board}"
     build_dir="{{ build / '$artifact' }}"
 
-    echo "Building firmware for $artifact with config $dconf"
+    echo "Building firmware for $artifact..."
     west build -s zmk/app -d "$build_dir" -b $board {{ west_args }} \
-        -S studio-rpc-usb-uart -- -DZMK_CONFIG="{{ '$dconf' }}" ${shield:+-DSHIELD="$shield"}
+        -S studio-rpc-usb-uart -- -DZMK_CONFIG="{{ config }}" ${shield:+-DSHIELD="$shield"}
 
     if [[ -f "$build_dir/zephyr/zmk.uf2" ]]; then
         mkdir -p "{{ out }}" && cp "$build_dir/zephyr/zmk.uf2" "{{ out }}/$artifact.uf2"
@@ -59,15 +59,14 @@ _build_single $board $shield $dconf *west_args:
     fi
 
 # build firmware for matching targets
-build expr *west_args:
+build expr *west_args: _parse_combos
     #!/usr/bin/env bash
     set -euo pipefail
     targets=$(just _parse_targets {{ expr }})
 
     [[ -z $targets ]] && echo "No matching targets found. Aborting..." >&2 && exit 1
-    echo "$targets" | while IFS=, read -r board shield dconf; do
-        just _parse_combos "$dconf"
-        just _build_single "$board" "$shield" "$dconf" {{ west_args }}
+    echo "$targets" | while IFS=, read -r board shield; do
+        just _build_single "$board" "$shield" {{ west_args }}
     done
 
 # clear build cache and artifacts

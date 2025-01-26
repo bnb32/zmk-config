@@ -101,4 +101,4 @@
 #define X_ENC ___ ___ // &bootloader &bootloader
 
 #define CONFIG_WIRELESS
-#include "../base.keymap"
+#include "base.keymap"
