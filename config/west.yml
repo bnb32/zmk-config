@@ -20,23 +20,26 @@
 manifest:
   defaults:
     remote: urob
-    revision: v0.1 # Pin everything to v0.1
 
   remotes:
+    - name: upstream
+      url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
 
+  projects:
+    - name: zmk-helpers
+      revision: main
+      path: modules/helpers
+    - name: zmk-tri-state
+      revision: main
+      path: modules/tri-state
+
+    # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
+    # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
       revision: v0.1+mouse
       import: app/west.yml
-
-    # ZMK modules
-    - name: zmk-helpers
-      path: modules/zmk/helpers
-    - name: zmk-tri-state
-      path: modules/zmk/tri-state
 
   self:
     path: config
