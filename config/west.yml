@@ -31,6 +31,7 @@ manifest:
     # ZMK modules
     - name: zmk-helpers
       path: modules/zmk/helpers
+      revision: main
     - name: zmk-tri-state
       path: modules/zmk/tri-state
       revision: main
