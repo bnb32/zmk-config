@@ -28,12 +28,18 @@ manifest:
       url-base: https://github.com/urob
 
   projects:
+    # ZMK modules
+    - name: zmk-adaptive-key
+      path: modules/zmk/adaptive-key
+    - name: zmk-auto-layer
+      path: modules/zmk/auto-layer
     - name: zmk-helpers
-      revision: main
-      path: modules/helpers
+      path: modules/zmk/helpers
+    - name: zmk-leader-key
+      revision: v0.1+locality
+      path: modules/zmk/leader-key
     - name: zmk-tri-state
-      revision: main
-      path: modules/tri-state
+      path: modules/zmk/tri-state
 
     - name: zmk
       revision: v0.1+mouse
