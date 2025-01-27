@@ -35,14 +35,25 @@ manifest:
       revision: main
       path: modules/tri-state
 
+    - name: zmk
+      revision: v0.1+mouse
+      import: app/west.yml
+
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
-    - name: zmk
-      revision: going-modular
-      path: .
+    - name: zephyr
+      revision: v3.5.0+zmk-fixes
+      clone-depth: 1
       import:
-        file: app/west.yml
-        path-prefix: zmk
+        # Only enable most commonly used boards. For less common hardware one
+        # may need to enable additional modules.
+        name-allowlist:
+          - cmsis
+          - hal_nordic
+          - hal_rpi_pico
+          - hal_stm32
+          - lvgl
+          - tinycrypt
 
   self:
     path: config
