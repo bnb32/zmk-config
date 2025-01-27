@@ -38,7 +38,7 @@ jobs:
 
       - name: Test build recipe
         run: |
-          nix develop --command just build planck
+          nix develop --command just build lily58
 
       - name: Test draw recipe
         run: |
