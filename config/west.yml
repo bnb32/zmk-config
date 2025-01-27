@@ -38,7 +38,7 @@ manifest:
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
-      revision: v0.1+mouse
+      revision: going-modular
       import: app/west.yml
 
   self:
