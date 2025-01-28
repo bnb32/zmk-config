@@ -45,7 +45,7 @@ manifest:
       import: app/west.yml
 
     - name: zephyr
-      revision: v3.4.0
+      revision: v3.5.0
 
   self:
     path: config
