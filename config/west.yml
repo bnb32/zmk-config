@@ -20,6 +20,7 @@
 manifest:
   defaults:
     remote: urob
+    revision: v0.1
 
   remotes:
     - name: upstream
@@ -36,18 +37,15 @@ manifest:
     - name: zmk-tri-state
       revision: main
       path: modules/tri-state
-    - name: nice-view-battery
-      remote: infely
-      revision: main
 
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
-      revision: going-modular
-      path: .
-      import:
-        file: app/west.yml
-        path-prefix: zmk
+      revision: v0.1+mouse
+      import: app/west.yml
+
+    - name: zephyr
+      revision: v3.4.0
 
   self:
     path: config
