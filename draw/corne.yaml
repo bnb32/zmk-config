@@ -259,6 +259,18 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
+- p: [14, 26]
+  k: $$mdi:content-cut$$"
+  l: [default]
+- p: [15, 27]
+  k: $$mdi:content-copy$$"
+  l: [default]
+- p: [16, 28]
+  k: $$mdi:content-paste$$"
+  l: [default]
+- p: [16, 17]
+  k: $$mdi:format-section$$
+  l: [default, navigate]
 - p: [0, 12]
   k: {t: '`', s: '~'}
   l: [default]
@@ -307,15 +319,3 @@ combos:
 - p: [22, 34]
   k: {h: ']', s: '}'}
   l: [default]
-- p: [14, 26]
-  k: $$mdi:content-cut$$"
-  l: [default]
-- p: [15, 27]
-  k: $$mdi:content-copy$$"
-  l: [default]
-- p: [16, 28]
-  k: $$mdi:content-paste$$"
-  l: [default]
-- p: [16, 17]
-  k: $$mdi:format-section$$
-  l: [default, navigate]

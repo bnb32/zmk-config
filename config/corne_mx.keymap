@@ -37,4 +37,4 @@
 #define CONFIG_WIRELESS
 #define SMALL_BOARD
 #include "zmk-helpers/key-labels/42.h"
-#include "../base.keymap"
+#include "base.keymap"

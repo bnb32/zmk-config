@@ -44,7 +44,15 @@
     #define RGB_BOTTOM &none &none &none &none &none &none
 #endif
 
-#define THUMB_ROW_DEF X_LT_DEF LS_TAB SYS_SPC NAV_SPC NUM_TOG X_RT_DEF
+#ifdef SMALL_BOARD
+    #define FN_ROW ___ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+    #define THUMB_ROW_DEF X_LT_DEF LS_TAB SYS_SPC NAV_SPC NUM_TOG X_RT_DEF
+#else
+    #define FN_ROW ___ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 \
+                   ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ &kp F12
+    #define THUMB_ROW_DEF X_LT_DEF LS_TAB SYS_SPC NAV_SPC RS_TAB X_RT_DEF
+#endif
+
 #define THUMB_ROW_NON_DEF X_LT_NON_DEF &kp LSHFT ___ &kp SPACE ___ X_RT_NON_DEF
 
 #define DEF 0
@@ -59,26 +67,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/outputs.h>
 #include "custom.dtsi"
-
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
-
-#define COMBO_IDLE_FAST 150
-#define COMBO_IDLE_SLOW 50
-
-#ifdef SMALL_BOARD
-    #include "combos.dtsi" // include combos for smaller boards without number row
-    #define FN_ROW ___ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-#else
-    #define FN_ROW ___ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 \
-                   ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ &kp F12
-#endif
-
-// universal combos
-ZMK_COMBO(cut,   &kp LC(X),    LM3 LB3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(copy,  &kp LC(INS),  LM2 LB2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(paste, &kp LS(INS),  LM1 LB1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,     DEF NAV          , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+#include "combos.dtsi"
 
 
 /* Keymap ----------------------------------------------------------------------------------------------------------- */
@@ -154,14 +143,16 @@ ZMK_LAYER(media,
                                                                                     THUMB_ROW_NON_DEF
 )
 
-ZMK_LAYER(number,
-                                                                                      X_TOP_NON_DEF
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                    &kp N6        &kp N7        &kp N8        &nine_morph   &zero_morph   &kp EQUAL
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           &kp LSHFT     &kp LCTRL     &kp LALT      ___                       ___           ___           ___           &kp LBKT      &kp RBKT      ___
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___           ___             X_ENC     ___           ___           ___           ___           ___           ___
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                                                    THUMB_ROW_NON_DEF
-)
+#ifdef SMALL_BOARD
+    ZMK_LAYER(number,
+                                                                                          X_TOP_NON_DEF
+    //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                    &kp N6        &kp N7        &kp N8        &nine_morph   &zero_morph   &kp EQUAL
+    //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        ___           ___           &kp LSHFT     &kp LCTRL     &kp LALT      ___                       ___           ___           ___           &kp LBKT      &kp RBKT      ___
+    //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        ___           ___           ___           ___           ___           ___             X_ENC     ___           ___           ___           ___           ___           ___
+    //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├───────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                                                                                        THUMB_ROW_NON_DEF
+    )
+#endif
