@@ -8,8 +8,7 @@ manifest:
   projects:
     - name: zmk
       remote: urob
-      #revision: main
-      revision: v0.1+mouse
+      revision: main
       import: app/west.yml
 
     - name: zmk-helpers

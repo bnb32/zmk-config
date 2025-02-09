@@ -2,22 +2,25 @@
 #include <behaviors/mouse_keys.dtsi>
 
 #undef ZMK_MOUSE_DEFAULT_MOVE_VAL
+#undef U_MOUSE_MOVE_EXPONENT
+#undef U_MOUSE_MOVE_TIME
+#undef U_MOUSE_MOVE_DELAY
+
 #undef ZMK_MOUSE_DEFAULT_SCRL_VAL
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100  // 10
+#undef U_MOUSE_SCROLL_EXPONENT
+#undef U_MOUSE_SCROLL_TIME
+#undef U_MOUSE_SCROLL_DELAY
 
-// Config from @caksoylar, defaults in comments
-&mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <200>;     // 300
-  delay-ms = <0>;                   // 0
-};
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 5000
+#define U_MOUSE_MOVE_EXPONENT 1
+#define U_MOUSE_MOVE_TIME 20
+#define U_MOUSE_MOVE_DELAY 0
 
-&msc {
-  acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <100>;      // 300
-  delay-ms = <0>;                   // 0
-};
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 1000
+#define U_MOUSE_SCROLL_EXPONENT 1
+#define U_MOUSE_SCROLL_TIME 20
+#define U_MOUSE_SCROLL_DELAY 0
+
 
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
