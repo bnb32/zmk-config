@@ -97,7 +97,7 @@
 #define X_RT_DEF &kp LBKT &kp RBKT
 #define X_LT_DEF &kp LGUI SMART_MOUSE
 #define X_RT_NON_DEF ___ ___
-#define X_LT_NON_DEF ___ ___
+#define X_LT_NON_DEF ___ CANCEL
 #define X_ENC ___ ___ // &bootloader &bootloader
 
 #define CONFIG_WIRELESS
