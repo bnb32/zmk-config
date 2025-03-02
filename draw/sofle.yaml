@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: sofle/rev1}
 layers:
-  default:
+  brandon:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -308,13 +308,13 @@ layers:
 combos:
 - p: [26, 38]
   k: $$mdi:content-cut$$"
-  l: [default]
+  l: [brandon]
 - p: [27, 39]
   k: $$mdi:content-copy$$"
-  l: [default]
+  l: [brandon]
 - p: [28, 40]
   k: $$mdi:content-paste$$"
-  l: [default]
+  l: [brandon]
 - p: [28, 29]
   k: $$mdi:format-section$$
-  l: [default, navigate]
+  l: [brandon, navigate]

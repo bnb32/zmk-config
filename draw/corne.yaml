@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  default:
+  brandon:
   - $$mdi:keyboard-esc$$
   - Q
   - W
@@ -80,7 +80,7 @@ layers:
   - $$mdi:page-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:close-box$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
@@ -105,25 +105,25 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:gesture-tap-hold$$', h: '$$mdi:bluetooth$$'}
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB EFF
+  - RGB HUD
+  - RGB HUI
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:alarm-light$$', s: '$$mdi:arrow-up$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:alarm-light$$', s: '$$mdi:alarm-light-off$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SAD
+  - RGB SAI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:close-box$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
   - $$mdi:keyboard-space$$
@@ -166,7 +166,7 @@ layers:
   - {t: '$$mdi:mouse-scroll-wheel$$', h: '$$mdi:arrow-right$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:close-box$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
@@ -209,7 +209,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:close-box$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
   - $$mdi:keyboard-space$$
@@ -252,7 +252,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:close-box$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
@@ -261,61 +261,61 @@ layers:
 combos:
 - p: [14, 26]
   k: $$mdi:content-cut$$"
-  l: [default]
+  l: [brandon]
 - p: [15, 27]
   k: $$mdi:content-copy$$"
-  l: [default]
+  l: [brandon]
 - p: [16, 28]
   k: $$mdi:content-paste$$"
-  l: [default]
+  l: [brandon]
 - p: [16, 17]
   k: $$mdi:format-section$$
-  l: [default, navigate]
+  l: [brandon, navigate]
 - p: [0, 12]
   k: {t: '`', s: '~'}
-  l: [default]
+  l: [brandon]
 - p: [1, 13]
   k: {t: '1', s: '!'}
-  l: [default]
+  l: [brandon]
 - p: [2, 14]
   k: {t: '2', s: '@'}
-  l: [default]
+  l: [brandon]
 - p: [3, 15]
   k: {t: '3', s: '#'}
-  l: [default]
+  l: [brandon]
 - p: [4, 16]
   k: {t: '4', s: $}
-  l: [default]
+  l: [brandon]
 - p: [5, 17]
   k: {t: '5', s: '%'}
-  l: [default]
+  l: [brandon]
 - p: [12, 24]
   k: $$mdi:monitor-screenshot$$
-  l: [default]
+  l: [brandon]
 - p: [13, 25]
   k: $$mdi:menu$$
-  l: [default]
+  l: [brandon]
 - p: [6, 18]
   k: {t: '6', s: ^}
-  l: [default]
+  l: [brandon]
 - p: [7, 19]
   k: {t: '7', s: '&'}
-  l: [default]
+  l: [brandon]
 - p: [8, 20]
   k: {t: '8', s: '*'}
-  l: [default]
+  l: [brandon]
 - p: [9, 21]
   k: {t: '9', s: (}
-  l: [default]
+  l: [brandon]
 - p: [10, 22]
   k: {t: '0', s: )}
-  l: [default]
+  l: [brandon]
 - p: [11, 23]
   k: {h: '=', s: +}
-  l: [default]
+  l: [brandon]
 - p: [21, 33]
   k: {h: '[', s: '{'}
-  l: [default]
+  l: [brandon]
 - p: [22, 34]
   k: {h: ']', s: '}'}
-  l: [default]
+  l: [brandon]
