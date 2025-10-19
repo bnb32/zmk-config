@@ -37,24 +37,24 @@ ZMK_COMBO(fmt,   FORMAT,       LM1 LM0,     DEF NAV          , COMBO_TERM_FAST, 
 
 #ifdef SMALL_BOARD
   /* Vertical combos - left hand */
-  ZMK_COMBO(grave, &kp GRAVE,    LT5 LM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(one,   &kp N1,       LT4 LM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(two,   &kp N2,       LT3 LM3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(three, &kp N3,       LT2 LM2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(four,  &kp N4,       LT1 LM1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(five,  &kp N5,       LT0 LM0,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(grave, &kp GRAVE,    LT5 LM5,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(one,   &kp N1,       LT4 LM4,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(two,   &kp N2,       LT3 LM3,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(three, &kp N3,       LT2 LM2,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(four,  &kp N4,       LT1 LM1,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(five,  &kp N5,       LT0 LM0,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-  ZMK_COMBO(pscrn, &kp PSCRN,    LM5 LB5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(menu,  &kp K_CMENU,  LM4 LB4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(pscrn, &kp PSCRN,    LM5 LB5,     DEF            , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(menu,  &kp K_CMENU,  LM4 LB4,     DEF            , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
   /* Vertical combos - right hand */
-  ZMK_COMBO(six,   &kp N6,       RT0 RM0,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(seven, &kp N7,       RT1 RM1,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(eight, &kp N8,       RT2 RM2,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(nine,  &nine_morph,  RT3 RM3,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(zero,  &zero_morph,  RT4 RM4,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-  ZMK_COMBO(equal, &kp EQUAL,    RT5 RM5,     DEF              , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(six,   &kp N6,       RT0 RM0,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(seven, &kp N7,       RT1 RM1,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(eight, &kp N8,       RT2 RM2,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(nine,  &nine_morph,  RT3 RM3,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(zero,  &zero_morph,  RT4 RM4,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+  ZMK_COMBO(equal, &kp EQUAL,    RT5 RM5,     DEF NAV        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-  ZMK_COMBO(lbkt,  &kp LBKT,     RM3 RB3,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
-  ZMK_COMBO(rbkt,  &kp RBKT,     RM4 RB4,     DEF              , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+  ZMK_COMBO(lbkt,  &kp LBKT,     RM3 RB3,     DEF NAV        , COMBO_TERM_FAST, COMBO_IDLE_FAST)
+  ZMK_COMBO(rbkt,  &kp RBKT,     RM4 RB4,     DEF NAV        , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 #endif
